@@ -4,15 +4,14 @@ using UnityEngine;
 using TMPro;
 using Valve.VR.InteractionSystem;
 
-// TODO: Replace canvas character with generic animation?
 public class DialogManager : MonoBehaviour {
     private BaseDialog activeDialog; // A reference to the base dialog, so we can let it know when we finish the convo
     private Queue<Sentence> sentences;
     private bool skipCurrentSentence;
     private Sentence currentSentence;
+    private DuckNPC currentNPC;
 
     public bool isDialogActive { get; private set; }
-    public Animator characterAnimator;
 
     [Header("UI Elements")]
     //public CanvasCharacter canvasCharacter;
@@ -57,7 +56,6 @@ public class DialogManager : MonoBehaviour {
     public void StartDialog(BaseDialog dialog, List<Sentence> newSentences, bool clearExistingDialog) {
         activeDialog = dialog;
         animator.SetBool("isDialogBoxOpen", true);
-        characterAnimator.SetBool("isTalking", true);
         isDialogActive = true;
 
         if (clearExistingDialog) {
@@ -90,17 +88,40 @@ public class DialogManager : MonoBehaviour {
             return;
         }
 
-        // Prepare the dialog
-        currentSentence = sentences.Dequeue();
+        // Prepare the dialog. 
+        // Advance until we have a sentence with text. 
+        //  By skipping empty texts, we can create empty sentences, we can update an NPC's lookdir without having them say anything
+        Sentence tmpSentence;
+        do {
+            tmpSentence = sentences.Dequeue();
+
+            // For this sentence, make the NPC look at something
+            currentNPC = SpeakerManager.instance.GetNPCSpeaker(tmpSentence.currentSpeaker);
+            if (currentNPC != null) {
+                // If the speaker is an NPC, look at the specified transform
+                currentNPC.lookatTarget = SpeakerManager.instance.GetLookatTarget(tmpSentence.lookatTarget);
+            }
+        } while (sentences.Count > 0 && tmpSentence.text.Trim() == "");
+
+        // This solves a bug with the last sentence overwriting the textbox image/name
+        if (tmpSentence.text.Trim() == "") {
+            if (sentences.Count == 0) {
+                EndDialog(true);
+            }
+            return;
+        }
+
+        currentSentence = tmpSentence;
         ConversationLog.instance.AddSentence(currentSentence);
-        characterAnimator.SetBool("isTalking", true);
 
         // Apply the animation state, prepare the textbox
         //canvasCharacter.SetAnimationState(currentSentence.animationState);
         ConfigureTextboxImages();
 
-        // Look at player
-        //canvasCharacter.LookAt(Player.instance.hmdTransform.position);
+        if (currentNPC != null) {
+            //  2. Lookat some transform
+            currentNPC.isTalking = true;
+        }
 
         // Start typing
         StartCoroutine(TypeSentence());
@@ -115,7 +136,10 @@ public class DialogManager : MonoBehaviour {
         isDialogActive = false;
         completedCurrentSentence = true;
         animator.SetBool("isDialogBoxOpen", false);
-        characterAnimator.SetBool("isTalking", false);
+
+        if (currentNPC != null) {
+            currentNPC.isTalking = false;
+        }
 
         if (activeDialog != null) {
             activeDialog.OnDialogEnd(wasDialogFullyCompleted);
@@ -161,7 +185,9 @@ public class DialogManager : MonoBehaviour {
             yield return null;
         }
 
-        characterAnimator.SetBool("isTalking", false);
+        if (currentNPC != null) {
+            currentNPC.isTalking = false;
+        }
         completedCurrentSentence = true;
     }
 

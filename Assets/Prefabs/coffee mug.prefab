@@ -125,6 +125,8 @@ MonoBehaviour:
   currentSteamOutput: 0
   coffeeTransform: {fileID: 66527717537931954}
   minCoffeeLevel: 0
+  capacity: 0
+  maxCapacity: 0
   currentCoffeeLevel: 0
 --- !u!1001 &2518745083905451427
 PrefabInstance:
@@ -181,12 +183,27 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 5601f4d3a9864284c83cae066778fcde,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -75
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5601f4d3a9864284c83cae066778fcde,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5601f4d3a9864284c83cae066778fcde,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5601f4d3a9864284c83cae066778fcde,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5601f4d3a9864284c83cae066778fcde,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: -3482085882602428156, guid: 5601f4d3a9864284c83cae066778fcde,
         type: 3}
