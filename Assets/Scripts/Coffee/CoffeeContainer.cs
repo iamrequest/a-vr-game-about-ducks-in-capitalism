@@ -14,22 +14,23 @@ public class CoffeeContainer : MonoBehaviour {
     [Header("Steam")]
     public VisualEffect steamVFX;
     private int steamVFXId_spawnRateId;
+    public bool matchSteamOutputToCoffeeLevel;
     public float minSteamOutput, maxSteamOutput;
+
     [Range(0f, 1f)]
     public float currentSteamOutput;
 
     [Header("Coffee Level")]
     [Tooltip("Please make sure that the coffee is scaled to 100% when creating your gameobject")]
     public Transform coffeeTransform;
-    public float minCoffeeLevel;
+    private Vector3 coffeeScale;
+    private float minCoffeeLevel = 0f, maxCoffeeLevel;
 
     [Tooltip("Capacity of this container, in ML")]
     public float capacity, maxCapacity;
+
     [Range(0f, 1f)]
     public float currentCoffeeLevel;
-
-    private float maxCoffeeLevel;
-    private Vector3 coffeeScale;
 
     private void Start() {
         steamVFXId_spawnRateId = Shader.PropertyToID("spawnRate");
@@ -38,14 +39,17 @@ public class CoffeeContainer : MonoBehaviour {
     }
 
     private void Update() {
+        if (matchSteamOutputToCoffeeLevel) {
+            currentSteamOutput = currentCoffeeLevel;
+        }
+
         // Output steam
         float steamSpawnRate = Mathf.Lerp(minSteamOutput, maxSteamOutput, currentSteamOutput);
         steamVFX.SetFloat(steamVFXId_spawnRateId, steamSpawnRate);
     }
 
-    public void SubtractCoffee(float capacitySubtraction) {
-        // Subtract coffee
-        capacity -= capacitySubtraction;
+    public void AddCoffee(float capacitySubtraction) {
+        capacity += capacitySubtraction;
         capacity = Mathf.Clamp(capacity, 0f, maxCapacity);
         currentCoffeeLevel = capacity / maxCapacity;
 

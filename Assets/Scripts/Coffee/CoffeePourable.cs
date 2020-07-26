@@ -5,10 +5,15 @@ using UnityEngine;
 [RequireComponent(typeof(CoffeeContainer))]
 public class CoffeePourable : MonoBehaviour {
     private CoffeeContainer coffeeContainer;
+
+    [Header("Pour")]
     public ParticleSystem coffeePourVFX;
     [Range(0f, 1f)]
     public float minPour, currentPour;
+    public float maxPourDistance;
+    public LayerMask pourLayerMask;
 
+    [Header("Tilt management")]
     // This represents how much the pot is upside-down
     [Range(0f, 1f)]
     public float tiltPercentage;
@@ -46,9 +51,17 @@ public class CoffeePourable : MonoBehaviour {
             }
 
             float capacityLoss = CalculateFluidLoss();
-            coffeeContainer.SubtractCoffee(capacityLoss);
+            coffeeContainer.AddCoffee(- capacityLoss);
 
             // TODO: Raycast down to container below, fill by pourDelta
+            if (Physics.Raycast(coffeePourVFX.transform.position, Vector3.down, out RaycastHit rayHit, maxPourDistance, pourLayerMask)) {
+                CoffeeContainer container = rayHit.collider.GetComponentInParent<CoffeeContainer>();
+                if(container != null) {
+                    if (container != coffeeContainer) {
+                        container.AddCoffee(capacityLoss);
+                    }
+                }
+            }
         } else {
             coffeePourVFX.Stop();
         }
