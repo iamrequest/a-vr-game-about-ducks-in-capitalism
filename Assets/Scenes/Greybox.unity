@@ -7829,7 +7829,7 @@ MonoBehaviour:
   snapAttachEaseInCompleted: 0
   skeletonPoser: {fileID: 0}
   handFollowTransform: 1
-  highlightOnHover: 1
+  highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
 --- !u!23 &1729761824
@@ -8060,7 +8060,7 @@ MonoBehaviour:
   snapAttachEaseInCompleted: 0
   skeletonPoser: {fileID: 0}
   handFollowTransform: 1
-  highlightOnHover: 1
+  highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
 --- !u!4 &1807398747 stripped
@@ -9078,6 +9078,10 @@ PrefabInstance:
       propertyPath: attachmentFlags
       value: 44
       objectReference: {fileID: 0}
+    - target: {fileID: 357427631, guid: 08ac9429715414341a6e2f75c31b9d83, type: 3}
+      propertyPath: highlightOnHover
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1296690780, guid: 08ac9429715414341a6e2f75c31b9d83, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -9360,6 +9364,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 47801616, guid: 2e71bdd91d279ac409ac8bea80fca31c, type: 3}
+      propertyPath: highlightOnHover
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 47801618, guid: 2e71bdd91d279ac409ac8bea80fca31c, type: 3}
       propertyPath: attachmentFlags
       value: 44
@@ -9986,7 +9994,7 @@ MonoBehaviour:
   snapAttachEaseInCompleted: 0
   skeletonPoser: {fileID: 0}
   handFollowTransform: 1
-  highlightOnHover: 1
+  highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
 --- !u!65 &8697849814356992696

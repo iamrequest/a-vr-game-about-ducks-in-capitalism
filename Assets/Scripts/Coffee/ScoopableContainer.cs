@@ -9,9 +9,9 @@ public enum ScoopableContents {
     NONE, COFFEE_GROUNDS_DRY, COFFEE_GROUNDS_WET, SUGAR
 }
 public class ScoopableContainer : MonoBehaviour {
-    private Color sugarColor = new Color(190,190,190);
-    private Color dryCoffeeGroundsColor = new Color(178,124,70);
-    private Color wetCoffeeGroundsColor = new Color(137,87,5);
+    private Color sugarColor = new Color32(190,190,190, 1);
+    private Color dryCoffeeGroundsColor = new Color32(178,124,70, 1);
+    private Color wetCoffeeGroundsColor = new Color32(137,87,5, 1);
 
     private ScoopableContents m_contents;
     public ScoopableContents contents {
