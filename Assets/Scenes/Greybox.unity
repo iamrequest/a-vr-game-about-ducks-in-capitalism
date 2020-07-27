@@ -448,6 +448,38 @@ MonoBehaviour:
   totalAvailableLines: 10
   totalCharsPerLine: 10
   conversationHistory: []
+--- !u!1 &47801613 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3329576978268231922, guid: 2e71bdd91d279ac409ac8bea80fca31c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2518745084029414359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &47801614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47801613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1417e784dc372d548bb43bec3d1bab71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialContent: 0
+  contentRenderer: {fileID: 0}
+  minReleasePercentage: 0
+  capacity: 0
+  canReceive: 1
+  canGive: 0
+  canPour: 0
+  infiniteCapacity: 0
+  canReceiveSugar: 1
+  canReceiveCoffeeGrounds: 0
+  maxPourDistance: 0
+  pourLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &47801615 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2701834537529197128, guid: 2e71bdd91d279ac409ac8bea80fca31c,
@@ -1572,6 +1604,8 @@ MonoBehaviour:
   canGive: 1
   canPour: 0
   infiniteCapacity: 1
+  canReceiveSugar: 0
+  canReceiveCoffeeGrounds: 0
   maxPourDistance: 0
   pourLayerMask:
     serializedVersion: 2
@@ -6476,6 +6510,8 @@ MonoBehaviour:
   canGive: 1
   canPour: 0
   infiniteCapacity: 1
+  canReceiveSugar: 0
+  canReceiveCoffeeGrounds: 0
   maxPourDistance: 0
   pourLayerMask:
     serializedVersion: 2
@@ -7912,6 +7948,8 @@ MonoBehaviour:
   canGive: 0
   canPour: 1
   infiniteCapacity: 0
+  canReceiveSugar: 0
+  canReceiveCoffeeGrounds: 1
   maxPourDistance: 3
   pourLayerMask:
     serializedVersion: 2
@@ -8060,7 +8098,7 @@ MonoBehaviour:
   snapAttachEaseInCompleted: 0
   skeletonPoser: {fileID: 0}
   handFollowTransform: 1
-  highlightOnHover: 0
+  highlightOnHover: 1
   hideHighlight: []
   hoverPriority: 0
 --- !u!4 &1807398747 stripped
@@ -8089,6 +8127,8 @@ MonoBehaviour:
   canGive: 1
   canPour: 1
   infiniteCapacity: 0
+  canReceiveSugar: 1
+  canReceiveCoffeeGrounds: 1
   maxPourDistance: 3
   pourLayerMask:
     serializedVersion: 2

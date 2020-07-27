@@ -56,6 +56,7 @@ public class ScoopableContainer : MonoBehaviour {
     [Header("Transfer of contents")]
     public int capacity;
     public bool canReceive, canGive, canPour, infiniteCapacity;
+    public bool canReceiveSugar, canReceiveCoffeeGrounds;
     public float maxPourDistance;
     public LayerMask pourLayerMask;
 
@@ -124,6 +125,8 @@ public class ScoopableContainer : MonoBehaviour {
         if (other == this) return;
         if (!other.canReceive) return;
 
+        if (!ContainerCanReceiveContents(other)) return;
+
         // We must either have the same contents, or the same
         if (other.contents == ScoopableContents.NONE || contents == other.contents) {
             other.contents = contents;
@@ -136,6 +139,16 @@ public class ScoopableContainer : MonoBehaviour {
             contents = ScoopableContents.NONE;
         } else {
             capacity = 0;
+        }
+    }
+
+    // Check if the other container can receive this content
+    private bool ContainerCanReceiveContents(ScoopableContainer other) {
+        switch (contents) {
+            case ScoopableContents.SUGAR: return other.canReceiveSugar;
+            case ScoopableContents.COFFEE_GROUNDS_DRY: return other.canReceiveCoffeeGrounds;
+            case ScoopableContents.COFFEE_GROUNDS_WET: return false;
+            default: return true;
         }
     }
 }

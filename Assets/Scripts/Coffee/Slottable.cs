@@ -79,9 +79,9 @@ public class Slottable : MonoBehaviour {
         // If we're releasing the object from its slot (ie: first grab after being slotted)
         if (isSlotted) {
             timeSinceLastGrab = 0f;
+            rb.isKinematic = false;
         }
 
-        rb.isKinematic = false;
         isSlotted = false;
         slot.SetActive(true);
     }

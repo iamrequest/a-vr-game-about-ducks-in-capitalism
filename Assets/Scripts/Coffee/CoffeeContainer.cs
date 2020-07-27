@@ -11,6 +11,8 @@ using UnityEngine.VFX;
  *  2. The coffee mesh's pivot point is at the bottom of the mesh. By doing so, we can just scale the mesh's z value to reduce fill capacity
  */
 public class CoffeeContainer : MonoBehaviour {
+    private ScoopableContainer scoopableContainer;
+
     [Header("Steam")]
     public VisualEffect steamVFX;
     private int steamVFXId_spawnRateId;
@@ -52,6 +54,11 @@ public class CoffeeContainer : MonoBehaviour {
         capacity += capacitySubtraction;
         capacity = Mathf.Clamp(capacity, 0f, maxCapacity);
         currentCoffeeLevel = capacity / maxCapacity;
+
+        // If we're pouring out the coffee, then get rid of the sugar capacity
+        if (capacity == 0 && scoopableContainer != null) {
+            scoopableContainer.capacity = 0;
+        }
 
         UpdateCoffeeMesh();
     }
