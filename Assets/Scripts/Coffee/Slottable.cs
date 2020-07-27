@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
 
-// TODO: Slot doesn't become active again until a grab. 
-//      User can push this gameobject around via physics to remove the object from the slot (ok), but they can't re-slot until they pick up the object (not ok)
+// Post-add configuration (should probably be auto-done in Reset()):
+//  Interactable.onPickUp(): this.ReleaseFromSlot()
+//  Interactable.OnDetachFromHand(): rb.isKinematic = false
 [RequireComponent(typeof(Rigidbody))]
 public class Slottable : MonoBehaviour {
     private Rigidbody rb;
     private Interactable interactable;
+
     public GameObject slot;
-    public bool isSlotted, followSlotWhenSlotted;
+    public bool slottedOnStart, isSlotted, followSlotWhenSlotted;
     private bool isLerping;
     public float lerpDuration = 1f;
     [Tooltip("The delay between a grab, and being able to slot this object again")]
@@ -26,6 +28,15 @@ public class Slottable : MonoBehaviour {
     private void Start() {
         rb = GetComponent<Rigidbody>();
         interactable = GetComponent<Interactable>();
+        
+        if (slottedOnStart) {
+            slot.SetActive(false);
+            isSlotted = true;
+
+            transform.position = slot.transform.position;
+            transform.rotation = slot.transform.rotation;
+            CompleteSlotting();
+        }
     }
     private void Update() {
         if (timeSinceLastGrab < 999) {
@@ -79,7 +90,6 @@ public class Slottable : MonoBehaviour {
         // If we're releasing the object from its slot (ie: first grab after being slotted)
         if (isSlotted) {
             timeSinceLastGrab = 0f;
-            rb.isKinematic = false;
         }
 
         isSlotted = false;
@@ -108,12 +118,15 @@ public class Slottable : MonoBehaviour {
             yield return null;
         }
 
-        // Reset RB
-        rb.isKinematic = true;
-        rb.velocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
+        CompleteSlotting();
 
         isLerping = false;
         yield break;
+    }
+
+    private void CompleteSlotting() {
+        rb.isKinematic = true;
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
     }
 }

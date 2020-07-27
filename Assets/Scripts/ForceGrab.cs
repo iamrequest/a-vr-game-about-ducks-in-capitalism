@@ -47,6 +47,11 @@ public class ForceGrab : MonoBehaviour {
     void Update() { }
 
     public void DoForceGrab(SteamVR_Action_Boolean triggeringAction, SteamVR_Input_Sources controller) {
+        // Don't force grab if we're hovering something we can pick up
+        if (sourceHand.hoveringInteractable != null) {
+            return;
+        }
+
         if(sourceHand.currentAttachedObject == null) {
             lineRenderer.SetPosition(0, sourceHand.transform.position);
             lineRenderer.SetPosition(1, sourceHand.transform.position + sourceHand.transform.forward * forceGrabLength);
@@ -77,11 +82,6 @@ public class ForceGrab : MonoBehaviour {
 
     private IEnumerator DoLerp(Throwable target) {
         float currentLerpTime = 0f;
-
-        // Release from the hand, if the player is holding onto the object
-        //if (hand != null) {
-        //    hand.DetachObject(gameObject);
-        //}
 
         Vector3 originalPosition = target.transform.position;
         Quaternion originalRotation = target.transform.rotation;
