@@ -48,21 +48,25 @@ public class ForceGrab : MonoBehaviour {
 
     public void DoForceGrab(SteamVR_Action_Boolean triggeringAction, SteamVR_Input_Sources controller) {
         if(sourceHand.currentAttachedObject == null) {
-            // TODO: Animate
             lineRenderer.SetPosition(0, sourceHand.transform.position);
             lineRenderer.SetPosition(1, sourceHand.transform.position + sourceHand.transform.forward * forceGrabLength);
+            animator.SetTrigger("pulseLineRenderer");
 
             RaycastHit raycastHit;
 
             // See if we collide with a grabbable object (ie: on layer forceGrabLayer) 
-            if(Physics.Raycast(sourceHand.transform.position, 
+            if (Physics.Raycast(sourceHand.transform.position,
                                sourceHand.transform.forward, out raycastHit, forceGrabLength, layerMask)) {
-                if(!sourceHand.currentAttachedObjectInfo.HasValue) {
+                if (!sourceHand.currentAttachedObjectInfo.HasValue) {
                     lineRenderer.SetPosition(1, raycastHit.point);
-                    animator.SetTrigger("pulseLineRenderer");
 
                     Throwable target = raycastHit.collider.gameObject.GetComponentInParent<Throwable>();
-                    if(target != null) {
+                    if (target != null) {
+                        // Attempt to remove from slot
+                        if (target.TryGetComponent(out Slottable slottable)) {
+                            slottable.ReleaseFromSlot();
+                        }
+
                         isForceGrabActive = true;
                         StartCoroutine(DoLerp(target));
                     }
@@ -80,7 +84,7 @@ public class ForceGrab : MonoBehaviour {
         //}
 
         Vector3 originalPosition = target.transform.position;
-        Quaternion originalRotation = transform.rotation;
+        Quaternion originalRotation = target.transform.rotation;
 
         while (currentLerpTime < lerpDuration) {
             // Quit early if the player lets go

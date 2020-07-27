@@ -28,14 +28,6 @@ public class ConversationLog : MonoBehaviour {
         textUI.text = "";
     }
 
-    private void Update() {
-        if (Input.GetKeyUp(KeyCode.D)) {
-            Sentence s = new Sentence();
-            s.text = Time.time.ToString();
-            AddSentence(s);
-        }
-    }
-
     public void AddSentence(Sentence sentence) {
         conversationHistory[lastSentence] = sentence;
         lastSentence = (lastSentence + 1) % totalAvailableLines;

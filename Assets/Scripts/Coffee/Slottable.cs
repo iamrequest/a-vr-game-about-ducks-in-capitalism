@@ -19,6 +19,7 @@ public class Slottable : MonoBehaviour {
 
     [Header("Release")]
     public bool releaseWhenInverted;
+    [Tooltip("How far the container has to tilt to pour its contents out. 0 represents completely upside-down")]
     [Range(0f, 1f)]
     public float minReleasePercentage;
 
@@ -80,6 +81,7 @@ public class Slottable : MonoBehaviour {
             timeSinceLastGrab = 0f;
         }
 
+        rb.isKinematic = false;
         isSlotted = false;
         slot.SetActive(true);
     }
@@ -107,7 +109,7 @@ public class Slottable : MonoBehaviour {
         }
 
         // Reset RB
-        rb.isKinematic = false;
+        rb.isKinematic = true;
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
 
