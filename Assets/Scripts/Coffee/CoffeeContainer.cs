@@ -34,20 +34,29 @@ public class CoffeeContainer : MonoBehaviour {
     [Range(0f, 1f)]
     public float currentCoffeeLevel;
 
+    [Header("Cream")]
+    [Range(0f, 1f)]
+    public float creamPercentage;
+    //public bool canReceiveCream;
+    public Color coffeeColor, creamColor;
+
     private void Start() {
+        scoopableContainer = GetComponent<ScoopableContainer>();
         steamVFXId_spawnRateId = Shader.PropertyToID("spawnRate");
         coffeeScale = coffeeTransform.localScale;
         maxCoffeeLevel = coffeeTransform.localScale.z;
     }
 
     private void Update() {
-        if (matchSteamOutputToCoffeeLevel) {
-            currentSteamOutput = currentCoffeeLevel;
-        }
+        if (steamVFX != null) {
+            if (matchSteamOutputToCoffeeLevel) {
+                currentSteamOutput = currentCoffeeLevel;
+            }
 
-        // Output steam
-        float steamSpawnRate = Mathf.Lerp(minSteamOutput, maxSteamOutput, currentSteamOutput);
-        steamVFX.SetFloat(steamVFXId_spawnRateId, steamSpawnRate);
+            // Output steam
+            float steamSpawnRate = Mathf.Lerp(minSteamOutput, maxSteamOutput, currentSteamOutput);
+            steamVFX.SetFloat(steamVFXId_spawnRateId, steamSpawnRate);
+        }
     }
 
     public void AddCoffee(float capacitySubtraction) {
@@ -57,7 +66,8 @@ public class CoffeeContainer : MonoBehaviour {
 
         // If we're pouring out the coffee, then get rid of the sugar capacity
         if (capacity == 0 && scoopableContainer != null) {
-            scoopableContainer.capacity = 0;
+            ClearSugar();
+            creamPercentage = 0f;
         }
 
         UpdateCoffeeMesh();
@@ -74,6 +84,29 @@ public class CoffeeContainer : MonoBehaviour {
         // Scale coffee liquids
         coffeeScale.z = Mathf.Lerp(minCoffeeLevel, maxCoffeeLevel, currentCoffeeLevel);
         coffeeTransform.localScale = coffeeScale;
+    }
+
+    // Do this before updating our capacity
+    //  New fluid: The capacity of fluids being transfered
+    public void UpdateCreamPercentage(float otherCreamPercentage, float newFluids) {
+        // Clamp the new fluid amount to only what will be added this frame
+        //  This solves an issue where a 100% full container can still have its cream amount updated
+        // We clamp capacity to maxCapacity, so we (probably) don't have to worry about float rounding errors
+        float availableCapacity = maxCapacity - capacity;
+        newFluids = Mathf.Clamp(newFluids, 0f, availableCapacity);
+
+        float currentCreamCapacity = creamPercentage * capacity;
+        float newCreamCapacity = otherCreamPercentage * newFluids;
+
+        creamPercentage = (currentCreamCapacity + newCreamCapacity) / (capacity + newFluids);
+        creamPercentage = Mathf.Clamp(creamPercentage, 0f, 1f);
+    }
+
+    public void ClearSugar() {
+        // Not all coffee containers can recieve sugar/grounds (eg: coffee pot)
+        if (scoopableContainer != null) {
+            scoopableContainer.capacity = 0;
+        }
     }
 }
 

@@ -151,4 +151,9 @@ public class ScoopableContainer : MonoBehaviour {
             default: return true;
         }
     }
+
+    // Required for Slottable.onSlot UnityEvent
+    public void ClearContents() {
+        contents = ScoopableContents.NONE;
+    }
 }

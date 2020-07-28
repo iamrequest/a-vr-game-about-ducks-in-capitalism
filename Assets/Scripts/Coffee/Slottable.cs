@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
+using UnityEngine.Events;
 
 // Post-add configuration (should probably be auto-done in Reset()):
 //  Interactable.onPickUp(): this.ReleaseFromSlot()
@@ -12,6 +13,7 @@ public class Slottable : MonoBehaviour {
     private Interactable interactable;
 
     public GameObject slot;
+    public UnityEvent onSlotEvent;
     public bool slottedOnStart, isSlotted, followSlotWhenSlotted;
     private bool isLerping;
     public float lerpDuration = 1f;
@@ -128,5 +130,7 @@ public class Slottable : MonoBehaviour {
         rb.isKinematic = true;
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
+
+        onSlotEvent.Invoke();
     }
 }

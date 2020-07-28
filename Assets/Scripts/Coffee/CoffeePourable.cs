@@ -18,6 +18,7 @@ public class CoffeePourable : MonoBehaviour {
     [Range(0f, 1f)]
     public float tiltPercentage;
     public float capacityLossMultiplier;
+    public bool infiniteCapacity;
 
     [Range(0f, 1f)]
     [Tooltip("How far the container has to tilt to enter drain mode")]
@@ -39,31 +40,45 @@ public class CoffeePourable : MonoBehaviour {
         //  2. How far the player is tilting the pot upside-down 
         tiltPercentage = GetTiltPercentage();
 
+        // Calculate how much we're tilting the container
         if (tiltPercentage > tiltPercentageToDrain) {
             currentPour = drainSpeed;
         } else {
             currentPour = coffeeContainer.currentCoffeeLevel * tiltPercentage;
         }
 
+        // If we're tilting the container enough to trigger a pour...
         if (currentPour > minPour && coffeeContainer.capacity > 0) {
+            // If the animation isn't already playing, then do so
             if (!coffeePourVFX.isPlaying) {
                 coffeePourVFX.Play();
             }
 
+            // Calculate how much fluid is being lost, and remove it from the source container
             float capacityLoss = CalculateFluidLoss();
-            coffeeContainer.AddCoffee(- capacityLoss);
+            if (!infiniteCapacity) {
+                coffeeContainer.AddCoffee(- capacityLoss);
+            }
 
-            // TODO: Raycast down to container below, fill by pourDelta
+            // Raycast straight down from the VFX spawn position, to find a container
             if (Physics.Raycast(coffeePourVFX.transform.position, Vector3.down, out RaycastHit rayHit, maxPourDistance, pourLayerMask)) {
-                CoffeeContainer container = rayHit.collider.GetComponentInParent<CoffeeContainer>();
-                if(container != null) {
-                    if (container != coffeeContainer) {
-                        container.AddCoffee(capacityLoss);
+                CoffeeContainer otherContainer = rayHit.collider.GetComponentInParent<CoffeeContainer>();
+                if(otherContainer != null) {
+                    // If we found a otherContainer (that isn't the source otherContainer), then transfer contents to it
+                    if (otherContainer != coffeeContainer) {
+                        // Calculate the new percentage of cream going to this otherContainer
+                        otherContainer.UpdateCreamPercentage(coffeeContainer.creamPercentage, capacityLoss);
+                        otherContainer.AddCoffee(capacityLoss);
                     }
                 }
             }
         } else {
             coffeePourVFX.Stop();
+
+            // 0 capacity, and we're pouring. Clear the sugar amount
+            // We usually do this in coffeeContainer.AddCoffee(), but since the capacity is 0, we need to explicitly check it again
+            //  Ex: Mug has 0 fluids, and 3 sugar. Inverting the mug needs to yeet those 3 sugars.
+            coffeeContainer.ClearSugar();
         }
     }
 
@@ -77,6 +92,7 @@ public class CoffeePourable : MonoBehaviour {
     }
 
     // Calculate how much of this container is being poured this frame
+    //  This will range from [0f, 1f].
     private float CalculateFluidLoss() {
         // -- Calculate how much is being poured
         // How much more are we pouring than the minimum amount?
