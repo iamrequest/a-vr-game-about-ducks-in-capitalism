@@ -273,8 +273,6 @@ MonoBehaviour:
   maxCapacity: 1000
   currentCoffeeLevel: 1
   creamPercentage: 0
-  coffeeColor: {r: 0, g: 0, b: 0, a: 0}
-  creamColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1640705560456673833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4087,7 +4085,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 2049
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5

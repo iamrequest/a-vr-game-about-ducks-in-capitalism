@@ -25,6 +25,7 @@ public class CoffeeContainer : MonoBehaviour {
     [Header("Coffee Level")]
     [Tooltip("Please make sure that the coffee is scaled to 100% when creating your gameobject")]
     public Transform coffeeTransform;
+    private Renderer coffeeRenderer;
     private Vector3 coffeeScale;
     private float minCoffeeLevel = 0f, maxCoffeeLevel;
 
@@ -37,11 +38,12 @@ public class CoffeeContainer : MonoBehaviour {
     [Header("Cream")]
     [Range(0f, 1f)]
     public float creamPercentage;
-    //public bool canReceiveCream;
-    public Color coffeeColor, creamColor;
+    public Gradient color;
 
     private void Start() {
         scoopableContainer = GetComponent<ScoopableContainer>();
+        coffeeRenderer = coffeeTransform.GetComponent<Renderer>();
+
         steamVFXId_spawnRateId = Shader.PropertyToID("spawnRate");
         coffeeScale = coffeeTransform.localScale;
         maxCoffeeLevel = coffeeTransform.localScale.z;
@@ -57,6 +59,8 @@ public class CoffeeContainer : MonoBehaviour {
             float steamSpawnRate = Mathf.Lerp(minSteamOutput, maxSteamOutput, currentSteamOutput);
             steamVFX.SetFloat(steamVFXId_spawnRateId, steamSpawnRate);
         }
+
+        UpdateCoffeeMesh();
     }
 
     public void AddCoffee(float capacitySubtraction) {
@@ -84,6 +88,9 @@ public class CoffeeContainer : MonoBehaviour {
         // Scale coffee liquids
         coffeeScale.z = Mathf.Lerp(minCoffeeLevel, maxCoffeeLevel, currentCoffeeLevel);
         coffeeTransform.localScale = coffeeScale;
+
+        // Update coffee color
+        coffeeRenderer.material.color = color.Evaluate(creamPercentage);
     }
 
     // Do this before updating our capacity
@@ -107,6 +114,11 @@ public class CoffeeContainer : MonoBehaviour {
         if (scoopableContainer != null) {
             scoopableContainer.capacity = 0;
         }
+    }
+
+    // Used for the coffee pour particle system. It should match the coffee's tone
+    public Color GetCoffeeColor() {
+        return coffeeRenderer.material.color;
     }
 }
 

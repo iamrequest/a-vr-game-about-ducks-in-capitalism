@@ -8,6 +8,7 @@ public class CoffeePourable : MonoBehaviour {
 
     [Header("Pour")]
     public ParticleSystem coffeePourVFX;
+    private ParticleSystem.MainModule coffeePourVFXSettings;
     [Range(0f, 1f)]
     public float minPour, currentPour;
     public float maxPourDistance;
@@ -30,9 +31,13 @@ public class CoffeePourable : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         coffeeContainer = GetComponent<CoffeeContainer>();
+        coffeePourVFXSettings = coffeePourVFX.main;
     }
 
     void FixedUpdate() {
+        // Update the color of the pour particle system
+        coffeePourVFXSettings.startColor = coffeeContainer.GetCoffeeColor();
+
         // -- Calculate the pour percentage
         // The amount of coffee that pours is proportional to:
         //  1. The amount of coffee in the pot
@@ -99,7 +104,6 @@ public class CoffeePourable : MonoBehaviour {
 
         // Calculate how much fluid is being lost, and remove it from the source container
         float capacityLoss = CalculateFluidLoss();
-        Debug.Log("Capacity loss: " + capacityLoss);
         if (!infiniteCapacity) {
             coffeeContainer.AddCoffee(- capacityLoss);
         }
