@@ -67,6 +67,7 @@ public class Slottable : MonoBehaviour {
                 // Next, we'll remap it to [0, 1], where 0 means completely downwards
                 float upPercentage = (upSimilarity * .5f) + 0.5f;
                 if (upPercentage < minReleasePercentage) {
+                    rb.isKinematic = false;
                     ReleaseFromSlot();
                 }
             }
