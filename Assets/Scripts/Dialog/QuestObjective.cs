@@ -2,30 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+
+public enum QuestObjectiveState {
+    PRE_ORDER, POST_ORDER, WAITING, COFFEE_RECEIVED, ALL_DIALOG_COMPLETE
+}
 public class QuestObjective : MonoBehaviour {
-    public string title;
-    public string description;
+    [Header("Coffee order")]
+    [Range(0f, 1f)]
+    public float minCapacityPercentage = 0.8f;
+    [Range(0f, 1f)]
+    public float minCream, maxCream;
+    public int requiredSugar;
 
-    public bool isComplete;
-    public bool initialDialogComplete;
-    public bool finalDialogComplete;
+    public bool isCoffeeOrderValid;
 
-    public UnityEvent onObjectiveStart, onObjectiveComplete;
+    [Header("Dialog")]
+    public UnityEvent onOrderReceived, onOrderServed, onLastDialogComplete;
 
-    // initialDialog: Dialog that plays once before the player gets the objective
-    // repeatDialog: Dialog that loops until the player completes the objective
-    public Conversation initialDialog;
-    public Conversation repeatDialog;
-    public Conversation onCompleteDialog;
+    public QuestObjectiveState state { get; private set; }
 
-    protected virtual void Start() {
-        //isComplete = false;
-        //initialDialogComplete = false;
-        finalDialogComplete = false;
-    }
+    // preOrderDialog: The order is created after this conversation
+    // postOrderDialog: Idle chatting that happens while waiting for the order
+    // waitingDialog: Dialog that loops after postOrderDialog is complete. Finishes once the order is served
+    // postOrderDialog: Dialog that happens after getting the order
+    public Conversation preOrderDialog;
+    public Conversation postOrderDialog;
+    public Conversation waitingDialog;
+    public Conversation evaluateCoffeeDialog; // Initial dialog for coffee evaluation
+    public Conversation badCoffeeDialog; // Customer isn't happy with the coffee supplied
+    public Conversation orderReceivedDialog;
 
-    // Called via unityevent
-    public virtual void CompleteObjective() {
-        isComplete = true;
+    public void AdvanceDialogState() {
+        if (state != QuestObjectiveState.ALL_DIALOG_COMPLETE) {
+            state++;
+        }
     }
 }

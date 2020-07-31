@@ -109,6 +109,14 @@ public class CoffeeContainer : MonoBehaviour {
         creamPercentage = Mathf.Clamp(creamPercentage, 0f, 1f);
     }
 
+    public int GetSugarAmount() {
+        if (scoopableContainer != null) {
+            return scoopableContainer.capacity;
+        } else {
+            return -1;
+        }
+    }
+
     public void ClearSugar() {
         // Not all coffee containers can recieve sugar/grounds (eg: coffee pot)
         if (scoopableContainer != null) {
