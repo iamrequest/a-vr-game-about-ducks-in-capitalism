@@ -1505,7 +1505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fad8f70141c1a240b373ddc84cc1069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minCapacity: 0.8
+  minCapacityPercentage: 0.8
   minCream: 0
   maxCream: 0
   requiredSugar: 0
