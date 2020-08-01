@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 // Slightly better spaghetti that maintains a list of coffee orders
 //  User has a list of objectives. For each objective, there's start/finish dialog that must be played to advance.
@@ -10,9 +11,12 @@ public class QuestDialog : BaseDialog {
     public int activeObjectiveIndex;
     public Slottable coffeeMug;
     private CoffeeContainer coffeeContainer;
+    private Animator orderSlipAnimator;
+    public TextMeshProUGUI orderSlipText;
 
     private void Start() {
         coffeeContainer = coffeeMug.GetComponent<CoffeeContainer>();
+        orderSlipAnimator = orderSlipText.GetComponentInParent<Animator>();
     }
 
     public override void StartDialog() {
@@ -65,7 +69,7 @@ public class QuestDialog : BaseDialog {
                     dialogManager.StartDialog(this, objectives[activeObjectiveIndex].waitingDialog, true);
                     break;
 
-                } 
+                }
 
                 // Initial evaluation dialog
                 dialogManager.StartDialog(this, objectives[activeObjectiveIndex].evaluateCoffeeDialog, true);
@@ -98,6 +102,8 @@ public class QuestDialog : BaseDialog {
         switch (objectives[activeObjectiveIndex].state) {
             // Start the post-order dialog immediately
             case QuestObjectiveState.PRE_ORDER:
+                CreateOrderSlip();
+
                 objectives[activeObjectiveIndex].AdvanceDialogState();
                 StartDialog();
                 break;
@@ -114,6 +120,8 @@ public class QuestDialog : BaseDialog {
 
             // Don't start dialog immediately. Invoke a unity event
             case QuestObjectiveState.COFFEE_RECEIVED:
+                DestroyOrderSlip();
+
                 objectives[activeObjectiveIndex].AdvanceDialogState();
                 objectives[activeObjectiveIndex].onLastDialogComplete.Invoke();
                 break;
@@ -125,11 +133,11 @@ public class QuestDialog : BaseDialog {
     }
 
 
-    public void EvaluateCoffee () {
+    public void EvaluateCoffee() {
         if (objectives[activeObjectiveIndex] == null) {
             Debug.LogError("Unable to evaluate coffee: null objective");
             return;
-        } 
+        }
 
         objectives[activeObjectiveIndex].isCoffeeOrderValid = false;
 
@@ -154,5 +162,25 @@ public class QuestDialog : BaseDialog {
         }
 
         objectives[activeObjectiveIndex].isCoffeeOrderValid = true;
+    }
+
+    private void CreateOrderSlip() {
+        orderSlipAnimator.SetBool("isOrderSlipActive", true);
+
+        if (objectives[activeObjectiveIndex].minCream == objectives[activeObjectiveIndex].maxCream) {
+            // Exact cream percentage
+            orderSlipText.text = "Coffee\n- Sugar: " + objectives[activeObjectiveIndex].requiredSugar +
+                "\n- Cream: " + objectives[activeObjectiveIndex].minCream + "%";
+        } else {
+            // Range of cream percentages
+            orderSlipText.text = "Coffee\n- Sugar: " + objectives[activeObjectiveIndex].requiredSugar +
+                "\n- Cream:\n  " +
+                objectives[activeObjectiveIndex].minCream + "% - " +
+                objectives[activeObjectiveIndex].maxCream + "%";
+        }
+    }
+
+    private void DestroyOrderSlip() {
+        orderSlipAnimator.SetBool("isOrderSlipActive", false);
     }
 }

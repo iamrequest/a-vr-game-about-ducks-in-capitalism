@@ -71,7 +71,7 @@ public class CoffeeBrewer : MonoBehaviour {
             return "Error: Missing coffee grounds";
         }
         if (coffeeFilterContents.contents == ScoopableContents.COFFEE_GROUNDS_WET) {
-            return "Error: Please dispose of used coffee grounds";
+            return "Error: Please dispose of old coffee grounds";
         }
 
         isBrewingPossible = true;
