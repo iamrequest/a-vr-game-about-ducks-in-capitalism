@@ -13,8 +13,8 @@ public class LightManager : MonoBehaviour {
 
         foreach (Material m in materials) {
             // TODO: Cache this
-            if (m.HasProperty("LightPosition")) {
-                m.SetVector("LightPosition", lightPos);
+            if (m.HasProperty("lightPosition")) {
+                m.SetVector("lightPosition", lightPos);
             } else {
                 Debug.LogError("Missing LightPosition property on this material: " + m.name);
             }
