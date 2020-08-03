@@ -475,6 +475,18 @@ MonoBehaviour:
     actionPath: /actions/default/in/SmoothLocomotion
     needsReinit: 0
   gravity: 1
+--- !u!114 &8788444504514462332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9143238487028376238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f0badb3e9d8e7345a8493abcbd46cc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2105911518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -531,7 +543,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Player Variant
       objectReference: {fileID: 0}
     - target: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_Layer
