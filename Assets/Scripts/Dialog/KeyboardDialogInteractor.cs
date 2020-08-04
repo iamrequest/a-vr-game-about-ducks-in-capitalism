@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class KeyboardDialogInteractor : MonoBehaviour {
-    public QuestDialog exampleDialog;
+    public DialogDelegator exampleDialog;
     public DialogManager dialogManager;
 
     // Start is called before the first frame update
@@ -26,8 +26,5 @@ public class KeyboardDialogInteractor : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.B)) {
-            exampleDialog.objectives[exampleDialog.activeObjectiveIndex].isCoffeeOrderValid = true;
-        }
     }
 }

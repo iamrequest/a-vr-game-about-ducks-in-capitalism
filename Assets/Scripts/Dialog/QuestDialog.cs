@@ -132,6 +132,11 @@ public class QuestDialog : BaseDialog {
         return activeObjectiveIndex == objectives.Count - 1;
     }
 
+    public bool IsComplete() {
+        return activeObjectiveIndex == objectives.Count - 1 && 
+            objectives[activeObjectiveIndex].state == QuestObjectiveState.ALL_DIALOG_COMPLETE;
+    }
+
 
     public void EvaluateCoffee() {
         if (objectives[activeObjectiveIndex] == null) {
