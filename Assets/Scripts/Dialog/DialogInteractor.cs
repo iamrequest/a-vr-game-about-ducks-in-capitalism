@@ -14,34 +14,35 @@ public class DialogInteractor : MonoBehaviour {
     private Hand hand;
 
     // -- Dialog management
-    public DialogManager activeDialogManager;
-    private DialogInteractor otherDialogInteractor;
+    public DialogDelegator dialogDelegator;
+    public DialogManager dialogManager;
 
     // Start is called before the first frame update
     void Start() {
         hand = GetComponentInParent<Hand>();
-        otherDialogInteractor = hand.otherHand.GetComponentInChildren<DialogInteractor>();
 
         skipSentenceAction.AddOnStateUpListener(SkipSentence, hand.handType);
         dialogInteractAction.AddOnStateUpListener(DialogInteract, hand.handType);
     }
 
     private void SkipSentence(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource) {
-        if (activeDialogManager != null) {
-            otherDialogInteractor.activeDialogManager = activeDialogManager;
-            activeDialogManager.SkipCurrentSentence();
+        if (dialogManager != null) {
+            dialogManager.SkipCurrentSentence();
+        } else {
+            Debug.LogError("No dialog manager assigned!");
         }
     }
 
     private void DialogInteract(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource) {
         // -- Next dialog line
-        if (activeDialogManager != null) {
-            otherDialogInteractor.activeDialogManager = activeDialogManager;
-
-            // Start dialog
-            if (!activeDialogManager.isDialogActive) {
-                activeDialogManager.DisplayNextSentence();
+        if (dialogDelegator != null) {
+            if (dialogManager.isDialogActive) {
+                dialogManager.DisplayNextSentence();
+            } else {
+                dialogDelegator.StartDialog();
             }
+        } else {
+            Debug.LogError("No dialog delegate assigned!");
         }
     }
 }
