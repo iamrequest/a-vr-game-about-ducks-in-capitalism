@@ -5,7 +5,7 @@ using Valve.VR.InteractionSystem;
 
 public enum DialogSpeaker {
    // TODO: Change this once speakers are defined
-   Me, Maid
+   Me, Suzie, Sam
 }
 public enum LookatTargets {
    NoChange, Player, Mug, Down, Up, Bonsai
@@ -28,7 +28,8 @@ public class SpeakerManager : MonoBehaviour {
     public Sprite playerTextbox;
 
     [Header("Speakers")]
-    public DuckNPC testDuck;
+    public DuckNPC workDuck;
+    public DuckNPC artDuck;
 
     [Header("Lookat Targets")]
     public Transform lookatMugTransform;
@@ -60,7 +61,8 @@ public class SpeakerManager : MonoBehaviour {
     public DuckNPC GetNPCSpeaker(DialogSpeaker speaker) {
         switch(speaker) {
             // TODO: Change this once speakers are defined
-            case DialogSpeaker.Maid: return testDuck;
+            case DialogSpeaker.Suzie: return workDuck;
+            case DialogSpeaker.Sam: return workDuck;
             default: return null;
         }
     }
