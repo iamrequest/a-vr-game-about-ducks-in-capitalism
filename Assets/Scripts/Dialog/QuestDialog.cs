@@ -14,12 +14,22 @@ public class QuestDialog : BaseDialog {
     private Animator orderSlipAnimator;
     public TextMeshProUGUI orderSlipText;
 
+    [Header("Setup/teardown")]
+    public UnityEvent onActStart;
+    public UnityEvent onActEnd;
+    public float dialogStartDelay;
+    private bool isActInitialized;
+
     private void Start() {
         coffeeContainer = coffeeMug.GetComponent<CoffeeContainer>();
         orderSlipAnimator = orderSlipText.GetComponentInParent<Animator>();
     }
 
     public override void StartDialog() {
+        if (!isActInitialized) {
+            return;
+        }
+
         // No quests exist
         if (objectives.Count == 0) {
             Debug.Log("Missing objective!");
@@ -53,7 +63,6 @@ public class QuestDialog : BaseDialog {
 
         // -- Quest is in progress
         // TODO: Post order dialog not triggering automatically
-        // TODO: Evaluate coffee
         switch (objectives[activeObjectiveIndex].state) {
             case QuestObjectiveState.PRE_ORDER:
                 dialogManager.StartDialog(this, objectives[activeObjectiveIndex].preOrderDialog, true);
@@ -118,12 +127,16 @@ public class QuestDialog : BaseDialog {
             case QuestObjectiveState.WAITING:
                 break;
 
-            // Don't start dialog immediately. Invoke a unity event
+            // Final dialog complete. 
             case QuestObjectiveState.COFFEE_RECEIVED:
                 DestroyOrderSlip();
 
                 objectives[activeObjectiveIndex].AdvanceDialogState();
                 objectives[activeObjectiveIndex].onLastDialogComplete.Invoke();
+
+                if (IsFinalObjective()) {
+                    GetComponentInParent<DialogDelegator>().StartNextAct();
+                }
                 break;
         }
     }
@@ -187,5 +200,21 @@ public class QuestDialog : BaseDialog {
 
     private void DestroyOrderSlip() {
         orderSlipAnimator.SetBool("isOrderSlipActive", false);
+    }
+
+    public IEnumerator StartActAfterInitDelay() {
+        // Stop early if we're not actually at the beginning of this act
+        if (activeObjectiveIndex != 0) {
+            Debug.LogError("Attempted to start dialog after delay, but we're not on the first objective of the quest");
+            yield break;
+        }
+
+        Debug.Log("Starting dialog after " + dialogStartDelay + " seconds...");
+        yield return new WaitForSeconds(dialogStartDelay);
+        Debug.Log("Waited for delay - starting dialog.");
+
+        // Begin the initial dialog
+        isActInitialized = true;
+        StartDialog();
     }
 }

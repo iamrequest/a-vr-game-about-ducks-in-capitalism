@@ -122,6 +122,117 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &225578
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 225580}
+  - component: {fileID: 225579}
+  m_Layer: 0
+  m_Name: Order 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &225579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fad8f70141c1a240b373ddc84cc1069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minCapacityPercentage: 0.8
+  minCream: 0
+  maxCream: 0
+  requiredSugar: 0
+  isCoffeeOrderValid: 0
+  onOrderReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  onOrderServed:
+    m_PersistentCalls:
+      m_Calls: []
+  onLastDialogComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  preOrderDialog:
+    sentences:
+    - currentSpeaker: 2
+      lookatTarget: 1
+      text: Howdy, sam here
+    - currentSpeaker: 2
+      lookatTarget: 0
+      text: Can I get a coffee?
+    - currentSpeaker: 2
+      lookatTarget: 0
+      text: Black as a crisp summer morning pls
+    - currentSpeaker: 0
+      lookatTarget: 0
+      text: Coming right up. Pre-order dialog complete
+  postOrderDialog:
+    sentences:
+    - currentSpeaker: 1
+      lookatTarget: 0
+      text: 
+    - currentSpeaker: 0
+      lookatTarget: 0
+      text: So, what brings you?
+    - currentSpeaker: 1
+      lookatTarget: 0
+      text: Nothing special. Post order chat completge.
+  waitingDialog:
+    sentences:
+    - currentSpeaker: 1
+      lookatTarget: 5
+      text: Looping dialog
+    - currentSpeaker: 0
+      lookatTarget: 0
+      text: Looooop
+    - currentSpeaker: 1
+      lookatTarget: 1
+      text: 
+  evaluateCoffeeDialog:
+    sentences: []
+  badCoffeeDialog:
+    sentences:
+    - currentSpeaker: 0
+      lookatTarget: 0
+      text: Here's your coffee, nerd
+    - currentSpeaker: 1
+      lookatTarget: 1
+      text: wtf this is literal garbage
+  orderReceivedDialog:
+    sentences:
+    - currentSpeaker: 0
+      lookatTarget: 0
+      text: Here's your coffee bb
+    - currentSpeaker: 1
+      lookatTarget: 0
+      text: ur a saint
+--- !u!4 &225580
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225578}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 356095059}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6448207
 GameObject:
   m_ObjectHideFlags: 0
@@ -1707,6 +1818,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 355480291}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &356095057
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 356095059}
+  - component: {fileID: 356095058}
+  m_Layer: 0
+  m_Name: 'Act 1-2, art duck '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &356095058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356095057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6853c685c483dd94a9346f2079701de5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogManager: {fileID: 731728408}
+  objectives:
+  - {fileID: 225579}
+  activeObjectiveIndex: 0
+  coffeeMug: {fileID: 1492703560}
+  orderSlipText: {fileID: 270383527}
+  onActStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onActEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogStartDelay: 1
+--- !u!4 &356095059
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356095057}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 225580}
+  m_Father: {fileID: 486781050}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &363773283
 GameObject:
   m_ObjectHideFlags: 0
@@ -2145,6 +2313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acts:
   - {fileID: 1609143168}
+  - {fileID: 356095058}
   activeActIndex: 0
 --- !u!114 &486781048
 MonoBehaviour:
@@ -2200,6 +2369,7 @@ Transform:
   - {fileID: 2005712239}
   - {fileID: 594719332}
   - {fileID: 1609143169}
+  - {fileID: 356095059}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4053,8 +4223,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836901128}
-  m_LocalRotation: {x: -0, y: -0.8525032, z: -0, w: 0.52272207}
-  m_LocalPosition: {x: 0, y: 0, z: -1.089}
+  m_LocalRotation: {x: -0.06822903, y: -0.84520984, z: -0.111274205, w: 0.51825017}
+  m_LocalPosition: {x: 0, y: 0, z: -0.19}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 826084030}
@@ -4062,10 +4232,10 @@ RectTransform:
   - {fileID: 1656709847}
   m_Father: {fileID: 486781050}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -116.97001, z: 0}
+  m_LocalEulerAnglesHint: {x: -15.000001, y: -116.97001, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1.918, y: 1.973}
+  m_AnchoredPosition: {x: -3.052, y: 2.275}
   m_SizeDelta: {x: 50, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &866293621
@@ -6019,6 +6189,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4413743071022073735, guid: 44a5ca453b5209349b7a8eb2f43b815a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413743071022073735, guid: 44a5ca453b5209349b7a8eb2f43b815a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4413743071887519741, guid: 44a5ca453b5209349b7a8eb2f43b815a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6605,85 +6785,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 363773284}
     m_Modifications:
-    - target: {fileID: 47801618, guid: 2e71bdd91d279ac409ac8bea80fca31c, type: 3}
-      propertyPath: onPickUp.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 47801618, guid: 2e71bdd91d279ac409ac8bea80fca31c, type: 3}
-      propertyPath: onDetachFromHand.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 47801618, guid: 2e71bdd91d279ac409ac8bea80fca31c, type: 3}
-      propertyPath: onPickUp.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 47801618, guid: 2e71bdd91d279ac409ac8bea80fca31c, type: 3}
-      propertyPath: onPickUp.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 47801618, guid: 2e71bdd91d279ac409ac8bea80fca31c, type: 3}
-      propertyPath: onPickUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1492703560}
-    - target: {fileID: 47801618, guid: 2e71bdd91d279ac409ac8bea80fca31c, type: 3}
-      propertyPath: onPickUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ReleaseFromSlot
-      objectReference: {fileID: 0}
-    - target: {fileID: 47801618, guid: 2e71bdd91d279ac409ac8bea80fca31c, type: 3}
-      propertyPath: onPickUp.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 47801618, guid: 2e71bdd91d279ac409ac8bea80fca31c, type: 3}
-      propertyPath: onDetachFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 47801618, guid: 2e71bdd91d279ac409ac8bea80fca31c, type: 3}
-      propertyPath: onDetachFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 47801618, guid: 2e71bdd91d279ac409ac8bea80fca31c, type: 3}
-      propertyPath: onDetachFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2082909809}
-    - target: {fileID: 47801618, guid: 2e71bdd91d279ac409ac8bea80fca31c, type: 3}
-      propertyPath: onDetachFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_isKinematic
-      objectReference: {fileID: 0}
-    - target: {fileID: 47801618, guid: 2e71bdd91d279ac409ac8bea80fca31c, type: 3}
-      propertyPath: onDetachFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 145198711, guid: 2e71bdd91d279ac409ac8bea80fca31c, type: 3}
-      propertyPath: currentCoffeeLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 145198711, guid: 2e71bdd91d279ac409ac8bea80fca31c, type: 3}
-      propertyPath: capacity
-      value: 350
-      objectReference: {fileID: 0}
     - target: {fileID: 1459608511, guid: 2e71bdd91d279ac409ac8bea80fca31c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1598548420, guid: 2e71bdd91d279ac409ac8bea80fca31c, type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1598548420, guid: 2e71bdd91d279ac409ac8bea80fca31c, type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1598548420, guid: 2e71bdd91d279ac409ac8bea80fca31c, type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1598548420, guid: 2e71bdd91d279ac409ac8bea80fca31c, type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1598548420, guid: 2e71bdd91d279ac409ac8bea80fca31c, type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2701834537529197128, guid: 2e71bdd91d279ac409ac8bea80fca31c,
         type: 3}
@@ -6740,16 +6844,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2701834537529197128, guid: 2e71bdd91d279ac409ac8bea80fca31c,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.39999995
-      objectReference: {fileID: 0}
-    - target: {fileID: 2701834537529197128, guid: 2e71bdd91d279ac409ac8bea80fca31c,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.39999995
-      objectReference: {fileID: 0}
     - target: {fileID: 3329576978268231922, guid: 2e71bdd91d279ac409ac8bea80fca31c,
         type: 3}
       propertyPath: m_Name
@@ -6760,16 +6854,6 @@ PrefabInstance:
       propertyPath: slot
       value: 
       objectReference: {fileID: 1173533761}
-    - target: {fileID: 4277049838456408226, guid: 2e71bdd91d279ac409ac8bea80fca31c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 1969886de29c728429a56e930a30452d, type: 2}
-    - target: {fileID: 4277049838456408226, guid: 2e71bdd91d279ac409ac8bea80fca31c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 1969886de29c728429a56e930a30452d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e71bdd91d279ac409ac8bea80fca31c, type: 3}
 --- !u!4 &1492703559 stripped
@@ -7115,6 +7199,120 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 16, y: 2, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1603397298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1603397299}
+  - component: {fileID: 1603397300}
+  m_Layer: 0
+  m_Name: Order 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1603397299
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603397298}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1609143169}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1603397300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603397298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fad8f70141c1a240b373ddc84cc1069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minCapacityPercentage: 0.8
+  minCream: 0
+  maxCream: 0
+  requiredSugar: 0
+  isCoffeeOrderValid: 0
+  onOrderReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  onOrderServed:
+    m_PersistentCalls:
+      m_Calls: []
+  onLastDialogComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  preOrderDialog:
+    sentences:
+    - currentSpeaker: 1
+      lookatTarget: 1
+      text: Think I can get another coffee?
+    - currentSpeaker: 0
+      lookatTarget: 0
+      text: Sure dude
+    - currentSpeaker: 1
+      lookatTarget: 0
+      text: Coffee with 2 sugars, pls
+    - currentSpeaker: 0
+      lookatTarget: 0
+      text: Coming right up. Pre-order dialog complete
+  postOrderDialog:
+    sentences:
+    - currentSpeaker: 1
+      lookatTarget: 1
+      text: Begin post-order chat
+    - currentSpeaker: 0
+      lookatTarget: 0
+      text: So, what brings you?
+    - currentSpeaker: 1
+      lookatTarget: 0
+      text: Nothing special. Post order chat completge.
+  waitingDialog:
+    sentences:
+    - currentSpeaker: 1
+      lookatTarget: 5
+      text: Looping dialog
+    - currentSpeaker: 0
+      lookatTarget: 0
+      text: Looooop
+    - currentSpeaker: 1
+      lookatTarget: 1
+      text: 
+  evaluateCoffeeDialog:
+    sentences: []
+  badCoffeeDialog:
+    sentences:
+    - currentSpeaker: 0
+      lookatTarget: 0
+      text: Here's your coffee, nerd
+    - currentSpeaker: 1
+      lookatTarget: 1
+      text: wtf this is literal garbage
+  orderReceivedDialog:
+    sentences:
+    - currentSpeaker: 0
+      lookatTarget: 0
+      text: Here's your coffee bb
+    - currentSpeaker: 1
+      lookatTarget: 0
+      text: ur a saint
+    - currentSpeaker: 0
+      lookatTarget: 0
+      text: '[End of order 2, end of act]'
 --- !u!1001 &1604367201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7272,9 +7470,17 @@ MonoBehaviour:
   dialogManager: {fileID: 731728408}
   objectives:
   - {fileID: 311846090}
+  - {fileID: 1603397300}
   activeObjectiveIndex: 0
   coffeeMug: {fileID: 1492703560}
   orderSlipText: {fileID: 270383527}
+  onActStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onActEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogStartDelay: 3
 --- !u!4 &1609143169
 Transform:
   m_ObjectHideFlags: 0
@@ -7287,6 +7493,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 311846091}
+  - {fileID: 1603397299}
   m_Father: {fileID: 486781050}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9525,12 +9732,6 @@ Transform:
   m_Father: {fileID: 90182421}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &2082909809 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 47801614, guid: 2e71bdd91d279ac409ac8bea80fca31c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1492703558}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2129164610
 GameObject:
   m_ObjectHideFlags: 0

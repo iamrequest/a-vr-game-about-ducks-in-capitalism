@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Delegates button presses to the current QuestDialog
+// Delegates button presses to the current QuestDialog (act)
 public class DialogDelegator : MonoBehaviour {
     public List<QuestDialog> acts;
     public int activeActIndex;
+    private bool lastActInvoked;
+
+    private void Start() {
+        SetupAct();
+    }
 
     public void StartDialog() {
         // No acts exist
@@ -15,7 +20,7 @@ public class DialogDelegator : MonoBehaviour {
         }
 
         // Failsafe
-        if (activeActIndex > acts.Count) {
+        if (activeActIndex > acts.Count - 1) {
             Debug.LogError("Bad count of acts!");
             return;
         }
@@ -24,24 +29,23 @@ public class DialogDelegator : MonoBehaviour {
             return;
         }
 
-        // -- Test finishing of the quest
-        if (acts[activeActIndex].IsComplete()) {
-            if (IsFinalObjective()) {
-                // Move on to the next objective
-                Debug.LogError("Attempted to start dialog after the last act was completed");
-                return;
-            } else {
-                // Move on to the next objective
-                activeActIndex++;
-                StartDialog();
-                return;
-            }
-        }
-
         acts[activeActIndex].StartDialog();
     }
 
-    private bool IsFinalObjective() {
-        return activeActIndex == acts.Count - 1;
+    private void SetupAct() {
+        if (activeActIndex > acts.Count - 1) {
+            Debug.LogError("Attempted to setup act " + activeActIndex + ", but there was not enough acts configured");
+        } else {
+            acts[activeActIndex].onActStart.Invoke();
+            StartCoroutine(acts[activeActIndex].StartActAfterInitDelay());
+        }
+    }
+
+    public void StartNextAct() {
+        acts[activeActIndex].onActEnd.Invoke();
+
+        // TODO: This stuff still triggers after the last act is complete. No damage, but it sends some debug error logs
+        activeActIndex++;
+        SetupAct();
     }
 }

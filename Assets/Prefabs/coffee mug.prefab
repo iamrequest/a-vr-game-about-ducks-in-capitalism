@@ -902,10 +902,32 @@ MonoBehaviour:
   restoreOriginalParent: 1
   onPickUp:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3356253818435637200}
+        m_MethodName: ReleaseFromSlot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDetachFromHand:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 47801614}
+        m_MethodName: set_isKinematic
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeldUpdate:
     m_PersistentCalls:
       m_Calls: []
@@ -928,9 +950,9 @@ MonoBehaviour:
   maxSteamOutput: 2
   currentSteamOutput: 0
   coffeeTransform: {fileID: 66527717537931954}
-  capacity: 0
+  capacity: 350
   maxCapacity: 350
-  currentCoffeeLevel: 0
+  currentCoffeeLevel: 1
   creamPercentage: 0
   color:
     serializedVersion: 2
@@ -6159,8 +6181,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3d3ae7af9c0564d4bb60025b2a61ba38, type: 2}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 1969886de29c728429a56e930a30452d, type: 2}
+  - {fileID: 2100000, guid: 1969886de29c728429a56e930a30452d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6258,17 +6280,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 5601f4d3a9864284c83cae066778fcde,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.4905072
+      value: -3.389
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5601f4d3a9864284c83cae066778fcde,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.3794737
+      value: 3.047
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5601f4d3a9864284c83cae066778fcde,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.1513407
+      value: 4.323
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5601f4d3a9864284c83cae066778fcde,
         type: 3}
@@ -6313,7 +6335,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 5601f4d3a9864284c83cae066778fcde,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.39999998
+      value: 0.39999995
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5601f4d3a9864284c83cae066778fcde,
         type: 3}
@@ -6323,7 +6345,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 5601f4d3a9864284c83cae066778fcde,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.39999998
+      value: 0.39999995
       objectReference: {fileID: 0}
     - target: {fileID: -3482085882602428156, guid: 5601f4d3a9864284c83cae066778fcde,
         type: 3}
