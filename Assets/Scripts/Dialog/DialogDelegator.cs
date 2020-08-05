@@ -8,8 +8,10 @@ public class DialogDelegator : MonoBehaviour {
     public int activeActIndex;
     private bool lastActInvoked;
 
+    [Tooltip("The delay before setting up act 1")]
+    public float initialDelay;
+
     public static DialogDelegator instance;
-    // Start is called before the first frame update
     void Awake() {
         if (instance != null && instance != this) {
             Destroy(this.gameObject);
@@ -20,7 +22,7 @@ public class DialogDelegator : MonoBehaviour {
     }
 
     private void Start() {
-        SetupAct();
+        StartCoroutine(SetupActAfterDelay(initialDelay));
     }
 
     public void StartDialog() {
@@ -43,6 +45,9 @@ public class DialogDelegator : MonoBehaviour {
         acts[activeActIndex].StartDialog();
     }
 
+
+
+
     private void SetupAct() {
         if (activeActIndex > acts.Count - 1) {
             Debug.LogError("Attempted to setup act " + activeActIndex + ", but there was not enough acts configured");
@@ -52,11 +57,16 @@ public class DialogDelegator : MonoBehaviour {
         }
     }
 
-    public void StartNextAct() {
+    private IEnumerator SetupActAfterDelay(float delay) {
+        yield return new WaitForSeconds(delay);
+        SetupAct();
+    }
+
+    public void StartNextActAfterDelay(float delay) {
         acts[activeActIndex].onActEnd.Invoke();
 
         // TODO: This stuff still triggers after the last act is complete. No damage, but it sends some debug error logs
         activeActIndex++;
-        SetupAct();
+        StartCoroutine(SetupActAfterDelay(delay));
     }
 }

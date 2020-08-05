@@ -13,7 +13,7 @@ namespace UnityEditor {
             if (expandSentences == null) {
                 expandSentences = new List<bool>();
 
-                for (int i = 0; i < 5; i++) {
+                for (int i = 0; i < 6; i++) {
                     expandSentences.Add(false);
                 }
             }
@@ -31,8 +31,9 @@ namespace UnityEditor {
             AddSentenceEditor(0, "Order Dialog", objective.preOrderDialog);
             AddSentenceEditor(1, "Post-Order Chat", objective.postOrderDialog);
             AddSentenceEditor(2, "Looping Idle Dialog", objective.waitingDialog);
-            AddSentenceEditor(3, "Bad Coffee Received", objective.badCoffeeDialog);
-            AddSentenceEditor(4, "Successful Order Received Chat", objective.orderReceivedDialog);
+            AddSentenceEditor(3, "Evaluation", objective.evaluateCoffeeDialog);
+            AddSentenceEditor(4, "Bad Coffee Received", objective.badCoffeeDialog);
+            AddSentenceEditor(5, "Successful Order Received Chat", objective.orderReceivedDialog);
         }
 
         private void AddSentenceEditor(int i, string label, Conversation convo) {

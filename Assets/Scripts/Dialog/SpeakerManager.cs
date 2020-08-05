@@ -4,7 +4,6 @@ using UnityEngine;
 using Valve.VR.InteractionSystem;
 
 public enum DialogSpeaker {
-   // TODO: Change this once speakers are defined
    Me, Suzie, Sam
 }
 public enum LookatTargets {
@@ -60,9 +59,8 @@ public class SpeakerManager : MonoBehaviour {
 
     public DuckNPC GetNPCSpeaker(DialogSpeaker speaker) {
         switch(speaker) {
-            // TODO: Change this once speakers are defined
             case DialogSpeaker.Suzie: return workDuck;
-            case DialogSpeaker.Sam: return workDuck;
+            case DialogSpeaker.Sam: return artDuck;
             default: return null;
         }
     }

@@ -40,4 +40,17 @@ public class DuckNPC : MonoBehaviour {
             lookatTarget = SpeakerManager.instance.lookatMugTransform;
         }
     }
+
+    public void Enter() {
+        animator.SetTrigger("enter");
+    }
+    public void Exit() {
+        animator.SetTrigger("exit");
+    }
+    public void SetMugVisibility(bool isHoldingMug) {
+        animator.SetBool("hasCoffee", isHoldingMug);
+    }
+    public void SipCoffee() {
+        animator.SetTrigger("takeSipOfCoffee");
+    }
 }

@@ -17,7 +17,7 @@ public class QuestDialog : BaseDialog {
     [Header("Setup/teardown")]
     public UnityEvent onActStart;
     public UnityEvent onActEnd;
-    public float dialogStartDelay;
+    public float dialogStartDelay, dialogEndDelay;
     private bool isActInitialized;
 
     private void Start() {
@@ -135,7 +135,7 @@ public class QuestDialog : BaseDialog {
                 objectives[activeObjectiveIndex].onLastDialogComplete.Invoke();
 
                 if (IsFinalObjective()) {
-                    GetComponentInParent<DialogDelegator>().StartNextAct();
+                    GetComponentInParent<DialogDelegator>().StartNextActAfterDelay(dialogEndDelay);
                 }
                 break;
         }

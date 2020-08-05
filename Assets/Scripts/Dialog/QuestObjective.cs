@@ -17,7 +17,9 @@ public class QuestObjective : MonoBehaviour {
     public bool isCoffeeOrderValid;
 
     [Header("Dialog")]
-    public UnityEvent onOrderReceived, onOrderServed, onLastDialogComplete;
+    public UnityEvent onOrderReceived;
+    public UnityEvent onOrderServed;
+    public UnityEvent onLastDialogComplete;
 
     public QuestObjectiveState state { get; private set; }
 

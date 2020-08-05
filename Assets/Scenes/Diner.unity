@@ -1825,58 +1825,40 @@ MonoBehaviour:
       m_Calls: []
   preOrderDialog:
     sentences:
-    - currentSpeaker: 1
+    - currentSpeaker: 2
       lookatTarget: 1
       text: 
     - currentSpeaker: 0
       lookatTarget: 0
       text: Hey, what can I get you?
-    - currentSpeaker: 1
+    - currentSpeaker: 2
       lookatTarget: 0
-      text: Coffee with 2 sugars, pls
-    - currentSpeaker: 0
-      lookatTarget: 0
-      text: Coming right up. Pre-order dialog complete
+      text: Coffee, black please
   postOrderDialog:
     sentences:
-    - currentSpeaker: 1
-      lookatTarget: 0
-      text: 
     - currentSpeaker: 0
       lookatTarget: 0
-      text: So, what brings you?
-    - currentSpeaker: 1
-      lookatTarget: 0
-      text: Nothing special. Post order chat completge.
+      text: Coming right up.
   waitingDialog:
     sentences:
-    - currentSpeaker: 1
-      lookatTarget: 5
-      text: Looping dialog
     - currentSpeaker: 0
       lookatTarget: 0
-      text: Looooop
-    - currentSpeaker: 1
-      lookatTarget: 1
-      text: 
+      text: Loop
   evaluateCoffeeDialog:
-    sentences: []
+    sentences:
+    - currentSpeaker: 0
+      lookatTarget: 0
+      text: Here, try this coffee
   badCoffeeDialog:
     sentences:
-    - currentSpeaker: 0
-      lookatTarget: 0
-      text: Here's your coffee, nerd
-    - currentSpeaker: 1
-      lookatTarget: 1
-      text: wtf this is literal garbage
+    - currentSpeaker: 2
+      lookatTarget: 3
+      text: wow this is hot garbage
   orderReceivedDialog:
     sentences:
-    - currentSpeaker: 0
+    - currentSpeaker: 2
       lookatTarget: 0
-      text: Here's your coffee bb
-    - currentSpeaker: 1
-      lookatTarget: 0
-      text: ur a saint
+      text: neat thanks
 --- !u!4 &311846091
 Transform:
   m_ObjectHideFlags: 0
@@ -2027,11 +2009,34 @@ MonoBehaviour:
   orderSlipText: {fileID: 270383527}
   onActStart:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2034080087}
+        m_MethodName: Enter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onActEnd:
     m_PersistentCalls:
-      m_Calls: []
-  dialogStartDelay: 1
+      m_Calls:
+      - m_Target: {fileID: 2034080087}
+        m_MethodName: Exit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialogStartDelay: 5
+  dialogEndDelay: 5
 --- !u!4 &356095059
 Transform:
   m_ObjectHideFlags: 0
@@ -2487,6 +2492,7 @@ MonoBehaviour:
   - {fileID: 1609143168}
   - {fileID: 356095058}
   activeActIndex: 0
+  initialDelay: 5
 --- !u!114 &486781048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7392,13 +7398,13 @@ MonoBehaviour:
       m_Calls: []
   preOrderDialog:
     sentences:
-    - currentSpeaker: 1
+    - currentSpeaker: 2
       lookatTarget: 1
       text: Think I can get another coffee?
     - currentSpeaker: 0
       lookatTarget: 0
       text: Sure dude
-    - currentSpeaker: 1
+    - currentSpeaker: 2
       lookatTarget: 0
       text: Coffee with 2 sugars, pls
     - currentSpeaker: 0
@@ -7417,23 +7423,26 @@ MonoBehaviour:
       text: Nothing special. Post order chat completge.
   waitingDialog:
     sentences:
-    - currentSpeaker: 1
+    - currentSpeaker: 2
       lookatTarget: 5
       text: Looping dialog
     - currentSpeaker: 0
       lookatTarget: 0
       text: Looooop
-    - currentSpeaker: 1
+    - currentSpeaker: 2
       lookatTarget: 1
       text: 
   evaluateCoffeeDialog:
-    sentences: []
+    sentences:
+    - currentSpeaker: 0
+      lookatTarget: 0
+      text: Here, try the coffee
   badCoffeeDialog:
     sentences:
     - currentSpeaker: 0
       lookatTarget: 0
       text: Here's your coffee, nerd
-    - currentSpeaker: 1
+    - currentSpeaker: 2
       lookatTarget: 1
       text: wtf this is literal garbage
   orderReceivedDialog:
@@ -7441,7 +7450,7 @@ MonoBehaviour:
     - currentSpeaker: 0
       lookatTarget: 0
       text: Here's your coffee bb
-    - currentSpeaker: 1
+    - currentSpeaker: 2
       lookatTarget: 0
       text: ur a saint
     - currentSpeaker: 0
@@ -7610,11 +7619,34 @@ MonoBehaviour:
   orderSlipText: {fileID: 270383527}
   onActStart:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 93408084}
+        m_MethodName: Enter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onActEnd:
     m_PersistentCalls:
-      m_Calls: []
-  dialogStartDelay: 3
+      m_Calls:
+      - m_Target: {fileID: 93408084}
+        m_MethodName: Exit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialogStartDelay: 5
+  dialogEndDelay: 5
 --- !u!4 &1609143169
 Transform:
   m_ObjectHideFlags: 0
