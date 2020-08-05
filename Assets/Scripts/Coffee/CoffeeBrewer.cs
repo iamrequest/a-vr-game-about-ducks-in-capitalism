@@ -4,7 +4,6 @@ using UnityEngine;
 using TMPro;
 using Valve.VR.InteractionSystem;
 
-// TODO: How to avoid reuse coffee filter
 // TODO: How to reset the CircularDrive's rotation after brewing? Changing the rotation manually works, but it snaps right back on grab. Same results even if I set LinearMapping.value
 public class CoffeeBrewer : MonoBehaviour {
     public TextMeshProUGUI text;
@@ -19,7 +18,6 @@ public class CoffeeBrewer : MonoBehaviour {
     public Slottable coffeeFilterTray;
 
     // Filter 
-    //public Slottable coffeeFilterSlottable;
     public ScoopableContainer coffeeFilterContents;
 
     public bool isBrewing;
@@ -31,7 +29,6 @@ public class CoffeeBrewer : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         coffeeContainer = coffeePotSlottable.GetComponent<CoffeeContainer>();
-        //coffeeFilterContents = coffeeFilterSlottable.GetComponent<ScoopableContainer>();
     }
 
     // Update is called once per frame
@@ -64,9 +61,6 @@ public class CoffeeBrewer : MonoBehaviour {
         }
 
         // -- Validation on the coffee filter
-        //if (!coffeeFilterSlottable.isSlotted) {
-        //    return "Please insert coffee filter";
-        //}
         if (coffeeFilterContents.capacity < 1) {
             return "Error: Missing coffee grounds";
         }
@@ -107,7 +101,6 @@ public class CoffeeBrewer : MonoBehaviour {
 
             // Validate that none of the slottables were removed
             // We can remove the pot early
-            //if (!coffeeFilterTray.isSlotted || !coffeeFilterSlottable.isSlotted) {
             if (!coffeeFilterTray.isSlotted) {
                 ResetBrewStatus();
                 yield break;
