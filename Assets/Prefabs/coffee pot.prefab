@@ -360,6 +360,18 @@ MonoBehaviour:
   postGrabSnapDelay: 1
   releaseWhenInverted: 0
   minReleasePercentage: 0
+--- !u!114 &2535773621445278382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830235706451377184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f0badb3e9d8e7345a8493abcbd46cc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &7650067503126001285
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5284,17 +5296,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1b800e6863e64ae47aeb07a4fb25ce6c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.7345072
+      value: -0.386
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1b800e6863e64ae47aeb07a4fb25ce6c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.34447372
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1b800e6863e64ae47aeb07a4fb25ce6c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.3853407
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1b800e6863e64ae47aeb07a4fb25ce6c,
         type: 3}
