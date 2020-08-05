@@ -29,7 +29,17 @@ public class DialogManager : MonoBehaviour {
     public AudioSource audioSource;
     public AudioClip typingAudio;
 
+    // Singleton
+    public static DialogManager instance;
     void Awake() {
+        // Configure singleton
+        if (instance != null && instance != this) {
+            Destroy(this.gameObject);
+            return;
+        }
+        instance = this;
+
+        // -- Configure other things
         sentences = new Queue<Sentence>();
         completedCurrentSentence = true;
     }

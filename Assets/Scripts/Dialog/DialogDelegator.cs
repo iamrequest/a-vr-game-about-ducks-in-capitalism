@@ -8,6 +8,17 @@ public class DialogDelegator : MonoBehaviour {
     public int activeActIndex;
     private bool lastActInvoked;
 
+    public static DialogDelegator instance;
+    // Start is called before the first frame update
+    void Awake() {
+        if (instance != null && instance != this) {
+            Destroy(this.gameObject);
+            return;
+        }
+
+        instance = this;
+    }
+
     private void Start() {
         SetupAct();
     }
