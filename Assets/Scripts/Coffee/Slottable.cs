@@ -79,13 +79,29 @@ public class Slottable : MonoBehaviour {
         // Only process a slot if it's been long enough since we last picked up the object
         if (timeSinceLastGrab > postGrabSnapDelay && !isSlotted) {
             if(other.gameObject == slot) {
-                isSlotted = true;
-                isLerping = true;
-                rb.isKinematic = true;
-
-                StartCoroutine(DoSlotLerp());
+                LerpToSlot();
             }
         }
+    }
+
+    /// <summary>
+    /// Begins lerp to slot
+    /// </summary>
+    public void LerpToSlot() {
+        isSlotted = true;
+        isLerping = true;
+        rb.isKinematic = true;
+
+        StartCoroutine(DoSlotLerp());
+    }
+
+    /// <summary>
+    /// Snaps to slot immediately
+    /// </summary>
+    public void SnapToSlot() {
+        transform.position = slot.transform.position;
+        transform.rotation = slot.transform.rotation;
+        CompleteSlotting();
     }
 
     // Hook this up to the interactable OnPickUp() event
