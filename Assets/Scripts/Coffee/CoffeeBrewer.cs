@@ -100,7 +100,7 @@ public class CoffeeBrewer : MonoBehaviour {
             elapsedBrewTime += Time.deltaTime;
 
             // Validate that none of the slottables were removed
-            // We can remove the pot early
+            // We can remove the pot early, but not the filter tray
             if (!coffeeFilterTray.isSlotted) {
                 ResetBrewStatus();
                 yield break;

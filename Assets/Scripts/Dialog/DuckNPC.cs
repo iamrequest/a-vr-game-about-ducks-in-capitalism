@@ -9,12 +9,17 @@ public class DuckNPC : MonoBehaviour {
             animator.SetBool("isTalking", value);
         }
     }
+    public bool isShouting {
+        set {
+            animator.SetBool("isShouting", value);
+        }
+    }
 
     [Header("Look At")]
     // lookatTransform: The NPC's head looks at this transform.
     // lookatTarget: lookatTransform lerps towards this position
     public Transform lookatTransform;
-    public Transform m_lookatTarget;
+    private Transform m_lookatTarget;
     public Transform lookatTarget {
         set {
             // value of null represents LookatTarget.NoChange
@@ -32,25 +37,44 @@ public class DuckNPC : MonoBehaviour {
         if (m_lookatTarget != null) {
             lookatTransform.position = Vector3.MoveTowards(lookatTransform.position, m_lookatTarget.position, headTurnSpeed * Time.deltaTime);
         }
+    }
 
-        if (Input.GetKeyUp(KeyCode.N)) {
-            lookatTarget = SpeakerManager.instance.lookatBonsaiTransform;
-        }
-        if (Input.GetKeyUp(KeyCode.M)) {
-            lookatTarget = SpeakerManager.instance.lookatMugTransform;
+    public void SetAnimation(NPCAnimation animation) {
+        switch (animation) {
+            case NPCAnimation.SetCoffee: 
+                SetMugVisibility(true);
+                break;
+            case NPCAnimation.UnsetCoffee: 
+                SetMugVisibility(false);
+                break;
+            case NPCAnimation.SipCoffee: 
+                SipCoffee();
+                break;
+            case NPCAnimation.Shout:
+                isTalking = false;
+                isShouting = true;
+                break;
+
+            default:
+                isShouting = false;
+                isTalking = true;
+                break;
         }
     }
 
     public void Enter() {
+        lookatTarget = null;
         animator.SetTrigger("enter");
     }
     public void Exit() {
+        lookatTarget = null;
         animator.SetTrigger("exit");
     }
     public void SetMugVisibility(bool isHoldingMug) {
         animator.SetBool("hasCoffee", isHoldingMug);
     }
     public void SipCoffee() {
+        lookatTarget = null;
         animator.SetTrigger("takeSipOfCoffee");
     }
 }

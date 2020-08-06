@@ -88,7 +88,7 @@ namespace UnityEditor
 
                     if (s.currentSpeaker != DialogSpeaker.Me) {
                         EditorGUILayout.LabelField("Lookat:", GUILayout.MaxWidth(70));
-                        s.lookatTarget = (LookatTargets)EditorGUILayout.EnumPopup(s.lookatTarget);
+                        s.npcAnimation = (NPCAnimation)EditorGUILayout.EnumPopup(s.npcAnimation);
                     }
 
                     //EditorGUILayout.LabelField("Animation:", GUILayout.MaxWidth(70));

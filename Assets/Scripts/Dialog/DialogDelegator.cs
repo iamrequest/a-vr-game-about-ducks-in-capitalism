@@ -6,7 +6,6 @@ using UnityEngine;
 public class DialogDelegator : MonoBehaviour {
     public List<QuestDialog> acts;
     public int activeActIndex;
-    private bool lastActInvoked;
 
     [Tooltip("The delay before setting up act 1")]
     public float initialDelay;

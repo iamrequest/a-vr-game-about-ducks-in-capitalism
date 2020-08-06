@@ -7,18 +7,18 @@ using UnityEngine;
 public class Sentence {
     public AnimationState animationState;
     public DialogSpeaker currentSpeaker;
-    public LookatTargets lookatTarget;
+    public NPCAnimation npcAnimation;
     public string text;
 
     public Sentence() { }
     public Sentence(AnimationState animationState, 
         DialogSpeaker currentSpeaker, 
-        LookatTargets lookatTarget,
+        NPCAnimation npcAnimation,
         string text) {
 
             this.animationState = animationState;
             this.currentSpeaker = currentSpeaker;
-            this.lookatTarget = lookatTarget;
+            this.npcAnimation = npcAnimation;
             this.text = text;
     }
 }

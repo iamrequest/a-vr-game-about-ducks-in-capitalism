@@ -109,7 +109,17 @@ public class DialogManager : MonoBehaviour {
             currentNPC = SpeakerManager.instance.GetNPCSpeaker(tmpSentence.currentSpeaker);
             if (currentNPC != null) {
                 // If the speaker is an NPC, look at the specified transform
-                currentNPC.lookatTarget = SpeakerManager.instance.GetLookatTarget(tmpSentence.lookatTarget);
+                currentNPC.lookatTarget = SpeakerManager.instance.GetLookatTarget(tmpSentence.npcAnimation);
+
+                // Set animation
+                // This can null out the lookat target, if the animation moves the head (eg: sipping coffee)
+                currentNPC.SetAnimation(tmpSentence.npcAnimation);
+
+                // Don't talk if the only dialog is "..."
+                if (tmpSentence.text.Trim() == "...") {
+                    currentNPC.isTalking = false;
+                    currentNPC.isShouting = false;
+                }
             }
         } while (sentences.Count > 0 && tmpSentence.text.Trim() == "");
 
@@ -125,13 +135,7 @@ public class DialogManager : MonoBehaviour {
         ConversationLog.instance.AddSentence(currentSentence);
 
         // Apply the animation state, prepare the textbox
-        //canvasCharacter.SetAnimationState(currentSentence.animationState);
         ConfigureTextboxImages();
-
-        if (currentNPC != null) {
-            //  2. Lookat some transform
-            currentNPC.isTalking = true;
-        }
 
         // Start typing
         StartCoroutine(TypeSentence());
@@ -149,6 +153,7 @@ public class DialogManager : MonoBehaviour {
 
         if (currentNPC != null) {
             currentNPC.isTalking = false;
+            currentNPC.isShouting = false;
         }
 
         if (activeDialog != null) {

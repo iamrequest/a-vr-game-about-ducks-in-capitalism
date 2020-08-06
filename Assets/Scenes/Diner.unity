@@ -132,6 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 225580}
   - component: {fileID: 225579}
+  - component: {fileID: 225581}
   m_Layer: 0
   m_Name: Order 1
   m_TagString: Untagged
@@ -164,60 +165,82 @@ MonoBehaviour:
       m_Calls: []
   onLastDialogComplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 225581}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 919132147671529026}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   preOrderDialog:
     sentences:
     - currentSpeaker: 2
-      lookatTarget: 1
+      npcAnimation: 0
       text: Howdy, sam here
     - currentSpeaker: 2
-      lookatTarget: 0
+      npcAnimation: 0
       text: Can I get a coffee?
     - currentSpeaker: 2
-      lookatTarget: 0
+      npcAnimation: 0
       text: Black as a crisp summer morning pls
     - currentSpeaker: 0
-      lookatTarget: 0
+      npcAnimation: 0
       text: Coming right up. Pre-order dialog complete
   postOrderDialog:
     sentences:
     - currentSpeaker: 1
-      lookatTarget: 0
+      npcAnimation: 0
       text: 
     - currentSpeaker: 0
-      lookatTarget: 0
+      npcAnimation: 0
       text: So, what brings you?
     - currentSpeaker: 1
-      lookatTarget: 0
+      npcAnimation: 0
       text: Nothing special. Post order chat completge.
   waitingDialog:
     sentences:
     - currentSpeaker: 1
-      lookatTarget: 5
+      npcAnimation: 0
       text: Looping dialog
     - currentSpeaker: 0
-      lookatTarget: 0
+      npcAnimation: 0
       text: Looooop
     - currentSpeaker: 1
-      lookatTarget: 1
+      npcAnimation: 0
       text: 
   evaluateCoffeeDialog:
     sentences: []
   badCoffeeDialog:
     sentences:
     - currentSpeaker: 0
-      lookatTarget: 0
+      npcAnimation: 0
       text: Here's your coffee, nerd
     - currentSpeaker: 1
-      lookatTarget: 1
+      npcAnimation: 0
       text: wtf this is literal garbage
   orderReceivedDialog:
     sentences:
     - currentSpeaker: 0
-      lookatTarget: 0
+      npcAnimation: 0
       text: Here's your coffee bb
     - currentSpeaker: 1
-      lookatTarget: 0
+      npcAnimation: 0
       text: ur a saint
 --- !u!4 &225580
 Transform:
@@ -233,6 +256,45 @@ Transform:
   m_Father: {fileID: 356095059}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &225581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225578}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5a6a70209b6e6345bfe18b02314a54e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelName: Greybox
+  internalProcessPath: 
+  internalProcessArgs: 
+  loadAdditive: 0
+  loadAsync: 1
+  loadingScreen: {fileID: 0}
+  progressBarEmpty: {fileID: 0}
+  progressBarFull: {fileID: 0}
+  loadingScreenWidthInMeters: 6
+  progressBarWidthInMeters: 3
+  loadingScreenDistance: 0
+  loadingScreenTransform: {fileID: 0}
+  progressBarTransform: {fileID: 0}
+  front: {fileID: 0}
+  back: {fileID: 0}
+  left: {fileID: 0}
+  right: {fileID: 0}
+  top: {fileID: 0}
+  bottom: {fileID: 0}
+  backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+  showGrid: 0
+  fadeOutTime: 0.5
+  fadeInTime: 0.5
+  postLoadSettleTime: 0
+  loadingScreenFadeInTime: 1
+  loadingScreenFadeOutTime: 0.25
+  autoTriggerOnEnable: 1
 --- !u!1 &6448207
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,6 +1552,56 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -82.86401
       objectReference: {fileID: 0}
+    - target: {fileID: 6809152487727569237, guid: c3b6945e2e147cc46a52177a82aecbd0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0065700393
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809152487727569237, guid: c3b6945e2e147cc46a52177a82aecbd0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.004090983
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809152487727569237, guid: c3b6945e2e147cc46a52177a82aecbd0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0023363153
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809152487727569237, guid: c3b6945e2e147cc46a52177a82aecbd0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.22906227
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809152487727569237, guid: c3b6945e2e147cc46a52177a82aecbd0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00000013585975
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809152487727569237, guid: c3b6945e2e147cc46a52177a82aecbd0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.64415497
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809152487727569237, guid: c3b6945e2e147cc46a52177a82aecbd0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.729791
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809152487727569237, guid: c3b6945e2e147cc46a52177a82aecbd0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809152487727569237, guid: c3b6945e2e147cc46a52177a82aecbd0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809152487727569237, guid: c3b6945e2e147cc46a52177a82aecbd0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7131944114532652737, guid: c3b6945e2e147cc46a52177a82aecbd0,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1609,6 +1721,56 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: workduck Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 9058254473543886355, guid: c3b6945e2e147cc46a52177a82aecbd0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.24895985
+      objectReference: {fileID: 0}
+    - target: {fileID: 9058254473543886355, guid: c3b6945e2e147cc46a52177a82aecbd0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00000015065386
+      objectReference: {fileID: 0}
+    - target: {fileID: 9058254473543886355, guid: c3b6945e2e147cc46a52177a82aecbd0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.70010966
+      objectReference: {fileID: 0}
+    - target: {fileID: 9058254473543886355, guid: c3b6945e2e147cc46a52177a82aecbd0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6692275
+      objectReference: {fileID: 0}
+    - target: {fileID: 9058254473543886355, guid: c3b6945e2e147cc46a52177a82aecbd0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9058254473543886355, guid: c3b6945e2e147cc46a52177a82aecbd0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.005944312
+      objectReference: {fileID: 0}
+    - target: {fileID: 9058254473543886355, guid: c3b6945e2e147cc46a52177a82aecbd0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0024474438
+      objectReference: {fileID: 0}
+    - target: {fileID: 9058254473543886355, guid: c3b6945e2e147cc46a52177a82aecbd0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0021138059
+      objectReference: {fileID: 0}
+    - target: {fileID: 9058254473543886355, guid: c3b6945e2e147cc46a52177a82aecbd0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9058254473543886355, guid: c3b6945e2e147cc46a52177a82aecbd0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
@@ -1826,38 +1988,56 @@ MonoBehaviour:
   preOrderDialog:
     sentences:
     - currentSpeaker: 2
-      lookatTarget: 1
+      npcAnimation: 0
       text: 
     - currentSpeaker: 0
-      lookatTarget: 0
+      npcAnimation: 0
       text: Hey, what can I get you?
     - currentSpeaker: 2
-      lookatTarget: 0
+      npcAnimation: 1
       text: Coffee, black please
   postOrderDialog:
     sentences:
     - currentSpeaker: 0
-      lookatTarget: 0
+      npcAnimation: 0
       text: Coming right up.
   waitingDialog:
     sentences:
     - currentSpeaker: 0
-      lookatTarget: 0
+      npcAnimation: 0
       text: Loop
+    - currentSpeaker: 2
+      npcAnimation: 6
+      text: Thanks for the coffee
+    - currentSpeaker: 2
+      npcAnimation: 8
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: No problem. How is it?
+    - currentSpeaker: 2
+      npcAnimation: 1
+      text: Damn fine coffee
+    - currentSpeaker: 2
+      npcAnimation: 7
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Well, glad you enjoy it
   evaluateCoffeeDialog:
     sentences:
     - currentSpeaker: 0
-      lookatTarget: 0
+      npcAnimation: 0
       text: Here, try this coffee
   badCoffeeDialog:
     sentences:
     - currentSpeaker: 2
-      lookatTarget: 3
+      npcAnimation: 0
       text: wow this is hot garbage
   orderReceivedDialog:
     sentences:
     - currentSpeaker: 2
-      lookatTarget: 0
+      npcAnimation: 0
       text: neat thanks
 --- !u!4 &311846091
 Transform:
@@ -7399,62 +7579,62 @@ MonoBehaviour:
   preOrderDialog:
     sentences:
     - currentSpeaker: 2
-      lookatTarget: 1
+      npcAnimation: 0
       text: Think I can get another coffee?
     - currentSpeaker: 0
-      lookatTarget: 0
+      npcAnimation: 0
       text: Sure dude
     - currentSpeaker: 2
-      lookatTarget: 0
+      npcAnimation: 0
       text: Coffee with 2 sugars, pls
     - currentSpeaker: 0
-      lookatTarget: 0
+      npcAnimation: 0
       text: Coming right up. Pre-order dialog complete
   postOrderDialog:
     sentences:
     - currentSpeaker: 1
-      lookatTarget: 1
+      npcAnimation: 0
       text: Begin post-order chat
     - currentSpeaker: 0
-      lookatTarget: 0
+      npcAnimation: 0
       text: So, what brings you?
     - currentSpeaker: 1
-      lookatTarget: 0
+      npcAnimation: 0
       text: Nothing special. Post order chat completge.
   waitingDialog:
     sentences:
     - currentSpeaker: 2
-      lookatTarget: 5
+      npcAnimation: 0
       text: Looping dialog
     - currentSpeaker: 0
-      lookatTarget: 0
+      npcAnimation: 0
       text: Looooop
     - currentSpeaker: 2
-      lookatTarget: 1
+      npcAnimation: 0
       text: 
   evaluateCoffeeDialog:
     sentences:
     - currentSpeaker: 0
-      lookatTarget: 0
+      npcAnimation: 0
       text: Here, try the coffee
   badCoffeeDialog:
     sentences:
     - currentSpeaker: 0
-      lookatTarget: 0
+      npcAnimation: 0
       text: Here's your coffee, nerd
     - currentSpeaker: 2
-      lookatTarget: 1
+      npcAnimation: 0
       text: wtf this is literal garbage
   orderReceivedDialog:
     sentences:
     - currentSpeaker: 0
-      lookatTarget: 0
+      npcAnimation: 0
       text: Here's your coffee bb
     - currentSpeaker: 2
-      lookatTarget: 0
+      npcAnimation: 0
       text: ur a saint
     - currentSpeaker: 0
-      lookatTarget: 0
+      npcAnimation: 0
       text: '[End of order 2, end of act]'
 --- !u!1001 &1604367201
 PrefabInstance:

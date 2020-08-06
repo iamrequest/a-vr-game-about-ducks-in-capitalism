@@ -6,8 +6,12 @@ using Valve.VR.InteractionSystem;
 public enum DialogSpeaker {
    Me, Suzie, Sam
 }
-public enum LookatTargets {
-   NoChange, Player, Mug, Down, Up, Bonsai
+public enum NPCAnimation {
+   // Set lookat target
+   NoChange, LookPlayer, LookMug, LookDown, LookUp, LookBonsai,
+
+   // Animation
+   SetCoffee, UnsetCoffee, SipCoffee, Shout
 }
 public class SpeakerManager : MonoBehaviour {
     public static SpeakerManager instance;
@@ -44,14 +48,21 @@ public class SpeakerManager : MonoBehaviour {
     public Color GetSpeakerColor(DialogSpeaker currentSpeaker) {
         return dialogBoxColors[(int)currentSpeaker];
     }
-    public Transform GetLookatTarget(LookatTargets lookatTarget) {
-        switch (lookatTarget) {
-            case LookatTargets.NoChange: return null;
-            case LookatTargets.Player: return Player.instance.hmdTransform;
-            case LookatTargets.Mug: return lookatMugTransform;
-            case LookatTargets.Down: return lookDownTransform;
-            case LookatTargets.Up: return lookUpTransform;
-            case LookatTargets.Bonsai: return lookatBonsaiTransform;
+    public Transform GetLookatTarget(NPCAnimation animation) {
+        switch (animation) {
+            // Lookat targets: Return an appropriate transform
+            case NPCAnimation.NoChange: return null;
+            case NPCAnimation.LookPlayer: return Player.instance.hmdTransform;
+            case NPCAnimation.LookMug: return lookatMugTransform;
+            case NPCAnimation.LookDown: return lookDownTransform;
+            case NPCAnimation.LookUp: return lookUpTransform;
+            case NPCAnimation.LookBonsai: return lookatBonsaiTransform;
+
+            // Animations: No lookat target
+            case NPCAnimation.SetCoffee: return null;
+            case NPCAnimation.UnsetCoffee: return null;
+            case NPCAnimation.SipCoffee: return null;
+            case NPCAnimation.Shout: return null;
             default: Debug.LogError("Lookat target doesn't exist!");
                      return Player.instance.hmdTransform;
         }
