@@ -1092,12 +1092,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 370bdf37c8e71a244a5eb27511619d33,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.19683981
+      value: -0.17
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 370bdf37c8e71a244a5eb27511619d33,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.089167
+      value: 2.09
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 370bdf37c8e71a244a5eb27511619d33,
         type: 3}
@@ -4923,7 +4923,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 370bdf37c8e71a244a5eb27511619d33,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.638
+      value: 3.651
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 370bdf37c8e71a244a5eb27511619d33,
         type: 3}
@@ -5195,8 +5195,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4279834905
+  m_fontColor: {r: 0.098039225, g: 0.098039225, b: 0.098039225, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6448,7 +6448,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 370bdf37c8e71a244a5eb27511619d33,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.647
+      value: 0.66
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 370bdf37c8e71a244a5eb27511619d33,
         type: 3}
@@ -6860,8 +6860,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4279834905
+  m_fontColor: {r: 0.098039225, g: 0.098039225, b: 0.098039225, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7680,8 +7680,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280098077
-  m_fontColor: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
+    rgba: 4282006074
+  m_fontColor: {r: 0.22745098, g: 0.22745098, b: 0.22745098, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7891,7 +7891,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 370bdf37c8e71a244a5eb27511619d33,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.638
+      value: 6.651
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 370bdf37c8e71a244a5eb27511619d33,
         type: 3}
@@ -9313,6 +9313,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4413743070399938535, guid: 44a5ca453b5209349b7a8eb2f43b815a,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.20754719
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413743070399938535, guid: 44a5ca453b5209349b7a8eb2f43b815a,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.20754719
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413743070399938535, guid: 44a5ca453b5209349b7a8eb2f43b815a,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.20754719
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413743070399938535, guid: 44a5ca453b5209349b7a8eb2f43b815a,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4281677109
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413743070922199649, guid: 44a5ca453b5209349b7a8eb2f43b815a,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.20784315
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413743070922199649, guid: 44a5ca453b5209349b7a8eb2f43b815a,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.20784315
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413743070922199649, guid: 44a5ca453b5209349b7a8eb2f43b815a,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.20784315
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413743070922199649, guid: 44a5ca453b5209349b7a8eb2f43b815a,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4281677109
+      objectReference: {fileID: 0}
     - target: {fileID: 4413743071022073735, guid: 44a5ca453b5209349b7a8eb2f43b815a,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -9743,8 +9783,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280032284
-  m_fontColor: {r: 0.10980393, g: 0.10980393, b: 0.10980393, a: 1}
+    rgba: 4282006074
+  m_fontColor: {r: 0.22745098, g: 0.22745098, b: 0.22745098, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9836,12 +9876,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 370bdf37c8e71a244a5eb27511619d33,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.197
+      value: -3.1701603
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 370bdf37c8e71a244a5eb27511619d33,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.089167
+      value: 2.09
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 370bdf37c8e71a244a5eb27511619d33,
         type: 3}
@@ -12085,8 +12125,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280098077
-  m_fontColor: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
+    rgba: 4282006074
+  m_fontColor: {r: 0.22745098, g: 0.22745098, b: 0.22745098, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -13577,12 +13617,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 370bdf37c8e71a244a5eb27511619d33,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.80316
+      value: 2.8299997
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 370bdf37c8e71a244a5eb27511619d33,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.089167
+      value: 2.09
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 370bdf37c8e71a244a5eb27511619d33,
         type: 3}
@@ -13845,8 +13885,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280098077
-  m_fontColor: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
+    rgba: 4282006074
+  m_fontColor: {r: 0.22745098, g: 0.22745098, b: 0.22745098, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -14574,8 +14614,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280098077
-  m_fontColor: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
+    rgba: 4282006074
+  m_fontColor: {r: 0.22745098, g: 0.22745098, b: 0.22745098, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
