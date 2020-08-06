@@ -115,7 +115,11 @@ public class DialogManager : MonoBehaviour {
                 // This can null out the lookat target, if the animation moves the head (eg: sipping coffee)
                 currentNPC.SetAnimation(tmpSentence.npcAnimation);
 
-                // Don't talk if the only dialog is "..."
+                // Don't talk if the only dialog is "...", or ""
+                if (tmpSentence.text.Trim() == "") {
+                    currentNPC.isTalking = false;
+                    currentNPC.isShouting = false;
+                }
                 if (tmpSentence.text.Trim() == "...") {
                     currentNPC.isTalking = false;
                     currentNPC.isShouting = false;
