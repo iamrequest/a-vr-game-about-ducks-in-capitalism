@@ -7,6 +7,9 @@ public class DialogDelegator : MonoBehaviour {
     public List<QuestDialog> acts;
     public int activeActIndex;
 
+    public Animator openingCinematicAnimator;
+    public bool setupInitialActAfterDelay;
+    private bool isInitialActInProgress;
     [Tooltip("The delay before setting up act 1")]
     public float initialDelay;
 
@@ -21,10 +24,17 @@ public class DialogDelegator : MonoBehaviour {
     }
 
     private void Start() {
-        StartCoroutine(SetupActAfterDelay(initialDelay));
+        if (setupInitialActAfterDelay) {
+            StartCoroutine(SetupActAfterDelay(initialDelay));
+        }
     }
 
     public void StartDialog() {
+        // Setup initial act via button press, rather than via delay
+        if (!isInitialActInProgress) {
+            StartCoroutine(SetupActAfterDelay(initialDelay));
+        }
+
         // No acts exist
         if (acts.Count == 0) {
             Debug.Log("Missing objective!");
@@ -57,7 +67,14 @@ public class DialogDelegator : MonoBehaviour {
     }
 
     private IEnumerator SetupActAfterDelay(float delay) {
+        // If there's an opening cinematic in this scene, then play it.
+        // This is really only the case for the initial scene
+        if (openingCinematicAnimator != null) {
+            openingCinematicAnimator.SetTrigger("startOpeningCinematic");
+        }
+
         yield return new WaitForSeconds(delay);
+        isInitialActInProgress = true;
         SetupAct();
     }
 
