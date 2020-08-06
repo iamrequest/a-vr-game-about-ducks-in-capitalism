@@ -2724,6 +2724,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffee grounds jar Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7468905921897733291, guid: 19fccb8ce3315cf41a5046d366989354,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f7fd2de4ff80b7409a61ae341bf9037, type: 2}
+    - target: {fileID: 7468905921897733291, guid: 19fccb8ce3315cf41a5046d366989354,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 70749949c114e5148b1fb0000422dbe5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19fccb8ce3315cf41a5046d366989354, type: 3}
 --- !u!4 &285915628 stripped
@@ -13479,6 +13489,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 363773284}
     m_Modifications:
+    - target: {fileID: 901209625643671570, guid: 8227a929445d16f48a0d6fd834955b0a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f7fd2de4ff80b7409a61ae341bf9037, type: 2}
+    - target: {fileID: 901209625643671570, guid: 8227a929445d16f48a0d6fd834955b0a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 220a3efd1cbd57c49887b75788f78420, type: 2}
     - target: {fileID: 6198153762889224809, guid: 8227a929445d16f48a0d6fd834955b0a,
         type: 3}
       propertyPath: m_Name
