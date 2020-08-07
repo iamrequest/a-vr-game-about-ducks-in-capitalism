@@ -33,6 +33,7 @@ public class DialogDelegator : MonoBehaviour {
         // Setup initial act via button press, rather than via delay
         if (!isInitialActInProgress) {
             StartCoroutine(SetupActAfterDelay(initialDelay));
+            return;
         }
 
         // No acts exist
@@ -67,6 +68,8 @@ public class DialogDelegator : MonoBehaviour {
     }
 
     private IEnumerator SetupActAfterDelay(float delay) {
+        isInitialActInProgress = true;
+
         // If there's an opening cinematic in this scene, then play it.
         // This is really only the case for the initial scene
         if (openingCinematicAnimator != null) {
@@ -74,7 +77,6 @@ public class DialogDelegator : MonoBehaviour {
         }
 
         yield return new WaitForSeconds(delay);
-        isInitialActInProgress = true;
         SetupAct();
     }
 

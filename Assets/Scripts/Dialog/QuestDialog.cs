@@ -136,6 +136,8 @@ public class QuestDialog : BaseDialog {
 
                 if (IsFinalObjective()) {
                     GetComponentInParent<DialogDelegator>().StartNextActAfterDelay(dialogEndDelay);
+                } else {
+                    StartDialog();
                 }
                 break;
         }

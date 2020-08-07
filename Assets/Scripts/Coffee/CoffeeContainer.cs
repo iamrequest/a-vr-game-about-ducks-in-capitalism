@@ -128,5 +128,14 @@ public class CoffeeContainer : MonoBehaviour {
     public Color GetCoffeeColor() {
         return coffeeRenderer.material.color;
     }
+
+    public void EmptyCup() {
+        capacity = 0f;
+        currentCoffeeLevel = 0f;
+        creamPercentage = 0f;
+        UpdateCoffeeMesh();
+
+        ClearSugar();
+    }
 }
 

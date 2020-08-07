@@ -43,8 +43,12 @@ namespace UnityEditor {
 
             if (expandSentences[i]) {
                 sentenceToDelete = null;
+                int sentenceIndex = 0;
+                int insertSentenceAt = -1;
 
                 foreach (Sentence s in convo.sentences) {
+                    sentenceIndex++;
+
                     if (s == null) break;
                     EditorGUI.BeginChangeCheck();
 
@@ -68,6 +72,11 @@ namespace UnityEditor {
                         Undo.RecordObject(target, "Remove Sentence");
                         EditorUtility.SetDirty(target);
                     }
+
+                    if (GUILayout.Button("+V")) {
+                        // Can't insert an element in the middle of a foreach loop
+                        insertSentenceAt = sentenceIndex;
+                    }
                     EditorGUILayout.EndHorizontal();
 
                     // -- Text field
@@ -81,6 +90,9 @@ namespace UnityEditor {
 
                 if (sentenceToDelete != null) {
                     convo.sentences.Remove(sentenceToDelete);
+                }
+                if (insertSentenceAt > -1) {
+                    convo.sentences.Insert(insertSentenceAt, new Sentence());
                 }
 
                 // -- Add sentence / remove convo
