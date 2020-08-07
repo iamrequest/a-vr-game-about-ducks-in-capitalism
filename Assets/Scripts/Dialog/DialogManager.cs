@@ -213,7 +213,15 @@ public class DialogManager : MonoBehaviour {
     private void ConfigureTextboxImages() {
         // -- Set namebox color and text
         nameboxBG.color = SpeakerManager.instance.GetSpeakerColor(currentSentence.currentSpeaker);
-        nameboxTextUI.text = currentSentence.currentSpeaker.ToString();
+        switch (currentSentence.currentSpeaker) {
+            case DialogSpeaker.WORK_DUCK_ANON:
+            case DialogSpeaker.ART_DUCK_ANON:
+                nameboxTextUI.text = "???";
+                break;
+            default:
+                nameboxTextUI.text = currentSentence.currentSpeaker.ToString();
+                break;
+        }
 
         // -- Set dialog box color and bg image
         dialogBG.color = SpeakerManager.instance.GetSpeakerColor(currentSentence.currentSpeaker);

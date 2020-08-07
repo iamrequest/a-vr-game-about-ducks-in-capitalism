@@ -4,7 +4,7 @@ using UnityEngine;
 using Valve.VR.InteractionSystem;
 
 public enum DialogSpeaker {
-   Me, Suzie, Sam
+   Me, Suzie, Sam, WORK_DUCK_ANON, ART_DUCK_ANON 
 }
 public enum NPCAnimation {
    // Set lookat target
@@ -72,6 +72,9 @@ public class SpeakerManager : MonoBehaviour {
         switch(speaker) {
             case DialogSpeaker.Suzie: return workDuck;
             case DialogSpeaker.Sam: return artDuck;
+
+            case DialogSpeaker.WORK_DUCK_ANON: return workDuck;
+            case DialogSpeaker.ART_DUCK_ANON: return artDuck;
             default: return null;
         }
     }

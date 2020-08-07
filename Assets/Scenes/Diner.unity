@@ -2996,7 +2996,7 @@ MonoBehaviour:
       text: Oh? Why's that?
     - currentSpeaker: 0
       npcAnimation: 0
-      text: Less caffine than lighter roasts, so it won't keep you up late.
+      text: Less caffeine than lighter roasts, so it won't keep you up late.
     - currentSpeaker: 0
       npcAnimation: 0
       text: As for the taste, it's richer. Bolder.
@@ -6274,7 +6274,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1604367201}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &781465792
+--- !u!114 &781465798
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
