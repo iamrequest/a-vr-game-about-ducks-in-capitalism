@@ -70,9 +70,117 @@ P: Greasy. You do what you can in a pinch, huh?
 W: Yep. Work's been getting real busy lately, so it's not like I can slip out for better coffee
 W: But that's life, ya know?
 W: Besides, I'm used to it now. I drink a bunch of the stuff these days
-P: 
+P: What kind of work are you doing that requires that much effort?
+W: Oh, it's nothing interesting. I work a desk job with an insurance company.
+W: I'm not loving it or anything, they were just the only company that would hire me out of university
+W: Fuck the job market, right?
+P: I see. So what's the plan then?
+W: The plan?
+W: Fuck if I know.
+W: All I know is that once I got into high school, everyone expected for me to have one.
+W: They all expected me to know what I wanted to be when I grew up
+W: All I wanted to be when I grew up, was to be happy, ya know?
+W: But these days, society cares more about what you do from 9-5, rather than who you are.
+W: I mean, when was the last time you met a stranger and they didn't ask what you did for a living?
+W: ...
+W: And then suddenly, it's time to graduate. Time to decide what I wanna do for the rest of my life
+W: As if anyone could reasonably make that decision at 18
+W: To make matters worse, my grades were good enough to qualify for a scholarship. 
+W: It wasn't much. I'm still paying off tuition years later
+P: Oh? How would that be a bad thing?
+W: Well it was only valid if I enrolled for university for the upcoming Fall semester.
+W: And so I didn't have time to figure out what kinda work I wanted to do.
+W: Ended up following in my dad's footsteps. It worked out well enough for him, I figured it'd be the same for me
+P: I see. It must've been hard to make that decision.
+W: Yeah, it was
+W: ...
+
+
+* Order:
+W: Mind if I get another coffee?
+P: Sure. You're welcome to do what you want, but I'd recommend trying the coffee as is
+P: Of course, I won't judge you either way
+W: Maybe another time. I just want something familar right now
+P: Of course. Lots of cream, and 7 sugars. Coming right up.
+
+* Post-order
+P: So, what's stopping you from leaving the company? Find a new place that you actually care about?
+W: Student loans, mainly.
+P: Ah, that's right
+W: Yep. I've been working overtime, trying to chip away at my debt, but there's just so much of it.
+W: Tuition fees are growing wildly over the past decade, out-pacing minimum wage by a long shot
+W: Not to mention most of the entry level jobs out there require a bachelor's degree
+W: Really pisses me off. How is the average working class supposed to get an education?
+P: Seems like the game's been rigged from the start
+W: You know it.
+W: When I think about it all, I just feel so... defeated.
+W: I mean, you work your way through education, and you wage slave until you die
+W: There's got to be more out there than that, right?
+W: ...
+
+* Loop
+W: ...
+P: ...
+P: (I should get her coffee ready. She looks really burnt out)
+
+* Eval
+W: ...
+
+* Fail
+W: Can you remake this dude? I said I wanted more of the same
+W: I just... I can't drink this right now.
+P: Of course, my bad. Just a moment.
+
+* Success
+W: Thanks man, I appreciate it.
+W: And thanks for listening too. I realize you're a barista, not a therapist.
+P: Have you considered seeing one? There's no shame in seeing one, you know
+W: Oh trust me, I would if I could.
+W: There's not really a stigma against getting therapy these days. It's a financial thing.
+W: You'd think that working for the insurance company, they'd actually cover the cost
+W: But they only cover up to $300. That barely covers a month of weekly appointments
+W: Stingy fucking bastards, the lot of them.
+W: Ugh, what should I do? I feel like I'm falling apart here
+P: ...
+P: Well, what are your coping strategies?
+W: My coping strategies?
+P: Yeah. I mean, what do you do to relax after work?
+W: To be honest, lately I haven't even been coming home from work.
+W: Much easier to just sleep under my desk. Gives me time to chip away at my piles of work
+P: You do realize that's super unhealthy, right?
+P: You need some boundaries between you and work.
+W: But there's just so much work to be done. If I don't work overtime, it won't get done
+W: Besides, I really could use the money from a bonus, or a promotion
+P: The work will still be there in the morning. It doesn't matter at sundown.
+P: Back to coping strategies. What are you using as an outlet?
+W: An outlet?
+P: You know, hobbies. Creative outlets, physical outlets. The works
+W: ...
+W: To be honest, I can't remember.
+W: Everything's always been about grades, making it into university, and finding a job, and working that job
+W: I feel like it's all just been a blur of work
+P: Sounds like a good time to re-discover yourself
+W: I think so, yeah.
+P: So, your homework for this week is to find something that makes you happy
+P: Oh, maybe I shouldn't call it homework, huh?
+W: No, it's fine. This is actually pretty exciting
+W: I'll let you know what I come up with next time I come by
+P: I'll be looking forward to it.
+P: I'm Arthur, by the way.
+W: Suzie. Nice to meet'cha
+W: I'd better hit the road. Work starts early tomorrow, didn't plan on staying so long
+W: But hey, that's what the sawdust coffee's for, right?
+W: Anyways, I'll see you around, Arthur
+P: Of course. Be safe.
+
+* Pre-order
+P: It is getting late, isn't it...
+P: Well, time to close up shop I suppose.
+
+
 
 - Whaqt kind of work do you do
 - Don't love it
 	- First thing out of uni that seemed appealing
+	- Rushed into a career path right out of high school
 	- 
