@@ -84,9 +84,11 @@ public class QuestDialog : BaseDialog {
                 dialogManager.StartDialog(this, objectives[activeObjectiveIndex].evaluateCoffeeDialog, true);
 
                 // Test if the coffee is good or not, and react accordingly
+                HideCoffee();
                 EvaluateCoffee();
                 if (objectives[activeObjectiveIndex].isCoffeeOrderValid) {
                     dialogManager.StartDialog(this, objectives[activeObjectiveIndex].orderReceivedDialog, false);
+                    coffeeContainer.EmptyCup();
 
                     // Advance to "order received"
                     objectives[activeObjectiveIndex].AdvanceDialogState();
@@ -112,6 +114,7 @@ public class QuestDialog : BaseDialog {
             // Start the post-order dialog immediately
             case QuestObjectiveState.PRE_ORDER:
                 CreateOrderSlip();
+                coffeeMug.gameObject.SetActive(true);
 
                 objectives[activeObjectiveIndex].AdvanceDialogState();
                 StartDialog();
@@ -125,6 +128,7 @@ public class QuestDialog : BaseDialog {
 
             // Don't advance until coffee is served
             case QuestObjectiveState.WAITING:
+                coffeeMug.gameObject.SetActive(true);
                 break;
 
             // Final dialog complete. 
@@ -218,5 +222,13 @@ public class QuestDialog : BaseDialog {
         // Begin the initial dialog
         isActInitialized = true;
         StartDialog();
+    }
+
+    /// <summary>
+    /// Slot the coffee, and set it as inactive
+    /// </summary>
+    private void HideCoffee() {
+        coffeeMug.SnapToSlot();
+        coffeeContainer.gameObject.SetActive(false);
     }
 }

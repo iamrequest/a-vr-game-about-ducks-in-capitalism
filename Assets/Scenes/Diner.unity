@@ -2874,61 +2874,28 @@ MonoBehaviour:
       m_Calls: []
   onOrderServed:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 489292549}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1492703560}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 489292545}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onLastDialogComplete:
     m_PersistentCalls:
       m_Calls: []
   preOrderDialog:
     sentences:
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 5
       text: 
     - currentSpeaker: 0
       npcAnimation: 0
       text: Hey, welcome. What can I get you?
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 1
       text: Black coffee would be nice, thanks.
     - currentSpeaker: 0
       npcAnimation: 0
       text: Sure, coming right up.
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: Thanks.
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 5
       text: 
     - currentSpeaker: 0
@@ -2943,43 +2910,43 @@ MonoBehaviour:
         the customer, and talk to them again)
   postOrderDialog:
     sentences:
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: ...
     - currentSpeaker: 0
       npcAnimation: 0
       text: ...
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 1
       text: 
     - currentSpeaker: 0
       npcAnimation: 0
       text: I like what you're drawing. Is this what you do for a living?
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 1
       text: I wouldn't exactly call it a living, but it pays the bills.
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: Sometimes, anyways
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 3
       text: And uh, some of the times, anyways
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 1
       text: 
     - currentSpeaker: 0
       npcAnimation: 0
       text: Always a struggle, eh?
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: You know it.
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 3
       text: ...
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: It's uh...
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 1
       text: A bit quiet today isn't it? Is it normal for this place to be empty?
     - currentSpeaker: 0
@@ -2991,7 +2958,7 @@ MonoBehaviour:
     - currentSpeaker: 0
       npcAnimation: 0
       text: That said, I think it's the perfect time for a nice dark roast
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: Oh? Why's that?
     - currentSpeaker: 0
@@ -3003,21 +2970,21 @@ MonoBehaviour:
     - currentSpeaker: 0
       npcAnimation: 0
       text: Fitting for a night like tonight, don't you think?
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 5
       text: I guess, yeah
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 1
       text: Is that what you're serving me now?
     - currentSpeaker: 0
       npcAnimation: 0
       text: 'Yep. It''s all we brew this late, actually. '
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: Cool, I'm looking forward to it
   waitingDialog:
     sentences:
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 3
       text: ...
     - currentSpeaker: 0
@@ -3045,13 +3012,13 @@ MonoBehaviour:
     - currentSpeaker: 0
       npcAnimation: 0
       text: Here, try this
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 6
       text: 
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 1
       text: So this is the dark roast you were talking about?
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 8
       text: ...
     - currentSpeaker: 0
@@ -3059,13 +3026,13 @@ MonoBehaviour:
       text: How is it?
   badCoffeeDialog:
     sentences:
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 1
       text: I was uh, kinda expecting more from this
     - currentSpeaker: 0
       npcAnimation: 0
       text: Something wrong?
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 7
       text: I think so. Can you remake it maybe?
     - currentSpeaker: 0
@@ -3076,19 +3043,19 @@ MonoBehaviour:
       text: (His order is on the order slip, posted on the coffee machine)
   orderReceivedDialog:
     sentences:
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 3
       text: It's bitter
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 1
       text: 
     - currentSpeaker: 0
       npcAnimation: 0
       text: I can add sugar or cream, if you'd like
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: Ah, nonono, don't bother
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 8
       text: This is how I want it today
     - currentSpeaker: 0
@@ -3097,28 +3064,28 @@ MonoBehaviour:
     - currentSpeaker: 0
       npcAnimation: 0
       text: So, what are you drawing?
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 3
       text: Oh this? It's a commission I'm working on
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: One of my mutuals wants me to draw them a portrait of their waifu-
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 1
       text: 
     - currentSpeaker: 0
       npcAnimation: 0
       text: Their waifu?
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: Oh, it's an anime thing. It's like... best girl of the show
     - currentSpeaker: 0
       npcAnimation: 0
       text: So it's weeb shit?
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: Pretty much, yeah
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 8
       text: 
     - currentSpeaker: 0
@@ -3127,22 +3094,23 @@ MonoBehaviour:
     - currentSpeaker: 0
       npcAnimation: 0
       text: A maid?
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: Yep~ That's Reme~
     - currentSpeaker: 0
       npcAnimation: 0
       text: Who's Reme?
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 3
       text: 'She''s the big waifu from this popular anime, Reme: Zero'
     - currentSpeaker: 0
       npcAnimation: 0
-      text: She's a cutie
-    - currentSpeaker: 2
+      text: She's a cutie. The kinda girl that makes you wish you spoke a little
+        French, huh
+    - currentSpeaker: 4
       npcAnimation: 1
       text: 
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 9
       text: Dude I know right?
     - currentSpeaker: 0
@@ -3151,23 +3119,23 @@ MonoBehaviour:
     - currentSpeaker: 0
       npcAnimation: 0
       text: I mean, it's pretty revealing. Is that even safe for work?
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: It's anime dude
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 5
       text: It's more about the fanservice than anything else
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 1
       text: Besides, Reme's more than just a smut machine
     - currentSpeaker: 0
       npcAnimation: 0
       text: And the fact that her thighs are thick as a bowl of oatmeal is just a
         coincidence?
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 9
       text: Exactly!
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 1
       text: I'm glad you understand~
 --- !u!4 &311846091
@@ -4292,18 +4260,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1492703558}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &489292549 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 145198711, guid: 2e71bdd91d279ac409ac8bea80fca31c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1492703558}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 489292545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 921eef9775683024cbe765882e56a0a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &492589676
 GameObject:
   m_ObjectHideFlags: 0
@@ -11355,54 +11311,10 @@ MonoBehaviour:
   isCoffeeOrderValid: 0
   onOrderReceived:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 489292545}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   onOrderServed:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 489292549}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1492703560}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 489292545}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onLastDialogComplete:
     m_PersistentCalls:
       m_Calls:
@@ -11422,34 +11334,34 @@ MonoBehaviour:
     - currentSpeaker: 0
       npcAnimation: 0
       text: You sure you don't want any sugar?
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 1
       text: Are you hitting on me? ;)
     - currentSpeaker: 0
       npcAnimation: 0
       text: Doesn't seem like you're into it
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: It's fine
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 4
       text: I think I need a kick in the ass right now anyways
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 1
       text: 
     - currentSpeaker: 0
       npcAnimation: 0
       text: A bitter coffee for a bitter night
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 8
       text: 
     - currentSpeaker: 0
       npcAnimation: 0
       text: Very methaphorical
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: I could go for a refill though, thanks
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 7
       text: More of the same would be nice, thanks
     - currentSpeaker: 0
@@ -11457,7 +11369,7 @@ MonoBehaviour:
       text: Sure, coming right up
   postOrderDialog:
     sentences:
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 4
       text: 
     - currentSpeaker: 0
@@ -11466,56 +11378,56 @@ MonoBehaviour:
     - currentSpeaker: 0
       npcAnimation: 0
       text: What's on your mind?
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: ...
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 1
       text: It's just art stuff
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: I'm trying to make this whole art thing my career
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 5
       text: But i'm having the fuckin' worst time trying to actually draw
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: And I really need these commissions to pay rent
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: It's already pretty tight covering my basic cost of living when I'm at
         normal productivity levels
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 1
       text: 
     - currentSpeaker: 0
       npcAnimation: 0
       text: I see.
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: 'The worst part is that I used to love doing art '
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: When I was a kid, I'd draw for hours at a time, just for fun
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 5
       text: We used to have rotate the fridge drawings every week, just because I
         was drawing so much
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: But now I can barely focus on anything I'm drawing
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 3
       text: I just... sit there. Every time I try to get started, it's like there's
         a weight pulling me away from my tablet
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: Makes me feel like I'm not really cut out for this whole art thing, ya
         know?
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 1
       text: I mean, how can I call myself an artist, if I'm not producing art?
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 5
       text: ...
   waitingDialog:
@@ -11523,29 +11435,29 @@ MonoBehaviour:
     - currentSpeaker: 0
       npcAnimation: 0
       text: (I should get his coffee for him. Same as before, black coffee)
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: 
   evaluateCoffeeDialog:
     sentences:
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 6
       text: 
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 1
       text: Oh, thanks
   badCoffeeDialog:
     sentences:
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 8
       text: ...
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: This isn't what I ordered, man
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 7
       text: Can you remake it?
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 5
       text: 
     - currentSpeaker: 0
@@ -11553,16 +11465,16 @@ MonoBehaviour:
       text: Sure, can do. Sorry about that
   orderReceivedDialog:
     sentences:
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 1
       text: 
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 8
       text: 
     - currentSpeaker: 0
       npcAnimation: 0
       text: Just how you ordered, black as a midnight on a motionless night
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: Thanks, appreciate it
     - currentSpeaker: 0
@@ -11571,19 +11483,19 @@ MonoBehaviour:
     - currentSpeaker: 0
       npcAnimation: 0
       text: Have you considered taking a break once in a while?
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: How can I? Like I said, I need this money to pay rent
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 3
       text: And if I don't make art, I can't pay rent
     - currentSpeaker: 0
       npcAnimation: 0
       text: This is true
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: Besides, I've been taking too many breaks already.
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 8
       text: 'I uh, accidentally binged all of the old episodes of Reme: Zero to get
         ready for the new season'
@@ -11593,16 +11505,16 @@ MonoBehaviour:
     - currentSpeaker: 0
       npcAnimation: 0
       text: It sounds like you've been stressing about this a lot, you know
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 5
       text: 'A real break? '
     - currentSpeaker: 0
       npcAnimation: 0
       text: Mhm
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 8
       text: 
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 1
       text: 
     - currentSpeaker: 0
@@ -11613,10 +11525,10 @@ MonoBehaviour:
       npcAnimation: 0
       text: But that was a stressfull, break, wasn't it? You didn't come out of the
         break any more ready to work than before.
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: This is true
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 8
       text: 
     - currentSpeaker: 0
@@ -11626,19 +11538,19 @@ MonoBehaviour:
       npcAnimation: 0
       text: No worrying about commissions. No obligations. Just set aside an hour
         or a half, to just watch anime or something
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 3
       text: ...
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: I don't know, it feels hard to justify
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 1
       text: But I'll give it a shot, sure.
     - currentSpeaker: 0
       npcAnimation: 0
       text: Good. Think of it this way -
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 8
       text: 
     - currentSpeaker: 0
@@ -11648,13 +11560,13 @@ MonoBehaviour:
     - currentSpeaker: 0
       npcAnimation: 0
       text: Anyways, I want to hear about it next time you come in, alright?
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 3
       text: ...
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 1
       text: Sure, I can do that.
-    - currentSpeaker: 2
+    - currentSpeaker: 4
       npcAnimation: 0
       text: Thanks man.
     - currentSpeaker: 2
