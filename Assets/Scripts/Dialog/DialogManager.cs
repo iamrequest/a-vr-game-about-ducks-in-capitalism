@@ -177,6 +177,10 @@ public class DialogManager : MonoBehaviour {
             //  This stops a bug where old text can bleed into a new convo when the player ends dialog early
             //  and then starts a new dialog quickly.
             if (!isDialogActive) {
+                if (currentNPC != null) {
+                    currentNPC.isTalking = false;
+                    currentNPC.isShouting = false;
+                }
                 yield break;
             }
 
@@ -185,6 +189,10 @@ public class DialogManager : MonoBehaviour {
                 // -- Skip through all the audio
                 textUI.text = currentSentence.text;
                 audioSource.PlayOneShot(typingAudio);
+                if (currentNPC != null) {
+                    currentNPC.isTalking = false;
+                    currentNPC.isShouting = false;
+                }
 
                 completedCurrentSentence = true;
                 yield break;
@@ -206,6 +214,7 @@ public class DialogManager : MonoBehaviour {
 
         if (currentNPC != null) {
             currentNPC.isTalking = false;
+            currentNPC.isShouting = false;
         }
         completedCurrentSentence = true;
     }
@@ -216,7 +225,7 @@ public class DialogManager : MonoBehaviour {
         switch (currentSentence.currentSpeaker) {
             case DialogSpeaker.WORK_DUCK_ANON:
             case DialogSpeaker.ART_DUCK_ANON:
-                nameboxTextUI.text = "???";
+                nameboxTextUI.text = "Customer";
                 break;
             default:
                 nameboxTextUI.text = currentSentence.currentSpeaker.ToString();
