@@ -1,0 +1,78 @@
+-- Goals
+- Establish character
+	- Workaholic
+	- Familiar with coffee machine, since she stays late at the office a lot
+	- Has used the coffee machine to cook in the past, during harder times
+	- Hint at frustration at the ultra wealthy
+- Establish advanced coffee mechanics (sugar, cream)
+
+* Order dialog
+W: (grumbles)
+P: You look tired. What can I get you?
+W: A nap would be nice. You think I can take a nap behind the counter?
+P: It probably wouldn't be sanitary
+W: You sure? I've got a sleeping bag back at the office, I could bring it by
+W: Maybe roast some marshmallows over the coffee burner, have us some smores~
+W: Maybe build a fort out of some blankies, and tell each-other about our crushes???
+P: That's tempting, but I'll have to pass tonight
+P: Maybe take me out to dinner first~
+W: Haha sure sure, I'll hold you to it then
+W: I guess for now, I'll start with a coffee
+P: Sure thing. How do you take it?
+W: Let's see... I'll take my coffee with cream, and 7 sugars tonight
+P: Cream and 7 sugars? S-sure, coming right up
+W: ?
+
+* Post-order
+P: So, do you think the whole marshmallow thing would actually work?
+W: What, roasting smores over the coffee burner?
+W: Yeah! Those get pretty hot, right?
+P: I mean, yeah. But it's probably not hot enough to cook a marhshmallow without contact
+W: But~ If you had some tin foil, you've essentially got a frying pan
+W: And that toasts them up pretty nicely~
+P: Sounds like you're speaking from experience
+W: That's university life, my guy
+P: Fair enough
+W: It's not just good for marshmallows ya know.
+W: You can also cook canned soups, and ramen with a coffee maker.
+W: And even pancakes~
+W: Honestly, who even needs a frying pan these days?
+P: I mean, you're welcome to get rid of yours, but I wouldn't wanna give up having multiple burners
+W: So? Just get 4 coffee pots. Bam, you've got a full range stovetop
+P: ...
+P: 4 coffee pots at the same time DOES sound nice...
+
+* Loop
+S: How's that coffee coming along? Getting sleepy over here my guy
+P: It's on the way, shouldn't be much longer.
+
+* Eval
+S: Ah, thanks
+S: ...
+
+* Fail
+P: Something wrong?
+S: This tastes like shit, bud
+P: Ah, my bad. Let me re-make it for you
+
+* Success
+W: Mmm, just what I needed
+W: This is, excuse me, a damn fine cup of coffee
+P: You sure about that? It's mostly cream and sugar.
+P: I mean, you do you, but this coffee is some serious gourmet shit. 
+W: This is how I like my coffee, my guy. I've always had my coffee like this
+P: When did you start drinking your coffee like this?
+W: Earlier this year.
+W: The coffee at work is hot garbage, it's the only way to really drink the stuff
+W: The boss orders whatever dirt passes as coffee, just to save a few cents.
+W: Pretty sure he mixes actual sawdust in with their coffee grinds to dilute it...
+P: Greasy. You do what you can in a pinch, huh?
+W: Yep. Work's been getting real busy lately, so it's not like I can slip out for better coffee
+W: But that's life, ya know?
+W: Besides, I'm used to it now. I drink a bunch of the stuff these days
+P: 
+
+- Whaqt kind of work do you do
+- Don't love it
+	- First thing out of uni that seemed appealing
+	- 

@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: d65b112bc0033fc4380999802b673b33,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -190,50 +190,167 @@ MonoBehaviour:
         m_CallState: 2
   preOrderDialog:
     sentences:
-    - currentSpeaker: 2
-      npcAnimation: 0
-      text: Howdy, sam here
-    - currentSpeaker: 2
-      npcAnimation: 0
-      text: Can I get a coffee?
-    - currentSpeaker: 2
-      npcAnimation: 0
-      text: Black as a crisp summer morning pls
+    - currentSpeaker: 3
+      npcAnimation: 3
+      text: (grumbles)
+    - currentSpeaker: 3
+      npcAnimation: 1
+      text: 
     - currentSpeaker: 0
       npcAnimation: 0
-      text: Coming right up. Pre-order dialog complete
+      text: You look tired. What can I get you?
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: A nap would be nice. You think I can take a nap behind the counter?
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: It probably wouldn't be sanitary
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: You sure? I've got a sleeping bag back at the office, I could bring it
+        by
+    - currentSpeaker: 3
+      npcAnimation: 9
+      text: Maybe roast some marshmallows over the coffee burner, have us some smores~
+    - currentSpeaker: 3
+      npcAnimation: 9
+      text: Maybe build a fort out of some blankies, and tell each-other about our
+        crushes???
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: That's tempting, but I'll have to pass tonight
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Maybe take me out to dinner first~
+    - currentSpeaker: 3
+      npcAnimation: 9
+      text: Haha sure sure, I'll hold you to it then~
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: I guess for now, I'll start with a coffee
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Sure thing. How do you take it?
+    - currentSpeaker: 3
+      npcAnimation: 4
+      text: Let's see... I'll take my coffee with cream, and 7 sugars tonight
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Cream and 7 sugars? S-sure, coming right up
+    - currentSpeaker: 3
+      npcAnimation: 1
+      text: '?'
   postOrderDialog:
     sentences:
     - currentSpeaker: 1
-      npcAnimation: 0
+      npcAnimation: 1
       text: 
     - currentSpeaker: 0
       npcAnimation: 0
-      text: So, what brings you?
-    - currentSpeaker: 1
+      text: So, do you think the whole marshmallow thing would actually work?
+    - currentSpeaker: 3
+      npcAnimation: 10
+      text: What, roasting smores over the coffee burner?
+    - currentSpeaker: 3
       npcAnimation: 0
-      text: Nothing special. Post order chat completge.
+      text: Yeah! Those get pretty hot, right?
+    - currentSpeaker: 3
+      npcAnimation: 1
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: I mean, yeah. But it's probably not hot enough to cook a marhshmallow
+        without contact
+    - currentSpeaker: 3
+      npcAnimation: 10
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Those burners only get about 160 Farenheit. Frying pans get a fair bit
+        hotter than that
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: This is true. But~ If you had some tin foil, you've essentially got yourself
+        a frying pan
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: And that toasts them up pretty nicely~
+    - currentSpeaker: 3
+      npcAnimation: 1
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Sounds like you're speaking from experience
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: That's college life, my guy
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Fair enough
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: It's not just good for marshmallows ya know.
+    - currentSpeaker: 3
+      npcAnimation: 10
+      text: You can also cook canned soups, and ramen with a coffee maker.
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: Pancakes too~
+    - currentSpeaker: 3
+      npcAnimation: 1
+      text: Honestly, who even needs a frying pan these days?
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: I mean, you're welcome to get rid of yours, but I wouldn't wanna give
+        up having multiple burners
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: So? Just get 4 coffee pots. Bam, you've got a full range stovetop
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: ...
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: 4 coffee pots at the same time DOES sound nice...
+    - currentSpeaker: 3
+      npcAnimation: 5
+      text: 
   waitingDialog:
     sentences:
-    - currentSpeaker: 1
-      npcAnimation: 0
-      text: Looping dialog
+    - currentSpeaker: 3
+      npcAnimation: 1
+      text: How's that coffee coming along? Getting sleepy over here my guy
     - currentSpeaker: 0
       npcAnimation: 0
-      text: Looooop
-    - currentSpeaker: 1
-      npcAnimation: 0
+      text: It's on the way, shouldn't be much longer.
+    - currentSpeaker: 3
+      npcAnimation: 5
       text: 
   evaluateCoffeeDialog:
-    sentences: []
+    sentences:
+    - currentSpeaker: 3
+      npcAnimation: 1
+      text: 
+    - currentSpeaker: 3
+      npcAnimation: 6
+      text: Ah, thanks
+    - currentSpeaker: 3
+      npcAnimation: 8
+      text: ...
   badCoffeeDialog:
     sentences:
     - currentSpeaker: 0
       npcAnimation: 0
-      text: Here's your coffee, nerd
-    - currentSpeaker: 1
+      text: Something wrong?
+    - currentSpeaker: 3
+      npcAnimation: 1
+      text: Tastes like shit, bud
+    - currentSpeaker: 3
+      npcAnimation: 7
+      text: 
+    - currentSpeaker: 0
       npcAnimation: 0
-      text: wtf this is literal garbage
+      text: Ah, my bad. I'll remake it for you, right away.
   orderReceivedDialog:
     sentences:
     - currentSpeaker: 0
@@ -4234,6 +4351,7 @@ MonoBehaviour:
   lookDownTransform: {fileID: 1445640901}
   lookUpTransform: {fileID: 1989925442}
   lookatBonsaiTransform: {fileID: 543450651861593336}
+  lookatCoffeeMakerTransform: {fileID: 1201982169}
 --- !u!4 &486781050
 Transform:
   m_ObjectHideFlags: 0

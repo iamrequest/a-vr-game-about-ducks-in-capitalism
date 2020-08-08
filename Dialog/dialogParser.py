@@ -39,6 +39,7 @@ def parseLine(line):
     dialog = line.split(':')
     if(len(dialog) > 1):
         dialogText = ':'.join(dialog[1:])
+        dialogText = dialogText.strip()
         print('      text: {}'.format(dialogText))
     else: 
         print('      text: ERROR, MISSING')
