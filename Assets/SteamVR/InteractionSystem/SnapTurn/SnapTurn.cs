@@ -64,15 +64,19 @@ namespace Valve.VR.InteractionSystem
 
                 // only allow snap turning when not holding something
 
-                bool rightHandValid = player.rightHand.currentAttachedObject == null ||
-                    (player.rightHand.currentAttachedObject != null
-                    && player.rightHand.currentAttachedTeleportManager != null
-                    && player.rightHand.currentAttachedTeleportManager.teleportAllowed);
+                // Replaced built-in code to hardcode validity to allow for snap turning while holding object
+                // http://answers.unity.com/answers/1735139/view.html
+                bool rightHandValid = true;
+                //bool rightHandValid = player.rightHand.currentAttachedObject == null ||
+                //    (player.rightHand.currentAttachedObject != null
+                //    && player.rightHand.currentAttachedTeleportManager != null
+                //    && player.rightHand.currentAttachedTeleportManager.teleportAllowed);
 
-                bool leftHandValid = player.leftHand.currentAttachedObject == null ||
-                    (player.leftHand.currentAttachedObject != null
-                    && player.leftHand.currentAttachedTeleportManager != null
-                    && player.leftHand.currentAttachedTeleportManager.teleportAllowed);
+                bool leftHandValid = true;
+                //bool leftHandValid = player.leftHand.currentAttachedObject == null ||
+                //    (player.leftHand.currentAttachedObject != null
+                //    && player.leftHand.currentAttachedTeleportManager != null
+                //    && player.leftHand.currentAttachedTeleportManager.teleportAllowed);
 
 
                 bool leftHandTurnLeft = snapLeftAction.GetStateDown(SteamVR_Input_Sources.LeftHand) && leftHandValid;
