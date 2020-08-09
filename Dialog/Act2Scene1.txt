@@ -1,0 +1,97 @@
+-- Act 2, scene 1
+- Art guy returns
+	- Has 2 sugars in his coffee. Trying to break his habit of self-inflicted pain
+	- He's taking a break, but things are still rough. Having a hard time taking a break
+	- Art guy leaves, but forgets his drawing tablet
+
+* Pre-order
+S: Hey Arthur
+A: Good to see you again, Sam. What can I get you?
+S: Coffee, black... With a little bit of sugar, please
+A: Of course, coming right up.
+
+* Post-order
+A: So, no bitter black coffee today?
+S: Nah, I figured I deserve the break.
+S: I've been trying to take more productive breaks, like you were saying the other day
+S: Well, more productive as in taking real breaks.
+S: So I guess less productive breaks?
+A: And? How's it going?
+S: Well, I tried to watch the new episode of Reme: Zero. Tried to play Animal Intersection. Tried not to think about my commissions.
+S: And then I sat down to draw some more.
+S: But it's hard man... I don't know how people do it
+S: You'd think it'd be easy. Just sit down and watch some anime, or play some games
+S: But whenever I'd get halfway through, or finish up a mission, I'd just feel guilty about wasting time
+A: I mean, yeah, you ARE wasting time. But that's the point, right?
+S: I know, I know... I just have to get used to it.
+A: These things take time. You're doing great, kiddo. 
+S: Thanks man, I appreciate it.
+
+S: So I was thinking -
+S: Money and commissions aside, is it really ok for me as an artist to slow my production down?
+S: I'm just... not clicking for me yet.
+S: I mean, we talked about this yesterday, but if I'm not creating art, how can I call myself an artist?
+P: Well, you're someone who creates art. Therefore you're an artist
+S: I mean, today I'm an artist, sure. And if I take a day off to watch anime, that's probably fine.
+S: But what if I get mega burnt out, and take a week off? What about a month?
+S: In that case, I'm not a person who creates art. And therefore I'm not an artist.
+S: If I don't post art on a regular basis, people will forget about me.
+S: Social media's just like that, ya know? It always demands something new from you
+S: And if you're not around to create, then it just continues to churn without you
+
+* Loop
+S: ...
+A: (I should get his coffee ready for him)
+
+* Eval
+A: Here you go.
+S: ...
+
+* Fail
+S: This isn't what I ordered man. 
+A: O-oh, that's right. My bad. Let me fix that for you.
+
+* Success
+A: How is it?
+S: It's not bad. Sweeter than I thought it'd be
+A: Want a fresh cup, less sugar?
+S: Nah, I don't want to put you through the hassle. The sweetness is change of pace anyways. I think I need this right now.
+S: Besides, I have to catch the train home soon anyways.
+A: Of course. No worries.
+A: You've heard of Leonardo da Vinci, right?
+S: Is that the one with the swords?
+A: No, you're thinking of someone else
+S: Heh, nah I'm just playin' with you. I know of da Vinci. He drew the Mona Lisa.
+S: What a painting too. Great hands on that one.
+A: Hands?
+S: Oh, nothing. What were you going to say about da Vinci?
+A: Right, da Vinci. Great artist. Very famous for his art. 
+A: In fact, you'd have a hard time meeting anyone who doesn't know of the Mona Lisa
+A: But did you know, he never actually completed it?
+S: What? 
+A: Yep. He picked at it for over 10 years, never satisfied with it. And so, he never published or sold the painting.
+A: They only found it in his studio after he passed.
+A: And yet, it's his most famous painting - some would even say it's THE most famous painting out there.
+S: Fuckin' wild
+A: Right?
+A: Over the 10 years that da Vinci worked on the Mona Lisa, he was still an artist. Art theory literature would certainly agree.
+A: And so, if da Vinci can spend 10 years working on one painting, you'll do just fine taking time off now and then.
+A: Be it a week, or a month - your effort and talent will not go away.
+S: ...
+S: ok
+S: I think I'm starting to get it.
+S: I think... I need to think about it some more.
+S: It all makes sense on paper, but I need to internalize this
+A: Of course. These things take time
+S: Yeah, they do, don't they?
+S: Well, I'm gonna be on my way then
+S: Thanks for the coffee, man. I'll see you around
+
+-- Act 2, scene 2
+- Work duck shows up shortly after
+	- Work is still busy, asked for time off. Rejected
+	- Not working overtime, but now she has all this time and she's not sure how to spend it. Trying different hobbies
+	- Half-jokes about mid-life crisis
+	- Notices the tablet left behind by art duck
+
+
