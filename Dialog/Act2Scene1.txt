@@ -94,4 +94,98 @@ S: Thanks for the coffee, man. I'll see you around
 	- Half-jokes about mid-life crisis
 	- Notices the tablet left behind by art duck
 
+S: Heya
+A: Hey Suzie, how's it going?
+S: It's going.
+A: What can I get you? Coffee?
+S: Yeah, that'd be nice. Maybe a little less sugar this time? Not too much less though
+A: Feeling more adventurous today?
+S: Something like that. 
+A: Very admirable. It's coming right up.
 
+S: ...
+S: Did someone leave this behind?
+A: Oh, that's Sam's drawing tablet - you passed him on the way in
+S: Should I run it back to him or something? He couldn't have gotten far.
+A: No, let it be. I think it's for the best that he left it.
+S: Sure? If you say so I guess.
+S: So what's the story on this drawing? Do you know about it?
+A: Oh, the girl in the picture? That's Reme, from Reme: Zero
+A: I guess she's a maid or something, I don't really know. I don't really watch anime.
+S: Anime, huh?
+S: I love her hair. Wish I could color my hair like that
+A: But you don't have hair?
+S: Ugh, I know. It's a dress code thing. 
+S: My boss is stuck in the last century - the old fart says "presentable ducks shouldn't have showing hair"
+S: Although if you ask me, it's just a way to keep us all in line and cooperative.
+S: If I ever came into a bunch of money, I'd grow my hair out, and dye it blue.
+S: Maybe start a small garden in front of my house.
+S: Wouldn't listen to anyone who'd tell me what's "wrong".
+A: Oh yeah?
+S: Yeah. 
+S: You ever think about that sorta thing? What you'd do if you suddenly had a million dollars?
+A: Now and then I suppose. I'd probably buy better coffee. Spend more time watching the stars.
+S: Sounds like a good time.
+S: Thing is, it's always super modest, right? Like what would you ever do with more than, say, 5 million dollars?
+A: Not sure. Give it to charity? Buy housing for my family?
+S: Exactly, right? At some point, there's just too much to live a reasonable modest life
+S: And yet, there's still billionaires out there, hoarding wealth like little gremlins
+S: You ever think about how wildly immoral a billion dollars is, in the hands of a single person?
+S: To put it into context, a million seconds is roughly 12 days. A billion seconds is 31 YEARS.
+S: How can one person spend all of that money? How can they ethically get all of that money?
+A: Seems like it can't be done.
+S: Yep. The only way for someone to become a billionaire, is through theft of the working class
+S: And yet there's never enough money to go around when it's needed by the average person
+S: For a society to allow billionaires to exist... It's just... It's not right.
+S: "The only framework capitalism can thrive in, is dystopia."
+S: ...
+S: Ah, but I didn't mean to go off on a rant there. I just really can't stand how 
+A: Don't worry about it. Your passion is admirable.
+
+* Eval
+A: Here you go, cream, and less than 7 sugar
+S: Ah, thanks, my guy
+S: ...
+
+* Fail
+S: Mmm... nah, this doesn't taste right. Can you take a look at it?
+A: Of course. Let me fix that. Sorry about that.
+
+* Success
+S: Mmm... That's actually pretty good
+A: Right? Coffee is pretty good when it's got no sawdust in it
+S: God totally. Maybe I should start brewing my own at home, instead of drinking the crap at work.
+A: Well, if you'd like tips, I'm happy to share
+A: Speaking of work, how's that going for you? You know, the hobby search and stuff
+S: Things are kinda coming along. I asked my boss for some time off. Told him I was feeling burnt out
+A: And?
+S: He went off on one of his rants. Guy says that burnout's a "natural part of any job"
+S: He says that "Coffee, God and Cigarettes" are all that I need to break this routine, but there's no way I can actually take that advice.
+S: He's been drinking the corporate cool-aid for years now, ya know?
+A: Right. Sounds like he just wants to squeeze you for all the work he can
+S: So in short, I'm not working overtime anymore. Whether he likes it or not.
+A: Good! I'm proud of you!
+S: Thanks, Arthur.
+A: And how's the hobby search going?
+S: It's been hard, actually. Now that I'm not working overtime, I have all this time at home, and no idea how to spend it
+S: So I'm trying a little bit of everything. This week, I'm learning how to knit~
+A: How's that going for you?
+S: ...
+S: God I hate it so much
+S: I mean, nothing against people who like to knit, but this is really not vibin' with me
+S: Is this what I'm supposed to be doing? Just spending time doing fucking whatever until I get old and die?
+S: What do people even do for fun these days?
+A: Not knitting, I take it?
+A: Look, it's going to take time to figure these things out. It's not like you can define yourself overnight
+A: Just keep at it. Something will stick.
+S: You think so? 
+A: Of course. There's always more to life than just work, regardless of what the cool-aid man at work says
+A: Just... keep your eyes open, and remember to say "yes" to new opportunities
+S: Ok... I can do that.
+A: Good. You're doing great out there, kiddo.
+S: ...
+A: Getting dark out there, you gonna be alright getting home tonight?
+S: I'll be fine, yeah. Trains are quiet this time of night. Been using the time to reflect on things
+S: I should be on my way though, don't want to have to wait around for the next train to come.
+S: See you around?
+A: Of course, come again soon!
