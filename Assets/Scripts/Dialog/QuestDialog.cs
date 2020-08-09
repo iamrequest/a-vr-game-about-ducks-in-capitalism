@@ -117,6 +117,7 @@ public class QuestDialog : BaseDialog {
                 coffeeMug.gameObject.SetActive(true);
 
                 objectives[activeObjectiveIndex].AdvanceDialogState();
+                objectives[activeObjectiveIndex].onOrderReceived.Invoke();
                 StartDialog();
                 break;
 
@@ -194,14 +195,22 @@ public class QuestDialog : BaseDialog {
         if (objectives[activeObjectiveIndex].minCream == objectives[activeObjectiveIndex].maxCream) {
             // Exact cream percentage
             orderSlipText.text = "Coffee\n- Sugar: " + objectives[activeObjectiveIndex].requiredSugar +
-                "\n- Cream: " + objectives[activeObjectiveIndex].minCream + "%";
+                "\n- Cream: " + FormatPercentage(objectives[activeObjectiveIndex].minCream);
         } else {
             // Range of cream percentages
             orderSlipText.text = "Coffee\n- Sugar: " + objectives[activeObjectiveIndex].requiredSugar +
                 "\n- Cream:\n  " +
-                objectives[activeObjectiveIndex].minCream + "% - " +
-                objectives[activeObjectiveIndex].maxCream + "%";
+                FormatPercentage(objectives[activeObjectiveIndex].minCream) + " - " +
+                FormatPercentage(objectives[activeObjectiveIndex].maxCream);
         }
+    }
+
+    /// <summary>
+    /// Formats a float percentage .5 as "50%"
+    /// </summary>
+    /// <param name="percentage">A float, from 0 to 1</param>
+    private string FormatPercentage(float percentage) {
+        return percentage * 100 + "%";
     }
 
     private void DestroyOrderSlip() {

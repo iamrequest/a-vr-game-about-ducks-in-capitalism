@@ -42,13 +42,23 @@ public class DuckNPC : MonoBehaviour {
     public void SetAnimation(NPCAnimation animation) {
         switch (animation) {
             case NPCAnimation.SetCoffee: 
+                SetIsDrawing(false);
                 SetMugVisibility(true);
                 break;
             case NPCAnimation.UnsetCoffee: 
+                SetIsDrawing(false);
                 SetMugVisibility(false);
                 break;
             case NPCAnimation.SipCoffee: 
                 SipCoffee();
+                break;
+            case NPCAnimation.StartDrawing: 
+                SetMugVisibility(false);
+                SetIsDrawing(true);
+                break;
+            case NPCAnimation.StopDrawing: 
+                SetMugVisibility(false);
+                SetIsDrawing(false);
                 break;
             case NPCAnimation.Shout:
                 isTalking = false;
@@ -72,6 +82,9 @@ public class DuckNPC : MonoBehaviour {
     }
     public void SetMugVisibility(bool isHoldingMug) {
         animator.SetBool("hasCoffee", isHoldingMug);
+    }
+    public void SetIsDrawing(bool isDrawing) {
+        animator.SetBool("isDrawing", isDrawing);
     }
     public void SipCoffee() {
         lookatTarget = null;

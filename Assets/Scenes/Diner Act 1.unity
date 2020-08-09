@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: d65b112bc0033fc4380999802b673b33,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -153,9 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minCapacityPercentage: 0.8
-  minCream: 0
-  maxCream: 0
-  requiredSugar: 0
+  minCream: 0.15
+  maxCream: 0.25
+  requiredSugar: 7
   isCoffeeOrderValid: 0
   onOrderReceived:
     m_PersistentCalls:
@@ -165,29 +165,7 @@ MonoBehaviour:
       m_Calls: []
   onLastDialogComplete:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 225581}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 919132147671529026}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   preOrderDialog:
     sentences:
     - currentSpeaker: 3
@@ -353,12 +331,148 @@ MonoBehaviour:
       text: Ah, my bad. I'll remake it for you, right away.
   orderReceivedDialog:
     sentences:
+    - currentSpeaker: 3
+      npcAnimation: 1
+      text: Mmm, just what I needed
+    - currentSpeaker: 3
+      npcAnimation: 9
+      text: This is, excuse me, a damn fine cup of coffee
     - currentSpeaker: 0
       npcAnimation: 0
-      text: Here's your coffee bb
-    - currentSpeaker: 1
+      text: You sure about that? It's mostly cream and sugar.
+    - currentSpeaker: 0
       npcAnimation: 0
-      text: ur a saint
+      text: 'I mean, you do you, but this coffee is some serious gourmet shit. '
+    - currentSpeaker: 3
+      npcAnimation: 10
+      text: This is how I like my coffee, my guy. I've always had my coffee like
+        this
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: When did you start drinking your coffee like this?
+    - currentSpeaker: 3
+      npcAnimation: 1
+      text: Earlier this year.
+    - currentSpeaker: 3
+      npcAnimation: 3
+      text: The coffee at work is hot garbage, it's the only way to really drink
+        the stuff
+    - currentSpeaker: 3
+      npcAnimation: 1
+      text: The boss orders whatever dirt passes as coffee, just to save a few cents.
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: Pretty sure he mixes actual sawdust in with their coffee grinds to dilute
+        it...
+    - currentSpeaker: 3
+      npcAnimation: 8
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Greasy. You do what you can in a pinch, huh?
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: Yep. Work's been getting real busy lately, so it's not like I can slip
+        out for better coffee
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: But that's life, ya know?
+    - currentSpeaker: 3
+      npcAnimation: 3
+      text: Besides, I'm used to it now. I drink a bunch of the stuff these days
+    - currentSpeaker: 3
+      npcAnimation: 1
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: What kind of work are you doing that asks so much of you?
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: ' Oh, it''s nothing interesting. I work a desk job with an insurance
+        company.'
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: I'm not loving it or anything, they were just the only company that would
+        hire me out of university
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: Fuck the job market, right?
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: I see. So what's the plan then?
+    - currentSpeaker: 3
+      npcAnimation: 3
+      text: The plan?
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: Fuck if I know.
+    - currentSpeaker: 3
+      npcAnimation: 5
+      text: All I know is that once I got into high school, everyone expected for
+        me to have one.
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: They all expected me to know what I wanted to be when I grew up
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: All I wanted to be when I grew up, was to be happy, ya know?
+    - currentSpeaker: 3
+      npcAnimation: 1
+      text: But these days, society cares more about what you do from 9-5, rather
+        than who you are.
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: I mean, when was the last time you met a stranger and they didn't ask
+        what you did for a living?
+    - currentSpeaker: 3
+      npcAnimation: 8
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: ...
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: And then suddenly, it's time to graduate. Time to decide what I wanna
+        do for the rest of my life
+    - currentSpeaker: 3
+      npcAnimation: 8
+      text: As if anyone could reasonably make that decision at 18
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: 'To make matters worse, my grades were good enough to qualify for a scholarship. '
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: It wasn't much. I'm still paying off tuition years later
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Oh? How would that be a bad thing?
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: It was only valid if I enrolled for university for the upcoming Fall
+        semester.
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: And so I didn't a chance to figure out what kinda work I wanted to do.
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: Had to enroll right away, or else I'd lose the scholarship money. Money
+        was tight back then too.
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: Ended up following in my dad's footsteps. It worked out well enough for
+        him, I figured it'd be the same for me
+    - currentSpeaker: 3
+      npcAnimation: 8
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: I see. It must've been hard to make that decision.
+    - currentSpeaker: 3
+      npcAnimation: 3
+      text: Yeah, it was
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: ...
 --- !u!4 &225580
 Transform:
   m_ObjectHideFlags: 0
@@ -1199,6 +1313,64 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 98787688}
   m_CullTransparentMesh: 0
+--- !u!1 &110396098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 110396100}
+  - component: {fileID: 110396099}
+  m_Layer: 0
+  m_Name: End of Act 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &110396099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110396098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6853c685c483dd94a9346f2079701de5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogManager: {fileID: 731728408}
+  objectives:
+  - {fileID: 572727561}
+  activeObjectiveIndex: 0
+  coffeeMug: {fileID: 1492703560}
+  orderSlipText: {fileID: 270383527}
+  onActStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onActEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogStartDelay: 2
+  dialogEndDelay: 0
+--- !u!4 &110396100
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110396098}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 572727564}
+  m_Father: {fileID: 486781050}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &151677405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2346,307 +2518,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 239835407, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
-      propertyPath: m_Name
-      value: Animation Rig
-      objectReference: {fileID: 0}
-    - target: {fileID: 239835408, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 239835408, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 239835408, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 239835408, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 239835408, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 239835408, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 239835408, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 239835408, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 239835408, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 239835408, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 474074822, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.017947942
-      objectReference: {fileID: 0}
-    - target: {fileID: 474074822, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.81662554
-      objectReference: {fileID: 0}
-    - target: {fileID: 474074822, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.025431454
-      objectReference: {fileID: 0}
-    - target: {fileID: 474074822, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.5763279
-      objectReference: {fileID: 0}
-    - target: {fileID: 474074822, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.0060272235
-      objectReference: {fileID: 0}
-    - target: {fileID: 474074822, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.233422
-      objectReference: {fileID: 0}
-    - target: {fileID: 474074822, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.018161774
-      objectReference: {fileID: 0}
-    - target: {fileID: 474074822, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 474074822, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 474074822, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1873856882, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
-      propertyPath: m_Weight
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1873856882, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
-      propertyPath: m_Data.m_SourceObjects.m_Item0.weight
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1873856883, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
-      propertyPath: m_Weight
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 978669921413012088, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.03109514
-      objectReference: {fileID: 0}
-    - target: {fileID: 978669921413012088, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.13242055
-      objectReference: {fileID: 0}
-    - target: {fileID: 978669921413012088, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.18176322
-      objectReference: {fileID: 0}
-    - target: {fileID: 978669921413012088, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9738892
-      objectReference: {fileID: 0}
-    - target: {fileID: 1109061614357165027, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 1109061614357165027, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071067
-      objectReference: {fileID: 0}
-    - target: {fileID: 1109061614357165027, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1109061614357165027, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1109061614357165027, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1109061614357165027, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1109061614357165027, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1109061614357165027, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1109061614357165027, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1584114760191900073, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2898671296203224832, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4558352876845439527, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.99107105
-      objectReference: {fileID: 0}
-    - target: {fileID: 4558352876845439527, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.07229817
-      objectReference: {fileID: 0}
-    - target: {fileID: 4558352876845439527, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.10730057
-      objectReference: {fileID: 0}
-    - target: {fileID: 4558352876845439527, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.032213822
-      objectReference: {fileID: 0}
-    - target: {fileID: 4558352876845439527, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 175.448
-      objectReference: {fileID: 0}
-    - target: {fileID: 4558352876845439527, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 12.044998
-      objectReference: {fileID: 0}
-    - target: {fileID: 4558352876845439527, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -82.86401
-      objectReference: {fileID: 0}
-    - target: {fileID: 6809152487727569237, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.0065700393
-      objectReference: {fileID: 0}
-    - target: {fileID: 6809152487727569237, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.004090983
-      objectReference: {fileID: 0}
-    - target: {fileID: 6809152487727569237, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.0023363153
-      objectReference: {fileID: 0}
-    - target: {fileID: 6809152487727569237, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.22906227
-      objectReference: {fileID: 0}
-    - target: {fileID: 6809152487727569237, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.00000013585975
-      objectReference: {fileID: 0}
-    - target: {fileID: 6809152487727569237, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.64415497
-      objectReference: {fileID: 0}
-    - target: {fileID: 6809152487727569237, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.729791
-      objectReference: {fileID: 0}
-    - target: {fileID: 6809152487727569237, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6809152487727569237, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6809152487727569237, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7131944114532652737, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b64368e3bd5b86443bf3acf8f2cbd7e2, type: 2}
-    - target: {fileID: 7591767134941862762, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813411691095629342, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.0013479791
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813411691095629342, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.028029837
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813411691095629342, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.06969534
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813411691095629342, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 3.1940002
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813411691095629342, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.37800002
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813411691095629342, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -96.993004
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813411691095629342, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.99717355
-      objectReference: {fileID: 0}
     - target: {fileID: 8346569768281334653, guid: c3b6945e2e147cc46a52177a82aecbd0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2702,75 +2573,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8346569768281334653, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8346569768281334653, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8346569768281334653, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.25
-      objectReference: {fileID: 0}
     - target: {fileID: 8691710163899136455, guid: c3b6945e2e147cc46a52177a82aecbd0,
         type: 3}
       propertyPath: m_Name
       value: workduck Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 9058254473543886355, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.24895985
-      objectReference: {fileID: 0}
-    - target: {fileID: 9058254473543886355, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.00000015065386
-      objectReference: {fileID: 0}
-    - target: {fileID: 9058254473543886355, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.70010966
-      objectReference: {fileID: 0}
-    - target: {fileID: 9058254473543886355, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.6692275
-      objectReference: {fileID: 0}
-    - target: {fileID: 9058254473543886355, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9058254473543886355, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.005944312
-      objectReference: {fileID: 0}
-    - target: {fileID: 9058254473543886355, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.0024474438
-      objectReference: {fileID: 0}
-    - target: {fileID: 9058254473543886355, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.0021138059
-      objectReference: {fileID: 0}
-    - target: {fileID: 9058254473543886355, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9058254473543886355, guid: c3b6945e2e147cc46a52177a82aecbd0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3b6945e2e147cc46a52177a82aecbd0, type: 3}
@@ -2991,7 +2797,18 @@ MonoBehaviour:
       m_Calls: []
   onOrderServed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 656198513}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   onLastDialogComplete:
     m_PersistentCalls:
       m_Calls: []
@@ -3097,12 +2914,12 @@ MonoBehaviour:
       npcAnimation: 0
       text: 'Yep. It''s all we brew this late, actually. '
     - currentSpeaker: 4
-      npcAnimation: 0
+      npcAnimation: 11
       text: Cool, I'm looking forward to it
   waitingDialog:
     sentences:
     - currentSpeaker: 4
-      npcAnimation: 3
+      npcAnimation: 11
       text: ...
     - currentSpeaker: 0
       npcAnimation: 6
@@ -3126,6 +2943,12 @@ MonoBehaviour:
         and talk to them.)
   evaluateCoffeeDialog:
     sentences:
+    - currentSpeaker: 4
+      npcAnimation: 12
+      text: 
+    - currentSpeaker: 4
+      npcAnimation: 1
+      text: 
     - currentSpeaker: 0
       npcAnimation: 0
       text: Here, try this
@@ -3400,6 +3223,7 @@ MonoBehaviour:
   dialogManager: {fileID: 731728408}
   objectives:
   - {fileID: 225579}
+  - {fileID: 1949841358}
   activeObjectiveIndex: 0
   coffeeMug: {fileID: 1492703560}
   orderSlipText: {fileID: 270383527}
@@ -3453,6 +3277,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 744704786}
+        m_MethodName: OpenDoorAfterDelay
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 3
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 744704786}
+        m_MethodName: CloseDoorAfterDelay
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 5
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   dialogStartDelay: 5
   dialogEndDelay: 5
 --- !u!4 &356095059
@@ -3467,6 +3313,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 225580}
+  - {fileID: 1949841356}
   m_Father: {fileID: 486781050}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4305,8 +4152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acts:
-  - {fileID: 1609143168}
-  - {fileID: 356095058}
+  - {fileID: 110396099}
   activeActIndex: 0
   openingCinematicAnimator: {fileID: 2067240945}
   setupInitialActAfterDelay: 0
@@ -4369,6 +4215,7 @@ Transform:
   - {fileID: 594719332}
   - {fileID: 1609143169}
   - {fileID: 356095059}
+  - {fileID: 110396100}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4809,6 +4656,143 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570389936}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &572727560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 572727564}
+  - component: {fileID: 572727561}
+  - component: {fileID: 572727562}
+  m_Layer: 0
+  m_Name: Leave Work
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &572727561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572727560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fad8f70141c1a240b373ddc84cc1069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minCapacityPercentage: 0.8
+  minCream: 0
+  maxCream: 0
+  requiredSugar: 0
+  isCoffeeOrderValid: 0
+  onOrderReceived:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 572727562}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 919132147671529026}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onOrderServed:
+    m_PersistentCalls:
+      m_Calls: []
+  onLastDialogComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  preOrderDialog:
+    sentences:
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: It is getting late, isn't it...
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Well, time to close up shop I suppose.
+  postOrderDialog:
+    sentences: []
+  waitingDialog:
+    sentences: []
+  evaluateCoffeeDialog:
+    sentences: []
+  badCoffeeDialog:
+    sentences: []
+  orderReceivedDialog:
+    sentences: []
+--- !u!114 &572727562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572727560}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5a6a70209b6e6345bfe18b02314a54e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelName: Greybox
+  internalProcessPath: 
+  internalProcessArgs: 
+  loadAdditive: 0
+  loadAsync: 1
+  loadingScreen: {fileID: 0}
+  progressBarEmpty: {fileID: 0}
+  progressBarFull: {fileID: 0}
+  loadingScreenWidthInMeters: 6
+  progressBarWidthInMeters: 3
+  loadingScreenDistance: 0
+  loadingScreenTransform: {fileID: 0}
+  progressBarTransform: {fileID: 0}
+  front: {fileID: 0}
+  back: {fileID: 0}
+  left: {fileID: 0}
+  right: {fileID: 0}
+  top: {fileID: 0}
+  bottom: {fileID: 0}
+  backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+  showGrid: 0
+  fadeOutTime: 0.5
+  fadeInTime: 0.5
+  postLoadSettleTime: 0
+  loadingScreenFadeInTime: 1
+  loadingScreenFadeOutTime: 0.25
+  autoTriggerOnEnable: 1
+--- !u!4 &572727564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572727560}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 110396100}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &579597292
 GameObject:
   m_ObjectHideFlags: 0
@@ -5428,6 +5412,107 @@ Transform:
   m_Father: {fileID: 90182421}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &656198511
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2136283899}
+    m_Modifications:
+    - target: {fileID: 5534847077734047802, guid: 3fddbbdd249a1e142bb47fbc52c2d60a,
+        type: 3}
+      propertyPath: m_Name
+      value: Drawing Tablet
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534847077734047802, guid: 3fddbbdd249a1e142bb47fbc52c2d60a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534847077734047803, guid: 3fddbbdd249a1e142bb47fbc52c2d60a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.6968727
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534847077734047803, guid: 3fddbbdd249a1e142bb47fbc52c2d60a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.026723
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534847077734047803, guid: 3fddbbdd249a1e142bb47fbc52c2d60a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.1919098
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534847077734047803, guid: 3fddbbdd249a1e142bb47fbc52c2d60a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534847077734047803, guid: 3fddbbdd249a1e142bb47fbc52c2d60a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534847077734047803, guid: 3fddbbdd249a1e142bb47fbc52c2d60a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534847077734047803, guid: 3fddbbdd249a1e142bb47fbc52c2d60a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534847077734047803, guid: 3fddbbdd249a1e142bb47fbc52c2d60a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534847077734047803, guid: 3fddbbdd249a1e142bb47fbc52c2d60a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534847077734047803, guid: 3fddbbdd249a1e142bb47fbc52c2d60a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534847077734047803, guid: 3fddbbdd249a1e142bb47fbc52c2d60a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534847077734047803, guid: 3fddbbdd249a1e142bb47fbc52c2d60a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534847077734047803, guid: 3fddbbdd249a1e142bb47fbc52c2d60a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534847077734047803, guid: 3fddbbdd249a1e142bb47fbc52c2d60a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3fddbbdd249a1e142bb47fbc52c2d60a, type: 3}
+--- !u!4 &656198512 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5534847077734047803, guid: 3fddbbdd249a1e142bb47fbc52c2d60a,
+    type: 3}
+  m_PrefabInstance: {fileID: 656198511}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &656198513 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5534847077734047802, guid: 3fddbbdd249a1e142bb47fbc52c2d60a,
+    type: 3}
+  m_PrefabInstance: {fileID: 656198511}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &660771697
 GameObject:
   m_ObjectHideFlags: 0
@@ -11447,6 +11532,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 656198513}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   preOrderDialog:
     sentences:
     - currentSpeaker: 0
@@ -14539,119 +14635,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 252020118, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 252020118, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 252020118, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 252020118, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 252020118, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 252020118, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 252020118, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1338037781, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1338037781, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1338037781, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1338037781, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1338037781, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1338037781, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1338037781, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1338037781, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1338037781, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1338037781, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2059726812, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.017947912
-      objectReference: {fileID: 0}
-    - target: {fileID: 2059726812, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.81662554
-      objectReference: {fileID: 0}
-    - target: {fileID: 2059726812, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.025431361
-      objectReference: {fileID: 0}
-    - target: {fileID: 2059726812, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.576328
-      objectReference: {fileID: 0}
-    - target: {fileID: 2059726812, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.006026985
-      objectReference: {fileID: 0}
-    - target: {fileID: 2059726812, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.2334225
-      objectReference: {fileID: 0}
-    - target: {fileID: 2059726812, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.018161774
-      objectReference: {fileID: 0}
-    - target: {fileID: 2059726812, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2059726812, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3218453166621452, guid: 96eab645eebf5bf47a2051e945ea1cd2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5614967501501373636, guid: 96eab645eebf5bf47a2051e945ea1cd2,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 4db70c71cd34ebf4ea7bf1964840c445, type: 2}
     - target: {fileID: 6997049423693751235, guid: 96eab645eebf5bf47a2051e945ea1cd2,
         type: 3}
       propertyPath: m_Name
@@ -14900,6 +14883,332 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1945035399}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1949841355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1949841356}
+  - component: {fileID: 1949841358}
+  m_Layer: 0
+  m_Name: Order 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1949841356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949841355}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 356095059}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1949841358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949841355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fad8f70141c1a240b373ddc84cc1069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minCapacityPercentage: 0.8
+  minCream: 0.15
+  maxCream: 0.25
+  requiredSugar: 7
+  isCoffeeOrderValid: 0
+  onOrderReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  onOrderServed:
+    m_PersistentCalls:
+      m_Calls: []
+  onLastDialogComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 489292545}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  preOrderDialog:
+    sentences:
+    - currentSpeaker: 3
+      npcAnimation: 3
+      text: Mind if I get another coffee?
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Sure. You're welcome to do what you want, but I'd recommend trying the
+        coffee as is
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Of course, I won't judge you either way
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: Maybe another time. I just want something familar right now
+    - currentSpeaker: 3
+      npcAnimation: 7
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Of course. Lots of cream, and 7 sugars. Coming right up.
+  postOrderDialog:
+    sentences:
+    - currentSpeaker: 3
+      npcAnimation: 1
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: So, what's stopping you from leaving the company? Find a new place that
+        you actually care about?
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: Student loans, mainly.
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Ah, that's right
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: Yep. I've been working overtime, trying to chip away at my debt, but
+        there's just so much of it.
+    - currentSpeaker: 3
+      npcAnimation: 10
+      text: Tuition fees have been growing wildly over the past decade, out-pacing
+        minimum wage by a long shot
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: Not to mention most of the entry level jobs out there require a bachelor's
+        degree
+    - currentSpeaker: 3
+      npcAnimation: 1
+      text: Really pisses me off. How is the average working class supposed to get
+        an education?
+    - currentSpeaker: 3
+      npcAnimation: 3
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Seems like the game's been rigged from the start
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: You know it.
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: When I think about it all, I just feel so... defeated.
+    - currentSpeaker: 3
+      npcAnimation: 1
+      text: I mean, you work your way through education, and you wage slave until
+        you die
+    - currentSpeaker: 3
+      npcAnimation: 5
+      text: There's got to be more out there than that, right?
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: ...
+  waitingDialog:
+    sentences:
+    - currentSpeaker: 3
+      npcAnimation: 5
+      text: ...
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: ...
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: (I should get her coffee ready. She looks really burnt out)
+  evaluateCoffeeDialog:
+    sentences:
+    - currentSpeaker: 3
+      npcAnimation: 1
+      text: 
+    - currentSpeaker: 3
+      npcAnimation: 6
+      text: 
+    - currentSpeaker: 3
+      npcAnimation: 8
+      text: ...
+  badCoffeeDialog:
+    sentences:
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: Can you remake this dude? I said I wanted more of the same
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: I just... I can't drink this right now.
+    - currentSpeaker: 3
+      npcAnimation: 7
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Of course, my bad. Just a moment.
+  orderReceivedDialog:
+    sentences:
+    - currentSpeaker: 3
+      npcAnimation: 1
+      text: Thanks man, I appreciate it.
+    - currentSpeaker: 3
+      npcAnimation: 1
+      text: And thanks for listening too. I realize you're a barista, not a therapist.
+    - currentSpeaker: 3
+      npcAnimation: 8
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Have you considered seeing one? There's no shame in seeing one, you know
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: Oh trust me, I would if I could.
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: There's not really a stigma against getting therapy these days. It's
+        a financial thing.
+    - currentSpeaker: 3
+      npcAnimation: 10
+      text: You'd think that working for the insurance company, they'd actually cover
+        the cost
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: But they only cover up to $300 per year. That barely covers a month of
+        weekly appointments
+    - currentSpeaker: 3
+      npcAnimation: 1
+      text: 
+    - currentSpeaker: 3
+      npcAnimation: 9
+      text: Stingy fucking bastards
+    - currentSpeaker: 3
+      npcAnimation: 3
+      text: ...
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: Ugh, what should I do? I feel like I'm falling apart here
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: ...
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Well, what are your coping strategies?
+    - currentSpeaker: 3
+      npcAnimation: 1
+      text: My coping strategies?
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Yeah. I mean, what do you do to relax after work?
+    - currentSpeaker: 3
+      npcAnimation: 10
+      text: To be honest, lately I haven't even been coming home from work.
+    - currentSpeaker: 3
+      npcAnimation: 1
+      text: Much easier to just sleep under my desk. Gives me time to chip away at
+        my piles of work
+    - currentSpeaker: 3
+      npcAnimation: 8
+      text: Plus it keeps me out of rush hour gridlock
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: You do realize that's super unhealthy, right?
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: You need some boundaries between you and work.
+    - currentSpeaker: 3
+      npcAnimation: 10
+      text: But there's just so much work to be done. If I don't work overtime, it
+        won't get done
+    - currentSpeaker: 3
+      npcAnimation: 1
+      text: Besides, I really could use the money from a bonus, or a promotion
+    - currentSpeaker: 3
+      npcAnimation: 8
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: The work will still be there in the morning. It doesn't matter at sundown.
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Back to coping strategies. What are you using as an outlet?
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: An outlet?
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: You know, hobbies. Creative outlets, physical outlets. The works
+    - currentSpeaker: 3
+      npcAnimation: 10
+      text: ...
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: To be honest, I can't remember.
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: Everything's always been about grades, making it into university, and
+        finding a job, and working that job
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: I feel like it's all just been a blur of work. Never really had time
+        to think about it
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Sounds like a good time to re-discover yourself
+    - currentSpeaker: 3
+      npcAnimation: 1
+      text: I think so, yeah.
+    - currentSpeaker: 3
+      npcAnimation: 8
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: So, your homework for this week is to find something that makes you happy
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Oh, maybe I shouldn't call it homework, huh?
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: No, it's fine. This is actually pretty exciting
+    - currentSpeaker: 3
+      npcAnimation: 0
+      text: I'll let you know what I come up with next time I come by
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: I'll be looking forward to it.
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: I'm Arthur, by the way.
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: Suzie. Nice to meet'cha
+    - currentSpeaker: 1
+      npcAnimation: 8
+      text: I'd better hit the road. Work starts early tomorrow, didn't plan on staying
+        so long
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: But hey, that's what the sawdust coffee's for, right?
+    - currentSpeaker: 1
+      npcAnimation: 7
+      text: Anyways, I'll see you around, Arthur
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Of course. Be safe.
 --- !u!1 &1980012123
 GameObject:
   m_ObjectHideFlags: 0
@@ -16034,6 +16343,7 @@ Transform:
   - {fileID: 615079557}
   - {fileID: 387601610}
   - {fileID: 2069867239}
+  - {fileID: 656198512}
   m_Father: {fileID: 1653707259}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

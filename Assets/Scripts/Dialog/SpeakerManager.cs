@@ -14,7 +14,7 @@ public enum NPCAnimation {
    SetCoffee, UnsetCoffee, SipCoffee, Shout,
 
    // Added late - didn't want to re-write all of the NPCAnimations
-   LookCoffeeMachine,
+   LookCoffeeMachine, StartDrawing, StopDrawing
 }
 public class SpeakerManager : MonoBehaviour {
     public static SpeakerManager instance;
@@ -67,6 +67,8 @@ public class SpeakerManager : MonoBehaviour {
             case NPCAnimation.UnsetCoffee: return null;
             case NPCAnimation.SipCoffee: return null;
             case NPCAnimation.Shout: return null;
+            case NPCAnimation.StartDrawing: return null;
+            case NPCAnimation.StopDrawing: return null;
             default: Debug.LogError("Lookat target doesn't exist!");
                      return Player.instance.hmdTransform;
         }

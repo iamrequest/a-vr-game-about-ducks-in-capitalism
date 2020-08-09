@@ -70,7 +70,7 @@ P: Greasy. You do what you can in a pinch, huh?
 W: Yep. Work's been getting real busy lately, so it's not like I can slip out for better coffee
 W: But that's life, ya know?
 W: Besides, I'm used to it now. I drink a bunch of the stuff these days
-P: What kind of work are you doing that requires that much effort?
+P: What kind of work are you doing that asks so much of you?
 W: Oh, it's nothing interesting. I work a desk job with an insurance company.
 W: I'm not loving it or anything, they were just the only company that would hire me out of university
 W: Fuck the job market, right?
@@ -89,7 +89,8 @@ W: To make matters worse, my grades were good enough to qualify for a scholarshi
 W: It wasn't much. I'm still paying off tuition years later
 P: Oh? How would that be a bad thing?
 W: Well it was only valid if I enrolled for university for the upcoming Fall semester.
-W: And so I didn't have time to figure out what kinda work I wanted to do.
+W: And so I didn't a chance to figure out what kinda work I wanted to do. 
+W: Had to enroll right away, or else I'd lose the scholarship money. Money was tight back then too.
 W: Ended up following in my dad's footsteps. It worked out well enough for him, I figured it'd be the same for me
 P: I see. It must've been hard to make that decision.
 W: Yeah, it was
@@ -108,7 +109,7 @@ P: So, what's stopping you from leaving the company? Find a new place that you a
 W: Student loans, mainly.
 P: Ah, that's right
 W: Yep. I've been working overtime, trying to chip away at my debt, but there's just so much of it.
-W: Tuition fees are growing wildly over the past decade, out-pacing minimum wage by a long shot
+W: Tuition fees have been growing wildly over the past decade, out-pacing minimum wage by a long shot
 W: Not to mention most of the entry level jobs out there require a bachelor's degree
 W: Really pisses me off. How is the average working class supposed to get an education?
 P: Seems like the game's been rigged from the start
@@ -138,7 +139,7 @@ P: Have you considered seeing one? There's no shame in seeing one, you know
 W: Oh trust me, I would if I could.
 W: There's not really a stigma against getting therapy these days. It's a financial thing.
 W: You'd think that working for the insurance company, they'd actually cover the cost
-W: But they only cover up to $300. That barely covers a month of weekly appointments
+W: But they only cover up to $300 per year. That barely covers a month of weekly appointments
 W: Stingy fucking bastards, the lot of them.
 W: Ugh, what should I do? I feel like I'm falling apart here
 P: ...
