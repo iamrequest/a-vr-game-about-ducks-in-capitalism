@@ -14,7 +14,7 @@ public enum NPCAnimation {
    SetCoffee, UnsetCoffee, SipCoffee, Shout,
 
    // Added late - didn't want to re-write all of the NPCAnimations
-   LookCoffeeMachine, StartDrawing, StopDrawing
+   LookCoffeeMachine, StartDrawing, StopDrawing, LookTablet
 }
 public class SpeakerManager : MonoBehaviour {
     public static SpeakerManager instance;
@@ -39,7 +39,7 @@ public class SpeakerManager : MonoBehaviour {
 
     [Header("Lookat Targets")]
     public Transform lookatMugTransform;
-    public Transform lookDownTransform, lookUpTransform, lookatBonsaiTransform, lookatCoffeeMakerTransform;
+    public Transform lookDownTransform, lookUpTransform, lookatBonsaiTransform, lookatCoffeeMakerTransform, lookatTabletTransform;
 
 
     private void Start() {
@@ -61,6 +61,7 @@ public class SpeakerManager : MonoBehaviour {
             case NPCAnimation.LookUp: return lookUpTransform;
             case NPCAnimation.LookBonsai: return lookatBonsaiTransform;
             case NPCAnimation.LookCoffeeMachine: return lookatCoffeeMakerTransform;
+            case NPCAnimation.LookTablet: return lookatTabletTransform;
 
             // Animations: No lookat target
             case NPCAnimation.SetCoffee: return null;
