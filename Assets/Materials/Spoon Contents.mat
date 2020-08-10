@@ -8,18 +8,22 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Spoon Contents
-  m_Shader: {fileID: 4800000, guid: 650dd9526735d5b46b79224bc6e94025, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: f2c61c38c3a41aa489e0094f2af8147e,
+    type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2050
-  stringTagMap:
-    RenderType: Opaque
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_DF2E2D1A:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -44,11 +48,20 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_6DACF64A_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 2165a3e58a06b5d44b852b797bbcdbcf, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_16AB4C19: 50
+    - Vector1_42BAAB86: 1
+    - Vector1_574F28DC: 0.01
+    - Vector1_6BA9C87F: 0
+    - Vector1_93D43900: -5
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -72,10 +85,15 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_2228D709: {r: 0, g: 1, b: 0.4603219, a: 0}
+    - Color_28DAD3B5: {r: 0.5566038, g: 0.47392532, b: 0.4542097, a: 0}
+    - Color_9135A225: {r: 0.16078427, g: 0.19607836, b: 0.25490198, a: 0}
+    - Color_DDBA7DBB: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - lightPosition: {r: 1, g: 1, b: 0, a: 0}
 --- !u!114 &5658052978601563309
 MonoBehaviour:
   m_ObjectHideFlags: 11

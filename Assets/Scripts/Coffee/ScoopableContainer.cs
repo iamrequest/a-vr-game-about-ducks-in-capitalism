@@ -25,14 +25,17 @@ public class ScoopableContainer : MonoBehaviour {
                     case ScoopableContents.COFFEE_GROUNDS_DRY: 
                         contentRenderer.gameObject.SetActive(true);
                         contentRenderer.material.color = dryCoffeeGroundsColor;
+                        contentRenderer.material.SetColor("MainColor", dryCoffeeGroundsColor);
                         break;
                     case ScoopableContents.COFFEE_GROUNDS_WET: 
                         contentRenderer.gameObject.SetActive(true);
                         contentRenderer.material.color = wetCoffeeGroundsColor;
+                        contentRenderer.material.SetColor("MainColor", wetCoffeeGroundsColor);
                         break;
                     case ScoopableContents.SUGAR: 
                         contentRenderer.gameObject.SetActive(true);
                         contentRenderer.material.color = sugarColor;
+                        contentRenderer.material.SetColor("MainColor", sugarColor);
                         break;
                     case ScoopableContents.NONE: 
                         contentRenderer.gameObject.SetActive(false);
