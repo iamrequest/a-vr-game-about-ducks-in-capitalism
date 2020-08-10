@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Diner Act 1.unity
     guid: b29c42c2cd284a1478c5d3cccdd041e6
+  - enabled: 1
+    path: Assets/Scenes/Diner Act 2.unity
+    guid: 7ee23474d09f4814080cd088121de5fd
   m_configObjects: {}

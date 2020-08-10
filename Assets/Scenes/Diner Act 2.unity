@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: d65b112bc0033fc4380999802b673b33,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4238,13 +4238,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acts:
-  - {fileID: 1609143168}
-  - {fileID: 356095058}
-  - {fileID: 110396099}
+  - {fileID: 1402746529}
+  - {fileID: 1961347865}
+  - {fileID: 1400736822}
   activeActIndex: 0
-  openingCinematicAnimator: {fileID: 2067240945}
-  setupInitialActAfterDelay: 0
-  initialDelay: 13
+  openingCinematicAnimator: {fileID: 0}
+  setupInitialActAfterDelay: 1
+  initialDelay: 5
 --- !u!114 &486781048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4792,7 +4792,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
   onOrderServed:
     m_PersistentCalls:
@@ -18239,7 +18239,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2008783244
 Transform:
   m_ObjectHideFlags: 0
@@ -18379,7 +18379,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &2067240945
 Animator:
   serializedVersion: 3
@@ -18770,7 +18770,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2086466590
 Transform:
   m_ObjectHideFlags: 0
