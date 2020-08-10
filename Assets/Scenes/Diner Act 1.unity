@@ -3004,7 +3004,7 @@ MonoBehaviour:
   waitingDialog:
     sentences:
     - currentSpeaker: 4
-      npcAnimation: 11
+      npcAnimation: 13
       text: ...
     - currentSpeaker: 0
       npcAnimation: 6
@@ -3028,9 +3028,6 @@ MonoBehaviour:
         and talk to them.)
   evaluateCoffeeDialog:
     sentences:
-    - currentSpeaker: 4
-      npcAnimation: 12
-      text: 
     - currentSpeaker: 4
       npcAnimation: 1
       text: 
@@ -3060,6 +3057,9 @@ MonoBehaviour:
     - currentSpeaker: 4
       npcAnimation: 7
       text: I think so. Can you remake it maybe?
+    - currentSpeaker: 4
+      npcAnimation: 13
+      text: 
     - currentSpeaker: 0
       npcAnimation: 0
       text: (I should remake the coffee.)
@@ -4238,12 +4238,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acts:
-  - {fileID: 1402746529}
-  - {fileID: 1961347865}
+  - {fileID: 1609143168}
+  - {fileID: 356095058}
+  - {fileID: 110396099}
   activeActIndex: 0
-  openingCinematicAnimator: {fileID: 0}
-  setupInitialActAfterDelay: 1
-  initialDelay: 5
+  openingCinematicAnimator: {fileID: 2067240945}
+  setupInitialActAfterDelay: 0
+  initialDelay: 13
 --- !u!114 &486781048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11878,7 +11879,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1314309408
 Transform:
   m_ObjectHideFlags: 0
@@ -17029,7 +17030,7 @@ PrefabInstance:
     - target: {fileID: 1133946825019147864, guid: 96eab645eebf5bf47a2051e945ea1cd2,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2725391704622172040, guid: 96eab645eebf5bf47a2051e945ea1cd2,
         type: 3}
@@ -18230,7 +18231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2008783244
 Transform:
   m_ObjectHideFlags: 0
@@ -18370,7 +18371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &2067240945
 Animator:
   serializedVersion: 3
