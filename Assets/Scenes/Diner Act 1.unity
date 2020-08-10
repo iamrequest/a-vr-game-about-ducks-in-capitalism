@@ -2522,12 +2522,12 @@ PrefabInstance:
     - target: {fileID: 8346569768281334653, guid: c3b6945e2e147cc46a52177a82aecbd0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.113471
+      value: -2.018
       objectReference: {fileID: 0}
     - target: {fileID: 8346569768281334653, guid: c3b6945e2e147cc46a52177a82aecbd0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8772772
+      value: 0.766
       objectReference: {fileID: 0}
     - target: {fileID: 8346569768281334653, guid: c3b6945e2e147cc46a52177a82aecbd0,
         type: 3}
@@ -3365,7 +3365,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 3
+          m_FloatArgument: 5
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -3376,7 +3376,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 5
+          m_FloatArgument: 7
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -4233,11 +4233,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acts:
-  - {fileID: 110396099}
+  - {fileID: 1402746529}
+  - {fileID: 1961347865}
   activeActIndex: 0
-  openingCinematicAnimator: {fileID: 2067240945}
-  setupInitialActAfterDelay: 0
-  initialDelay: 13
+  openingCinematicAnimator: {fileID: 0}
+  setupInitialActAfterDelay: 1
+  initialDelay: 5
 --- !u!114 &486781048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4297,6 +4298,7 @@ Transform:
   - {fileID: 594719332}
   - {fileID: 2086466590}
   - {fileID: 2008783244}
+  - {fileID: 1400736821}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4777,17 +4779,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 572727562}
         m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 919132147671529026}
-        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7092,6 +7083,132 @@ RectTransform:
   m_AnchoredPosition: {x: -3.052, y: 2.275}
   m_SizeDelta: {x: 50, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &851538156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 851538157}
+  - component: {fileID: 851538159}
+  - component: {fileID: 851538158}
+  m_Layer: 0
+  m_Name: Leave Work
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &851538157
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851538156}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1400736821}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &851538158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851538156}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5a6a70209b6e6345bfe18b02314a54e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelName: Greybox
+  internalProcessPath: 
+  internalProcessArgs: 
+  loadAdditive: 0
+  loadAsync: 1
+  loadingScreen: {fileID: 0}
+  progressBarEmpty: {fileID: 0}
+  progressBarFull: {fileID: 0}
+  loadingScreenWidthInMeters: 6
+  progressBarWidthInMeters: 3
+  loadingScreenDistance: 0
+  loadingScreenTransform: {fileID: 0}
+  progressBarTransform: {fileID: 0}
+  front: {fileID: 0}
+  back: {fileID: 0}
+  left: {fileID: 0}
+  right: {fileID: 0}
+  top: {fileID: 0}
+  bottom: {fileID: 0}
+  backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+  showGrid: 0
+  fadeOutTime: 0.5
+  fadeInTime: 0.5
+  postLoadSettleTime: 0
+  loadingScreenFadeInTime: 1
+  loadingScreenFadeOutTime: 0.25
+  autoTriggerOnEnable: 1
+--- !u!114 &851538159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851538156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fad8f70141c1a240b373ddc84cc1069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minCapacityPercentage: 0.8
+  minCream: 0
+  maxCream: 0
+  requiredSugar: 0
+  isCoffeeOrderValid: 0
+  onOrderReceived:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 851538158}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  onOrderServed:
+    m_PersistentCalls:
+      m_Calls: []
+  onLastDialogComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  preOrderDialog:
+    sentences:
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: It is getting late, isn't it...
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Well, time to close up shop I suppose.
+  postOrderDialog:
+    sentences: []
+  waitingDialog:
+    sentences: []
+  evaluateCoffeeDialog:
+    sentences: []
+  badCoffeeDialog:
+    sentences: []
+  orderReceivedDialog:
+    sentences: []
 --- !u!1001 &851820260
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10756,6 +10873,64 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_TargetDisplay: 0
+--- !u!1 &1400736820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1400736821}
+  - component: {fileID: 1400736822}
+  m_Layer: 0
+  m_Name: End of Act 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1400736821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400736820}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 851538157}
+  m_Father: {fileID: 486781050}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1400736822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400736820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6853c685c483dd94a9346f2079701de5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogManager: {fileID: 731728408}
+  objectives:
+  - {fileID: 851538159}
+  activeObjectiveIndex: 0
+  coffeeMug: {fileID: 1492703560}
+  orderSlipText: {fileID: 270383527}
+  onActStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onActEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogStartDelay: 2
+  dialogEndDelay: 0
 --- !u!1 &1402746527
 GameObject:
   m_ObjectHideFlags: 0
@@ -14913,9 +15088,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minCapacityPercentage: 0.8
-  minCream: 0
-  maxCream: 0
-  requiredSugar: 0
+  minCream: 0.15
+  maxCream: 0.2
+  requiredSugar: 3
   isCoffeeOrderValid: 0
   onOrderReceived:
     m_PersistentCalls:
@@ -14925,19 +15100,379 @@ MonoBehaviour:
       m_Calls: []
   onLastDialogComplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489292545}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   preOrderDialog:
-    sentences: []
+    sentences:
+    - currentSpeaker: 1
+      npcAnimation: 1
+      text: Heya
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Hey Suzie, how's it going?
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: It's going.
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: What can I get you? Coffee?
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: Yeah, that'd be nice. Maybe a little less sugar this time? Not too much
+        less though. Maybe 3?
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Feeling more adventurous today?
+    - currentSpeaker: 1
+      npcAnimation: 10
+      text: 'Something like that. '
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Very admirable. It's coming right up.
   postOrderDialog:
-    sentences: []
+    sentences:
+    - currentSpeaker: 1
+      npcAnimation: 13
+      text: ...
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: Did someone leave this behind?
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Oh, that's Sam's drawing tablet - you passed him on the way in
+    - currentSpeaker: 1
+      npcAnimation: 1
+      text: Should I run it back to him or something? He couldn't have gotten far.
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: No, let it be. I think it's for the best that he left it.
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: Sure? If you say so I guess.
+    - currentSpeaker: 1
+      npcAnimation: 13
+      text: So what's the story on this drawing? Do you know about it?
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: 'Oh, the girl in the picture? That''s Reme, from Reme: Zero'
+    - currentSpeaker: 1
+      npcAnimation: 1
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: I guess she's a maid or something, I don't really know. I don't really
+        watch anime.
+    - currentSpeaker: 1
+      npcAnimation: 13
+      text: Anime, huh?
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: I love her hair. Wish I could color my hair like that
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: But you don't have hair?
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: 'Ugh, I know. It''s a dress code thing. '
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: My boss is stuck in the last century - the old fart says "presentable
+        ducks shouldn't have showing hair"
+    - currentSpeaker: 1
+      npcAnimation: 1
+      text: Although if you ask me, it's just a way to keep us all in line and cooperative.
+    - currentSpeaker: 1
+      npcAnimation: 5
+      text: If I ever came into a bunch of money, I'd grow my hair out, and dye it
+        blue.
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: Maybe start a small garden in front of my house.
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: Wouldn't listen to anyone who'd tell me what's "wrong".
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Oh yeah?
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: Yeah...
+    - currentSpeaker: 1
+      npcAnimation: 1
+      text: You ever think about that sorta thing? What you'd do if you suddenly
+        had a million dollars?
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Now and then I suppose. I'd probably buy better coffee. Spend more time
+        watching the stars.
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: Sounds like a good time.
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: Thing is, it's always super modest, right? Like what would you ever do
+        with more than, say, 5 million dollars?
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: 'Not sure. Buy housing for my family? Give it to charity? '
+    - currentSpeaker: 1
+      npcAnimation: 13
+      text: Exactly, right? At some point, there's just too much to live a reasonable,
+        modest life
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: And yet, there's still billionaires out there, hoarding wealth like little
+        gremlins
+    - currentSpeaker: 1
+      npcAnimation: 1
+      text: You ever think about how wildly immoral a billion dollars is, in the
+        hands of a single person?
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: To put it into context, a million seconds is roughly 12 days. A billion
+        seconds is 31 YEARS.
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: How can one person spend all of that money? How can they ethically get
+        all of that money?
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Seems like it can't be done.
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: Yep. The only way for someone to become a billionaire, is through exploiting
+        the working class
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: And yet there's never enough money to go around when it's needed by the
+        average person
+    - currentSpeaker: 1
+      npcAnimation: 5
+      text: For a society to allow billionaires to exist... It's just... It's not
+        right.
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: '"The only framework capitalism can thrive in, is dystopia."'
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: ...
+    - currentSpeaker: 1
+      npcAnimation: 1
+      text: Ah, but I didn't mean to go off on a rant there. I just really can't
+        stand how broken this shit all is.
+    - currentSpeaker: 1
+      npcAnimation: 13
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Don't worry about it. Your passion is admirable.
   waitingDialog:
-    sentences: []
+    sentences:
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: (I should get her coffee ready for her)
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: (This one's gotta blow her socks off)
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: (... she is wearing socks right?)
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: (maybe i should put up one of those signs... No shirt, no socks, no service.)
   evaluateCoffeeDialog:
-    sentences: []
+    sentences:
+    - currentSpeaker: 1
+      npcAnimation: 6
+      text: 
+    - currentSpeaker: 1
+      npcAnimation: 8
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: 'Here you go: Cream, and less than 7 sugar'
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: Ah, thanks, my guy
   badCoffeeDialog:
-    sentences: []
+    sentences:
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: Mmm... nah, this doesn't taste right. Can you take a look at it?
+    - currentSpeaker: 1
+      npcAnimation: 7
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Of course. Let me fix that. Sorry about that.
   orderReceivedDialog:
-    sentences: []
+    sentences:
+    - currentSpeaker: 1
+      npcAnimation: 1
+      text: Mmm... That's actually pretty good
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Right? Coffee is pretty good when it's got no sawdust in it
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: God totally. Maybe I should start brewing my own at home, instead of
+        drinking the crap at work.
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Well, if you'd like tips, I'm happy to share
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Speaking of work, how's that going for you? You know, the hobby search
+        and stuff
+    - currentSpeaker: 1
+      npcAnimation: 8
+      text: Things are kinda coming along. I asked my boss for some time off. Told
+        him I was feeling burnt out
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: And?
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: He went off on one of his rants. Guy says that burnout's a "natural part
+        of any job"
+    - currentSpeaker: 1
+      npcAnimation: 10
+      text: He says that "Coffee, God and Cigarettes" are all that I need to break
+        this routine
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: But there's no way I can actually take that advice.
+    - currentSpeaker: 1
+      npcAnimation: 1
+      text: He's been drinking the corporate cool-aid for years now, ya know?
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Right. Sounds like he just wants to squeeze you for all the work he can
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: So in short, I'm not working overtime anymore. Whether he likes it or
+        not.
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Good! I'm proud of you!
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: Thanks, Arthur.
+    - currentSpeaker: 1
+      npcAnimation: 8
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: And how's the hobby search going?
+    - currentSpeaker: 1
+      npcAnimation: 13
+      text: It's been hard, actually. Now that I'm not working overtime, I have all
+        this time at home, and no idea how to spend it
+    - currentSpeaker: 1
+      npcAnimation: 1
+      text: So I'm trying a little bit of everything. This week, I'm learning how
+        to knit~
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: How's that going for you?
+    - currentSpeaker: 1
+      npcAnimation: 3
+      text: ...
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: ...
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: God I hate it so much
+    - currentSpeaker: 1
+      npcAnimation: 1
+      text: I mean, nothing against people who like to knit, but this is really not
+        vibin' with me
+    - currentSpeaker: 1
+      npcAnimation: 10
+      text: Is this what I'm supposed to be doing? Just spending time doing fucking
+        whatever until I get old and die?
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: What do people even do for fun these days?
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Well, if the kids had half your spirit, it sounds like they'be be out
+        learning woodworking
+    - currentSpeaker: 1
+      npcAnimation: 1
+      text: Woodworking?
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: How else are you gonna build those guillotines?
+    - currentSpeaker: 1
+      npcAnimation: 9
+      text: Hah! Good one, Arthur
+    - currentSpeaker: 1
+      npcAnimation: 8
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Look, it's going to take time to figure these things out. It's not like
+        you can define yourself overnight
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Just keep at it. Something will stick.
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: 'You think so? '
+    - currentSpeaker: 1
+      npcAnimation: 5
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Of course. There's always more to life than just work, regardless of
+        what the cool-aid man at work says
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Just... keep your eyes open, and remember to say "yes" to new opportunities
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: Ok... I can do that.
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Good. You're doing great out there, kiddo.
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: And never forget - your heart is a muscle the size of your fist.
+    - currentSpeaker: 1
+      npcAnimation: 13
+      text: ...
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Getting dark out there, you gonna be alright getting home tonight?
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: I'll be fine, yeah. Trains are quiet this time of night. Been using the
+        time to reflect on things
+    - currentSpeaker: 1
+      npcAnimation: 5
+      text: I should be on my way though, don't want to have to wait around for the
+        next train to come.
+    - currentSpeaker: 1
+      npcAnimation: 1
+      text: See you around?
+    - currentSpeaker: 1
+      npcAnimation: 7
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: 'Of course, come again soon! '
 --- !u!1 &1910164032
 GameObject:
   m_ObjectHideFlags: 0
@@ -15214,6 +15749,81 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1133946825019147864, guid: 96eab645eebf5bf47a2051e945ea1cd2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725391704622172040, guid: 96eab645eebf5bf47a2051e945ea1cd2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725391704622172040, guid: 96eab645eebf5bf47a2051e945ea1cd2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725391704622172040, guid: 96eab645eebf5bf47a2051e945ea1cd2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725391704622172040, guid: 96eab645eebf5bf47a2051e945ea1cd2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725391704622172040, guid: 96eab645eebf5bf47a2051e945ea1cd2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725391704622172040, guid: 96eab645eebf5bf47a2051e945ea1cd2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725391704622172040, guid: 96eab645eebf5bf47a2051e945ea1cd2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775088754278507997, guid: 96eab645eebf5bf47a2051e945ea1cd2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775088754278507997, guid: 96eab645eebf5bf47a2051e945ea1cd2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775088754278507997, guid: 96eab645eebf5bf47a2051e945ea1cd2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775088754278507997, guid: 96eab645eebf5bf47a2051e945ea1cd2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775088754278507997, guid: 96eab645eebf5bf47a2051e945ea1cd2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775088754278507997, guid: 96eab645eebf5bf47a2051e945ea1cd2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775088754278507997, guid: 96eab645eebf5bf47a2051e945ea1cd2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6997049423693751235, guid: 96eab645eebf5bf47a2051e945ea1cd2,
         type: 3}
       propertyPath: m_Name
@@ -15270,6 +15880,31 @@ PrefabInstance:
       value: 90.00001
       objectReference: {fileID: 0}
     - target: {fileID: 7660996578478291321, guid: 96eab645eebf5bf47a2051e945ea1cd2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908853383473731098, guid: 96eab645eebf5bf47a2051e945ea1cd2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.9238791
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908853383473731098, guid: 96eab645eebf5bf47a2051e945ea1cd2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00000038416923
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908853383473731098, guid: 96eab645eebf5bf47a2051e945ea1cd2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00000023061136
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908853383473731098, guid: 96eab645eebf5bf47a2051e945ea1cd2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.38268456
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908853383473731098, guid: 96eab645eebf5bf47a2051e945ea1cd2,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
@@ -15877,7 +16512,7 @@ MonoBehaviour:
   onActEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 93408084}
+      - m_Target: {fileID: 2034080087}
         m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
@@ -17161,7 +17796,18 @@ MonoBehaviour:
       m_Calls: []
   onLastDialogComplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 489292545}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   preOrderDialog:
     sentences:
     - currentSpeaker: 2
@@ -17176,6 +17822,9 @@ MonoBehaviour:
     - currentSpeaker: 2
       npcAnimation: 0
       text: Coffee, black... With a little bit of sugar, please. 2 should be good.
+    - currentSpeaker: 2
+      npcAnimation: 12
+      text: 
     - currentSpeaker: 0
       npcAnimation: 0
       text: Of course, coming right up.
@@ -17435,7 +18084,7 @@ MonoBehaviour:
       npcAnimation: 0
       text: Well, I'm gonna be on my way then
     - currentSpeaker: 2
-      npcAnimation: 0
+      npcAnimation: 7
       text: Thanks for the coffee, man. I'll see you around
 --- !u!1 &375517913648965985
 GameObject:
