@@ -11,7 +11,7 @@ Act goals:
 
 ----
 * Order dialog
-P: Hey, welcome. What can I get you?
+P: Hey, welcome to "Damn Fine Coffee". What can I get you?
 S: ...
 S: Black coffee would be nice, thanks. 
 P: Sure, coming right up.
@@ -36,7 +36,7 @@ P: This late into the night, yeah
 P: Not many people come for coffee in the evening
 P: That said, I think it's the perfect time for a nice dark roast
 S: Oh? Why's that?
-P: Less caffine than lighter roasts, so it won't keep you up late.
+P: Less caffeine than lighter roasts, so it won't keep you up late.
 P: As for the taste, it's richer. Bolder
 P: Fitting for a stormy night like tonight, don't you think?
 S: I guess, yeah
@@ -106,8 +106,9 @@ P: No I mean like, in your coffee
 P: Doesn't seem like you're into it
 S: It's fine
 S: I think I need a kick in the ass right now anyways
-P: A bitter coffee for a bitter night
-P: Very methaphorical
+P: Sounds like the Sinner's Coffee...
+P: Self inflicted punishment to atone for past sins. A bitter coffee for a bitter night
+P: Very metaphorical~
 S: *sip*
 S: I could go for a refill though, thanks
 S: More of the same would be nice, thanks
@@ -125,7 +126,7 @@ S: It's already pretty tight covering my basic cost of living when I'm at normal
 P: I see
 S: The worst part is that I used to love doing art 
 S: When I was a kid, I'd draw for hours at a time, just for fun
-S: We used to have rotate the fridge drawings every week, just because I was drawing so much
+S: We used to have to rotate the fridge drawings every week, just because I was drawing so much
 S: But now I can barely focus on anything I'm drawing
 S: I just... sit there. Every time I try to get started, it's like there's a weight pulling me away from my tablet
 S: Makes me feel like I'm not really cut out for this whole art thing, ya know?
@@ -141,7 +142,7 @@ P: Give it a try
 
 * Fail
 S: This isn't what I ordered, man
-S: Can you re-mmake it?
+S: Can you remake it?
 
 * Success
 P: Just how you ordered, black as a midnight on a motionless night

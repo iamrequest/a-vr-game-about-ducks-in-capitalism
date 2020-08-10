@@ -7,7 +7,7 @@
 * Pre-order
 S: Hey Arthur
 A: Good to see you again, Sam. What can I get you?
-S: Coffee, black... With a little bit of sugar, please
+S: Coffee, black... With a little bit of sugar, please. 2 should be good.
 A: Of course, coming right up.
 
 * Post-order
@@ -59,7 +59,7 @@ S: Nah, I don't want to put you through the hassle. The sweetness is change of p
 S: Besides, I have to catch the train home soon anyways.
 A: Of course. No worries.
 A: You've heard of Leonardo da Vinci, right?
-S: Is that the one with the swords?
+S: Is that the guy with the swords?
 A: No, you're thinking of someone else
 S: Heh, nah I'm just playin' with you. I know of da Vinci. He drew the Mona Lisa.
 S: What a painting too. Great hands on that one.
@@ -139,7 +139,7 @@ S: And yet there's never enough money to go around when it's needed by the avera
 S: For a society to allow billionaires to exist... It's just... It's not right.
 S: "The only framework capitalism can thrive in, is dystopia."
 S: ...
-S: Ah, but I didn't mean to go off on a rant there. I just really can't stand how 
+S: Ah, but I didn't mean to go off on a rant there. I just really can't stand how broken this shit all is.
 A: Don't worry about it. Your passion is admirable.
 
 * Eval
@@ -175,7 +175,10 @@ S: God I hate it so much
 S: I mean, nothing against people who like to knit, but this is really not vibin' with me
 S: Is this what I'm supposed to be doing? Just spending time doing fucking whatever until I get old and die?
 S: What do people even do for fun these days?
-A: Not knitting, I take it?
+A: Well, if the kids had half your spirit, it sounds like they'be be out learning woodworking
+S: Woodworking?
+A: How else are you gonna build those guillotines?
+S: Hah! Good one, Arthur
 A: Look, it's going to take time to figure these things out. It's not like you can define yourself overnight
 A: Just keep at it. Something will stick.
 S: You think so? 
@@ -183,6 +186,7 @@ A: Of course. There's always more to life than just work, regardless of what the
 A: Just... keep your eyes open, and remember to say "yes" to new opportunities
 S: Ok... I can do that.
 A: Good. You're doing great out there, kiddo.
+A: And never forget - your heart is a muscle the size of your fist.
 S: ...
 A: Getting dark out there, you gonna be alright getting home tonight?
 S: I'll be fine, yeah. Trains are quiet this time of night. Been using the time to reflect on things

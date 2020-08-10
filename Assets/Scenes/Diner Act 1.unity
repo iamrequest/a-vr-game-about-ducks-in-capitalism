@@ -452,7 +452,8 @@ MonoBehaviour:
         semester.
     - currentSpeaker: 3
       npcAnimation: 0
-      text: And so I didn't a chance to figure out what kinda work I wanted to do.
+      text: And so I didn't have a chance to figure out what kinda work I wanted
+        to do.
     - currentSpeaker: 3
       npcAnimation: 0
       text: Had to enroll right away, or else I'd lose the scholarship money. Money
@@ -1363,13 +1364,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 110396098}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.5120325, y: 2.2312102, z: 0.19990332}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 572727564}
-  m_Father: {fileID: 486781050}
-  m_RootOrder: 6
+  m_Father: {fileID: 2086466590}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &151677405
 PrefabInstance:
@@ -2738,12 +2739,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289499393}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.0000002533197}
-  m_LocalPosition: {x: 0.371, y: 0.818, z: -0.967}
+  m_LocalPosition: {x: -2.0409977, y: 2.631723, z: 1.8487015}
   m_LocalScale: {x: 0.55, y: 0.55, z: 0.6}
   m_Children:
   - {fileID: 1852344340}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 2136283899}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: 0}
 --- !u!1 &307917965
 GameObject:
@@ -2899,7 +2900,7 @@ MonoBehaviour:
       text: 
     - currentSpeaker: 0
       npcAnimation: 0
-      text: Hey, welcome. What can I get you?
+      text: Hey, welcome to "Damn Fine Coffee". What can I get you?
     - currentSpeaker: 4
       npcAnimation: 1
       text: Black coffee would be nice, thanks.
@@ -3282,7 +3283,7 @@ GameObject:
   - component: {fileID: 356095059}
   - component: {fileID: 356095058}
   m_Layer: 0
-  m_Name: 'Act 1-2, art duck '
+  m_Name: Scene 2, work duck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3388,14 +3389,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 356095057}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.5120325, y: 2.2312102, z: 0.19990332}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 225580}
   - {fileID: 1949841356}
-  m_Father: {fileID: 486781050}
-  m_RootOrder: 5
+  m_Father: {fileID: 2086466590}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &357212702
 GameObject:
@@ -4294,9 +4295,8 @@ Transform:
   - {fileID: 731728412}
   - {fileID: 2005712239}
   - {fileID: 594719332}
-  - {fileID: 1609143169}
-  - {fileID: 356095059}
-  - {fileID: 110396100}
+  - {fileID: 2086466590}
+  - {fileID: 2008783244}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10756,6 +10756,108 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_TargetDisplay: 0
+--- !u!1 &1402746527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1402746528}
+  - component: {fileID: 1402746529}
+  m_Layer: 0
+  m_Name: Scene 1, art duck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1402746528
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402746527}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2141963721}
+  m_Father: {fileID: 2008783244}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1402746529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402746527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6853c685c483dd94a9346f2079701de5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogManager: {fileID: 731728408}
+  objectives:
+  - {fileID: 2141963722}
+  activeObjectiveIndex: 0
+  coffeeMug: {fileID: 1492703560}
+  orderSlipText: {fileID: 270383527}
+  onActStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 93408084}
+        m_MethodName: Enter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 744704786}
+        m_MethodName: OpenDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 3
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 744704786}
+        m_MethodName: CloseDoorAfterDelay
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onActEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 93408084}
+        m_MethodName: Exit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialogStartDelay: 5
+  dialogEndDelay: 5
 --- !u!1 &1430297391
 GameObject:
   m_ObjectHideFlags: 0
@@ -11794,13 +11896,17 @@ MonoBehaviour:
       text: 
     - currentSpeaker: 0
       npcAnimation: 0
-      text: A bitter coffee for a bitter night
+      text: Sounds like the Sinner's Coffee...
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Self inflicted punishment to atone for past sins. A bitter coffee for
+        a bitter night
     - currentSpeaker: 4
       npcAnimation: 8
       text: 
     - currentSpeaker: 0
       npcAnimation: 0
-      text: Very methaphorical
+      text: Very metaphorical~
     - currentSpeaker: 4
       npcAnimation: 0
       text: I could go for a refill though, thanks
@@ -11854,8 +11960,8 @@ MonoBehaviour:
       text: When I was a kid, I'd draw for hours at a time, just for fun
     - currentSpeaker: 4
       npcAnimation: 5
-      text: We used to have rotate the fridge drawings every week, just because I
-        was drawing so much
+      text: We used to have to rotate the fridge drawings every week, just because
+        I was drawing so much
     - currentSpeaker: 4
       npcAnimation: 0
       text: But now I can barely focus on anything I'm drawing
@@ -12327,7 +12433,7 @@ GameObject:
   - component: {fileID: 1609143169}
   - component: {fileID: 1609143168}
   m_Layer: 0
-  m_Name: Act 1, art duck
+  m_Name: Scene 1, art duck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12411,14 +12517,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1609143167}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.5120325, y: 2.2312102, z: 0.19990332}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 311846091}
   - {fileID: 1603397299}
-  m_Father: {fileID: 486781050}
-  m_RootOrder: 4
+  m_Father: {fileID: 2086466590}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1611710531
 GameObject:
@@ -14763,6 +14869,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862934678}
   m_CullTransparentMesh: 0
+--- !u!1 &1865690782
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1865690783}
+  - component: {fileID: 1865690784}
+  m_Layer: 0
+  m_Name: Order 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1865690783
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865690782}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1961347864}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1865690784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865690782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fad8f70141c1a240b373ddc84cc1069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minCapacityPercentage: 0.8
+  minCream: 0
+  maxCream: 0
+  requiredSugar: 0
+  isCoffeeOrderValid: 0
+  onOrderReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  onOrderServed:
+    m_PersistentCalls:
+      m_Calls: []
+  onLastDialogComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  preOrderDialog:
+    sentences: []
+  postOrderDialog:
+    sentences: []
+  waitingDialog:
+    sentences: []
+  evaluateCoffeeDialog:
+    sentences: []
+  badCoffeeDialog:
+    sentences: []
+  orderReceivedDialog:
+    sentences: []
 --- !u!1 &1910164032
 GameObject:
   m_ObjectHideFlags: 0
@@ -15613,6 +15788,108 @@ MonoBehaviour:
     - currentSpeaker: 0
       npcAnimation: 0
       text: Of course. Be safe.
+--- !u!1 &1961347863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1961347864}
+  - component: {fileID: 1961347865}
+  m_Layer: 0
+  m_Name: Scene 2, work duck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1961347864
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961347863}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1865690783}
+  m_Father: {fileID: 2008783244}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1961347865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961347863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6853c685c483dd94a9346f2079701de5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogManager: {fileID: 731728408}
+  objectives:
+  - {fileID: 1865690784}
+  activeObjectiveIndex: 0
+  coffeeMug: {fileID: 1492703560}
+  orderSlipText: {fileID: 270383527}
+  onActStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2034080087}
+        m_MethodName: Enter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 744704786}
+        m_MethodName: OpenDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 3
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 744704786}
+        m_MethodName: CloseDoorAfterDelay
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onActEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 93408084}
+        m_MethodName: Exit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialogStartDelay: 5
+  dialogEndDelay: 5
 --- !u!1 &1980012123
 GameObject:
   m_ObjectHideFlags: 0
@@ -16022,6 +16299,38 @@ MonoBehaviour:
   totalAvailableLines: 15
   totalCharsPerLine: 10
   conversationHistory: []
+--- !u!1 &2008783243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2008783244}
+  m_Layer: 0
+  m_Name: Act 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2008783244
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008783243}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1402746528}
+  - {fileID: 1961347864}
+  m_Father: {fileID: 486781050}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2034080087 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1051684170, guid: c3b6945e2e147cc46a52177a82aecbd0,
@@ -16462,6 +16771,39 @@ Transform:
   m_Father: {fileID: 1762667851}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2086466589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2086466590}
+  m_Layer: 0
+  m_Name: Act 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2086466590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086466589}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.5120325, y: -2.2312102, z: -0.19990332}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1609143169}
+  - {fileID: 356095059}
+  - {fileID: 110396100}
+  m_Father: {fileID: 486781050}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2121061634
 GameObject:
   m_ObjectHideFlags: 0
@@ -16748,9 +17090,353 @@ Transform:
   - {fileID: 387601610}
   - {fileID: 2069867239}
   - {fileID: 656198512}
+  - {fileID: 289499397}
   m_Father: {fileID: 1653707259}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2141963720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2141963721}
+  - component: {fileID: 2141963722}
+  m_Layer: 0
+  m_Name: Order 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2141963721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141963720}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1402746528}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2141963722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141963720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fad8f70141c1a240b373ddc84cc1069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minCapacityPercentage: 0.8
+  minCream: 0
+  maxCream: 0
+  requiredSugar: 2
+  isCoffeeOrderValid: 0
+  onOrderReceived:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 656198513}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  onOrderServed:
+    m_PersistentCalls:
+      m_Calls: []
+  onLastDialogComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  preOrderDialog:
+    sentences:
+    - currentSpeaker: 2
+      npcAnimation: 1
+      text: 
+    - currentSpeaker: 2
+      npcAnimation: 0
+      text: Hey Arthur
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Good to see you again, Sam. What can I get you?
+    - currentSpeaker: 2
+      npcAnimation: 0
+      text: Coffee, black... With a little bit of sugar, please. 2 should be good.
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Of course, coming right up.
+  postOrderDialog:
+    sentences:
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: So, no bitter black coffee today?
+    - currentSpeaker: 2
+      npcAnimation: 5
+      text: Nah, I figured I deserve the break.
+    - currentSpeaker: 2
+      npcAnimation: 1
+      text: I've been trying to take more productive breaks, like you were saying
+        the other day
+    - currentSpeaker: 2
+      npcAnimation: 0
+      text: Well, more productive as in taking real breaks.
+    - currentSpeaker: 2
+      npcAnimation: 13
+      text: So I guess less productive breaks?
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: And? How's it going?
+    - currentSpeaker: 2
+      npcAnimation: 13
+      text: 'Well, I tried to watch the new episode of Reme: Zero. Tried to play
+        Animal Intersection. Tried not to think about my commissions.'
+    - currentSpeaker: 2
+      npcAnimation: 1
+      text: And then I sat down to draw some more.
+    - currentSpeaker: 2
+      npcAnimation: 0
+      text: But it's hard man... I don't know how people do it
+    - currentSpeaker: 2
+      npcAnimation: 5
+      text: You'd think it'd be easy. Just sit down and watch some anime, or play
+        some games
+    - currentSpeaker: 2
+      npcAnimation: 0
+      text: But whenever I'd get halfway through, or finish selling bugs, I'd just
+        feel guilty about wasting time
+    - currentSpeaker: 2
+      npcAnimation: 1
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: I mean, yeah, you ARE wasting time. But that's the point, right?
+    - currentSpeaker: 2
+      npcAnimation: 5
+      text: I know, I know... I just have to get used to it.
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: 'These things take time. You''re doing great, kiddo. '
+    - currentSpeaker: 2
+      npcAnimation: 1
+      text: Thanks man, I appreciate it.
+    - currentSpeaker: 2
+      npcAnimation: 5
+      text: ...
+    - currentSpeaker: 2
+      npcAnimation: 0
+      text: So I was thinking -
+    - currentSpeaker: 2
+      npcAnimation: 0
+      text: Money and commissions aside, is it really ok for me as an artist to slow
+        my production down?
+    - currentSpeaker: 2
+      npcAnimation: 0
+      text: I'm just... not clicking for me yet.
+    - currentSpeaker: 2
+      npcAnimation: 1
+      text: I mean, we talked about this yesterday, but if I'm not creating art,
+        how can I call myself an artist?
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Well, you're someone who creates art. Therefore you're an artist
+    - currentSpeaker: 2
+      npcAnimation: 0
+      text: I mean, today I'm an artist, sure. And if I take a day off to watch anime,
+        that's probably fine.
+    - currentSpeaker: 2
+      npcAnimation: 5
+      text: But what if I get mega burnt out, and take a week off? What about a month?
+    - currentSpeaker: 2
+      npcAnimation: 0
+      text: In that case, I'm not a person who creates art. And therefore I'm not
+        an artist.
+    - currentSpeaker: 2
+      npcAnimation: 0
+      text: If I don't post art on a regular basis, people will forget about me.
+    - currentSpeaker: 2
+      npcAnimation: 1
+      text: Social media's just like that, ya know? It always demands something new
+        from you
+    - currentSpeaker: 2
+      npcAnimation: 0
+      text: And if you're not around to create, then it just continues to churn without
+        you
+    - currentSpeaker: 2
+      npcAnimation: 5
+      text: ...
+  waitingDialog:
+    sentences:
+    - currentSpeaker: 2
+      npcAnimation: 5
+      text: ...
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: (I should get his coffee ready for him. That might cheer him up)
+  evaluateCoffeeDialog:
+    sentences:
+    - currentSpeaker: 2
+      npcAnimation: 1
+      text: 
+    - currentSpeaker: 2
+      npcAnimation: 6
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Here, drink this.
+    - currentSpeaker: 2
+      npcAnimation: 8
+      text: ...
+  badCoffeeDialog:
+    sentences:
+    - currentSpeaker: 2
+      npcAnimation: 7
+      text: This wasn't what I ordered, man.
+    - currentSpeaker: 2
+      npcAnimation: 5
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: O-oh, that's right. My bad. Let me fix that for you.
+  orderReceivedDialog:
+    sentences:
+    - currentSpeaker: 2
+      npcAnimation: 1
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: How is it?
+    - currentSpeaker: 2
+      npcAnimation: 0
+      text: It's not bad. Sweeter than I thought it'd be
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Want a fresh cup, less sugar?
+    - currentSpeaker: 2
+      npcAnimation: 8
+      text: Nah, I don't want to put you through the hassle. The sweetness is change
+        of pace anyways. I think I need this right now.
+    - currentSpeaker: 2
+      npcAnimation: 5
+      text: Besides, I have to catch the train home soon anyways.
+    - currentSpeaker: 2
+      npcAnimation: 1
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Of course. No worries.
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: You've heard of Leonardo da Vinci, right?
+    - currentSpeaker: 2
+      npcAnimation: 9
+      text: Is that the guy with the swords?
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: No, you're thinking of someone else
+    - currentSpeaker: 2
+      npcAnimation: 0
+      text: Heh, nah I'm just playin' with you. I know of da Vinci. He drew the Mona
+        Lisa.
+    - currentSpeaker: 2
+      npcAnimation: 9
+      text: What a painting too. Great hands on that one.
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Hands?
+    - currentSpeaker: 2
+      npcAnimation: 8
+      text: Oh, nothing. What were you going to say about da Vinci?
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: 'Right, da Vinci. Great artist. Very famous for his art. '
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: In fact, you'd have a hard time meeting anyone who doesn't know of the
+        Mona Lisa
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: But did you know, he never actually completed it?
+    - currentSpeaker: 2
+      npcAnimation: 0
+      text: What?
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Yep. He picked at it for over 10 years, never satisfied with it. And
+        so, he never published or sold the painting.
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: They only found it in his studio after he passed.
+    - currentSpeaker: 2
+      npcAnimation: 8
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: And yet, it's his most famous painting - some would even say it's THE
+        most famous painting out there.
+    - currentSpeaker: 2
+      npcAnimation: 5
+      text: Fuckin' wild
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Right?
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Over the 10 years that da Vinci worked on the Mona Lisa, he was still
+        an artist. Art theory literature would certainly agree.
+    - currentSpeaker: 2
+      npcAnimation: 10
+      text: 
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: And so, if da Vinci can spend 10 years working on one painting, you'll
+        do just fine taking time off now and then.
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Be it a week, or a month - your effort and talent will not go away.
+    - currentSpeaker: 2
+      npcAnimation: 1
+      text: 
+    - currentSpeaker: 2
+      npcAnimation: 8
+      text: ...
+    - currentSpeaker: 2
+      npcAnimation: 0
+      text: ok
+    - currentSpeaker: 2
+      npcAnimation: 0
+      text: I think I'm starting to get it.
+    - currentSpeaker: 2
+      npcAnimation: 8
+      text: I think... I need to think about it some more.
+    - currentSpeaker: 2
+      npcAnimation: 0
+      text: It all makes sense on paper, but I need to internalize this
+    - currentSpeaker: 0
+      npcAnimation: 0
+      text: Of course. These things take time
+    - currentSpeaker: 2
+      npcAnimation: 0
+      text: Yeah, they do, don't they?
+    - currentSpeaker: 2
+      npcAnimation: 0
+      text: Well, I'm gonna be on my way then
+    - currentSpeaker: 2
+      npcAnimation: 0
+      text: Thanks for the coffee, man. I'll see you around
 --- !u!1 &375517913648965985
 GameObject:
   m_ObjectHideFlags: 0
