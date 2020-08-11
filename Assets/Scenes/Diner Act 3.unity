@@ -4272,11 +4272,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogBoxColors:
-  - {r: 0.71063256, g: 0.3244037, b: 0.8490566, a: 1}
+  - {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
   - {r: 0.7647059, g: 0.42745098, b: 0.42745098, a: 1}
-  - {r: 0.28439835, g: 0.73476297, b: 0.7830189, a: 1}
+  - {r: 0.19103774, g: 0.46837395, b: 0.5, a: 1}
   - {r: 0.76470596, g: 0.427451, b: 0.427451, a: 1}
-  - {r: 0.28627452, g: 0.73333335, b: 0.7843138, a: 1}
+  - {r: 0.19215688, g: 0.4666667, b: 0.5019608, a: 1}
   npcTextbox: {fileID: 21300000, guid: 0cf96e4a59a8e0341beef57351ad470a, type: 3}
   playerTextbox: {fileID: 21300000, guid: 0cf96e4a59a8e0341beef57351ad470a, type: 3}
   workDuck: {fileID: 2034080087}
@@ -5607,7 +5607,7 @@ PrefabInstance:
     - target: {fileID: 5534847077734047802, guid: 3fddbbdd249a1e142bb47fbc52c2d60a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5534847077734047803, guid: 3fddbbdd249a1e142bb47fbc52c2d60a,
         type: 3}
@@ -6757,7 +6757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minCapacityPercentage: 0.8
-  minCream: 0.5
+  minCream: 0.05
   maxCream: 0.1
   requiredSugar: 2
   isCoffeeOrderValid: 0
@@ -6780,18 +6780,7 @@ MonoBehaviour:
       m_Calls: []
   onLastDialogComplete:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 489292545}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   preOrderDialog:
     sentences:
     - currentSpeaker: 2
@@ -6840,8 +6829,11 @@ MonoBehaviour:
         time either of you paid for your drinks?
     - currentSpeaker: 1
       npcAnimation: 0
-      text: You've uh, got a point there... I just assumed that we weren't paying
-        because the developer didn't want to add a new animation
+      text: 'You''ve uh, got a point there... '
+    - currentSpeaker: 1
+      npcAnimation: 0
+      text: I just assumed that we weren't paying because the developer didn't want
+        to add a new animation
     - currentSpeaker: 0
       npcAnimation: 0
       text: I mean, that's pretty much it. Don't worry about it though, coffee's
@@ -6850,7 +6842,7 @@ MonoBehaviour:
       npcAnimation: 5
       text: You hear that? Arthur says it's my turn on the mug~
     - currentSpeaker: 2
-      npcAnimation: 3
+      npcAnimation: 5
       text: W-what? I mean, if you want a drink, you can take my mug
     - currentSpeaker: 1
       npcAnimation: 0
@@ -6863,7 +6855,7 @@ MonoBehaviour:
       npcAnimation: 8
       text: Am not!
     - currentSpeaker: 2
-      npcAnimation: 0
+      npcAnimation: 7
       text: See?
   postOrderDialog:
     sentences:
@@ -7088,15 +7080,6 @@ MonoBehaviour:
     - currentSpeaker: 0
       npcAnimation: 10
       text: You see the sink behind me? Totally fake. Doesn't even work.
-    - currentSpeaker: 1
-      npcAnimation: 0
-      text: But there's no way I can actually take that advice.
-    - currentSpeaker: 1
-      npcAnimation: 1
-      text: He's been drinking the corporate cool-aid for years now, ya know?
-    - currentSpeaker: 0
-      npcAnimation: 0
-      text: Right. Sounds like he just wants to squeeze you for all the work he can
     - currentSpeaker: 0
       npcAnimation: 0
       text: So, I bought self-cleaning mugs. Well, a singular self cleaning mug.
@@ -7111,7 +7094,7 @@ MonoBehaviour:
       text: Truth is, the developer ran out of time, and wasn't able to add a cleaning
         mechanism that felt good enough
     - currentSpeaker: 1
-      npcAnimation: 0
+      npcAnimation: 8
       text: It do be like that sometimes
     - currentSpeaker: 0
       npcAnimation: 13
@@ -7138,6 +7121,9 @@ MonoBehaviour:
         think I was ever built for the rat race. '
     - currentSpeaker: 1
       npcAnimation: 5
+      text: 
+    - currentSpeaker: 1
+      npcAnimation: 8
       text: 
     - currentSpeaker: 2
       npcAnimation: 0
@@ -7257,6 +7243,9 @@ MonoBehaviour:
     - currentSpeaker: 1
       npcAnimation: 1
       text: What about you, Arthur?
+    - currentSpeaker: 1
+      npcAnimation: 8
+      text: 
     - currentSpeaker: 0
       npcAnimation: 0
       text: Let's see...
@@ -7292,6 +7281,9 @@ MonoBehaviour:
     - currentSpeaker: 1
       npcAnimation: 1
       text: When are you gonna start watching anime, Arthur?
+    - currentSpeaker: 1
+      npcAnimation: 8
+      text: 
     - currentSpeaker: 0
       npcAnimation: 0
       text: Me? I don't know if I should...
@@ -7370,7 +7362,7 @@ MonoBehaviour:
       text: Well, when it IS time to eat the rich, you're welcome to swing by for
         an after-dinner coffee, on the house
     - currentSpeaker: 1
-      npcAnimation: 9
+      npcAnimation: 8
       text: Ha! I'll hold you to your word on that one~
 --- !u!1 &776874756
 GameObject:
@@ -15340,13 +15332,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   preOrderDialog:
-    sentences:
-    - currentSpeaker: 0
-      npcAnimation: 0
-      text: It is getting late, isn't it...
-    - currentSpeaker: 0
-      npcAnimation: 0
-      text: Well, time to close up shop I suppose.
+    sentences: []
   postOrderDialog:
     sentences: []
   waitingDialog:
@@ -18668,11 +18654,22 @@ MonoBehaviour:
   orderSlipText: {fileID: 270383527}
   onActStart:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2067240945}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ShowCinematic
+          m_BoolArgument: 0
+        m_CallState: 2
   onActEnd:
     m_PersistentCalls:
       m_Calls: []
-  dialogStartDelay: 2
+  dialogStartDelay: 3
   dialogEndDelay: 0
 --- !u!1 &2083278695
 GameObject:
