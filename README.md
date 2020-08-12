@@ -2,6 +2,10 @@
 
 This is my submission for "I Want to Tell A Story, But I Can't Write 2020", a 14 day game jam with a theme of "Lost". Serve coffee to ducks, and help guide them through their troubles. 
 
+<p align="center">
+    <img src="./ReadmeContents/coverart.gif">
+</p>
+
 You can download the game for free [here, on itch.io](https://request.itch.io/a-vr-game-about-ducks-in-capitalism). 
 
 You're free to do whatever with this code, but if you do use it, it'd be real cool of you to link back to this page or the itch.io page (or both). Thanks!
